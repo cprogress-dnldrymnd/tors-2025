@@ -1000,7 +1000,9 @@ section.home-about-area .content ul + a {
     .name-icon-box {
       width: 100%;
     }
-
+    .image-holder {
+      width: 100%;
+    }
     .image-box {
       width: 159px;
       padding: 50%;
@@ -1019,8 +1021,11 @@ section.home-about-area .content ul + a {
       @media (max-width: 1199px) {
         width: 120px;
       }
-      @media (max-width: 575px) {
+      @media (max-width: 991px) {
         width: 100px;
+      }
+      @media (max-width: 575px) {
+        width: 100%;
       }
     }
 
@@ -1076,6 +1081,9 @@ section.home-about-area .content ul + a {
         height: 40px;
         flex: 0 0 40px;
       }
+    }
+    @media (max-width: 575px) {
+      flex-direction: column;
     }
   }
 
