@@ -12,7 +12,7 @@ $products = get_posts(array(
       <?php foreach ($products as  $product_id) { ?>
         <?php $product = wc_get_product($product_id) ?>
         <div class="col-lg-4">
-          <input type="checkbox" name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
+          <input type="checkbox" instrument_id="<?= $product->get_id() ?>" name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
           <label for="instrument-<?= $product->get_id() ?>" class="d-flex align-items-center justify-content-between label-box">
             <div class="image-holder">
               <div class="image-box">
@@ -61,22 +61,29 @@ $products = get_posts(array(
     jQuery(".label-box").click(function(event) {
 
       setTimeout(function() {
-        var val = jQuery(".instruments input:checkbox:checked").map(function() {
+        var val_name = jQuery(".instruments input:checkbox:checked").map(function() {
           return jQuery(this).val();
-        }).get(); // <----
+        }).get();
+        var val_ids = jQuery(".instruments input:checkbox:checked").map(function() {
+          return jQuery(this).attr('instrument_id');
+        }).get();
 
         $append = '';
         $textarea_val = '';
 
-        jQuery.each(val, function(index, value) {
+        jQuery.each(val_name, function(index, value) {
           $append = $append + '<li>' + value + '</li>';
           $textarea_val = $textarea_val + value + '\n';
         });
 
-        console.log($append);
+        jQuery.each(val_ids, function(index, value) {
+          $textarea_val_ids = $textarea_val_ids + value + '\n';
+        });
+
         jQuery('.selection').html('');
         jQuery(jQuery($append)).appendTo('.selection');
         jQuery('textarea[name="instruments"]').val($textarea_val);
+        jQuery('textarea[name="instruments_id"]').val($textarea_val_ids);
 
       }, 100);
     });
