@@ -155,7 +155,6 @@ function get_estimated_read_time_shortcode($atts)
 
     return get_estimated_read_time($atts['post_id']);
 }
-add_shortcode('import_to_woocommerce', 'import_to_woocommerce');
 function import_to_woocommerce()
 {
     ob_start();
