@@ -705,10 +705,17 @@ section.home-about-area .content ul + a {
     font-size: 30px;
     font-weight: bold;
     line-height: 1.4; }
+    @media (max-width: 1199px) {
+      .get-a-quote-form .label-box .name-box {
+        font-size: 28px;
+        margin-left: 20px;
+        margin-right: 20px; } }
     @media (max-width: 991px) {
       .get-a-quote-form .label-box .name-box {
-        font-size: 28px; } }
-    @media (max-width: 767px) {
+        font-size: 26px;
+        margin-left: 15px;
+        margin-right: 15px; } }
+    @media (max-width: 991px) {
       .get-a-quote-form .label-box .name-box {
         font-size: 24px; } }
     @media (max-width: 575px) {
@@ -729,6 +736,9 @@ section.home-about-area .content ul + a {
       height: 105%;
       width: 105%;
       object-fit: cover; }
+    @media (max-width: 1199px) {
+      .get-a-quote-form .label-box .image-box {
+        width: 120px; } }
     @media (max-width: 575px) {
       .get-a-quote-form .label-box .image-box {
         width: 100px; } }
@@ -750,6 +760,9 @@ section.home-about-area .content ul + a {
       width: 30px;
       height: 1px;
       background-color: var(--black-color); }
+      @media (max-width: 1199px) {
+        .get-a-quote-form .label-box .plus-minus-box:before {
+          width: 20px; } }
       @media (max-width: 991px) {
         .get-a-quote-form .label-box .plus-minus-box:before {
           width: 15px; } }
@@ -758,9 +771,17 @@ section.home-about-area .content ul + a {
       width: 1px;
       background-color: var(--black-color);
       transition: 300ms; }
+      @media (max-width: 1199px) {
+        .get-a-quote-form .label-box .plus-minus-box:after {
+          height: 20px; } }
       @media (max-width: 991px) {
         .get-a-quote-form .label-box .plus-minus-box:after {
           height: 15px; } }
+    @media (max-width: 1199px) {
+      .get-a-quote-form .label-box .plus-minus-box {
+        width: 50px;
+        height: 50px;
+        flex: 0 0 50px; } }
     @media (max-width: 991px) {
       .get-a-quote-form .label-box .plus-minus-box {
         width: 40px;
