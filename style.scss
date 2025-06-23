@@ -788,6 +788,12 @@ section.home-about-area .content ul + a {
     top: 35px;
     bottom: 400px;
     transform: translateX(-50%);
+
+    @media (max-width: 991px) {
+      left: auto;
+      transform: none;
+      right: 20px;
+    }
   }
 
   .row {
@@ -798,6 +804,9 @@ section.home-about-area .content ul + a {
 
       @media (min-width: 992px) {
         width: 50% !important;
+      }
+      @media (max-width: 991px) {
+        width: 100% !important;
       }
     }
   }
@@ -861,6 +870,9 @@ section.home-about-area .content ul + a {
           border: 3px solid var(--e-global-color-accent);
         }
       }
+      @media (max-width: 991px) {
+        width: 85px;
+      }
     }
   }
 
@@ -882,6 +894,9 @@ section.home-about-area .content ul + a {
 
         .circle-2 {
           right: -13px;
+        }
+        @media (max-width: 991px) {
+          right: 0;
         }
       }
     }
