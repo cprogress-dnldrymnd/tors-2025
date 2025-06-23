@@ -971,6 +971,15 @@ section.home-about-area .content ul + a {
       font-size: 30px;
       font-weight: bold;
       line-height: 1.4;
+      @media (max-width: 991px) {
+        font-size: 28px;
+      }
+      @media (max-width: 767px) {
+        font-size: 24px;
+      }
+      @media (max-width: 575px) {
+        font-size: 20px;
+      }
     }
 
     .name-icon-box {
@@ -991,6 +1000,9 @@ section.home-about-area .content ul + a {
         height: 105%;
         width: 105%;
         object-fit: cover;
+      }
+      @media (max-width: 575px) {
+        width: 100px;
       }
     }
 

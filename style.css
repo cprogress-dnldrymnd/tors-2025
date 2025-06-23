@@ -699,6 +699,15 @@ section.home-about-area .content ul + a {
     font-size: 30px;
     font-weight: bold;
     line-height: 1.4; }
+    @media (max-width: 991px) {
+      .get-a-quote-form .label-box .name-box {
+        font-size: 28px; } }
+    @media (max-width: 767px) {
+      .get-a-quote-form .label-box .name-box {
+        font-size: 24px; } }
+    @media (max-width: 575px) {
+      .get-a-quote-form .label-box .name-box {
+        font-size: 20px; } }
   .get-a-quote-form .label-box .name-icon-box {
     width: 100%; }
   .get-a-quote-form .label-box .image-box {
@@ -714,6 +723,9 @@ section.home-about-area .content ul + a {
       height: 105%;
       width: 105%;
       object-fit: cover; }
+    @media (max-width: 575px) {
+      .get-a-quote-form .label-box .image-box {
+        width: 100px; } }
   .get-a-quote-form .label-box .plus-minus-box {
     width: 68px;
     height: 68px;
