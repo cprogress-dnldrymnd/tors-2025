@@ -16,7 +16,7 @@ $products = get_posts(array(
           <label for="instrument-<?= $product->get_id() ?>" class="d-flex align-items-center justify-content-between label-box">
             <div class="image-holder">
               <div class="image-box">
-                <img src="<?= wp_get_attachment_image_url(get_post_thumbnail_id($product->ID), 'medium') ?>" alt="<?= $product->get_name() ?>">
+                <img src="<?= wp_get_attachment_image_url(get_post_thumbnail_id($product_id), 'medium') ?>" alt="<?= $product->get_name() ?>">
               </div>
             </div>
             <div class="name-icon-box d-flex align-items-center justify-content-between">
