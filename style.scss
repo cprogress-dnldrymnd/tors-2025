@@ -1001,7 +1001,9 @@ section.home-about-area .content ul + a {
       width: 100%;
     }
     .image-holder {
-      width: 100%;
+      @media (max-width: 575px) {
+        width: 100%;
+      }
     }
     .image-box {
       width: 159px;
