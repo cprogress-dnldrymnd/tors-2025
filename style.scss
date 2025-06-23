@@ -898,26 +898,22 @@ section.home-about-area .content ul + a {
       }
     }
   }
-
-  .right-box {
-    @media (min-width: 992px) {
+  @media (min-width: 992px) {
+    .right-box {
       padding-left: 115px !important;
       padding-top: 115px !important;
-    }
-    @media (max-width: 991px) {
-      padding-right: 115px !important;
-    }
-    .elementor-image-box {
-      .line-box {
-        transform: translate(-100%, -50%);
-        left: -15px;
+      .elementor-image-box {
+        .line-box {
+          transform: translate(-100%, -50%);
+          left: -15px;
 
-        .circle {
-          right: 0;
-        }
+          .circle {
+            right: 0;
+          }
 
-        .circle-2 {
-          left: -13px;
+          .circle-2 {
+            left: -13px;
+          }
         }
       }
     }
