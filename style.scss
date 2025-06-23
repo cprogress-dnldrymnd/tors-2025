@@ -792,7 +792,7 @@ section.home-about-area .content ul + a {
     @media (max-width: 991px) {
       left: auto;
       transform: none;
-      right: 20px;
+      right: 15px;
     }
   }
 
@@ -895,17 +895,18 @@ section.home-about-area .content ul + a {
         .circle-2 {
           right: -13px;
         }
-        @media (max-width: 991px) {
-          right: 0;
-        }
       }
     }
   }
 
   .right-box {
-    padding-left: 115px !important;
-    padding-top: 115px !important;
-
+    @media (min-width: 992px) {
+      padding-left: 115px !important;
+      padding-top: 115px !important;
+    }
+    @media (max-width: 991px) {
+      padding-right: 115px !important;
+    }
     .elementor-image-box {
       .line-box {
         transform: translate(-100%, -50%);
