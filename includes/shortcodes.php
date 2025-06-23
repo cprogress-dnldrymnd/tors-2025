@@ -160,8 +160,8 @@ function import_to_woocommerce()
 {
     ob_start();
     $get_a_quote_form = carbon_get_theme_option('get_a_quote_form');
-
-    foreach ($get_a_quote_form as $form) {
+    $reversed = array_reverse($get_a_quote_form);
+    foreach ($reversed as $form) {
         // Define product details
         $product_name = $form['name'];
         $product_sku = 'EQUIPMENT_' . str_replace(' ', '_', $form['name']);
