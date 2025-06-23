@@ -16,6 +16,7 @@ $get_a_quote_form = carbon_get_theme_option('get_a_quote_form');
           <div class="name-icon-box d-flex align-items-center justify-content-between">
             <div class="name-box">
               <?= $form['name'] ?>
+              <div class="price-box">From £100</div>
             </div>
             <div class="plus-minus-box">
 
