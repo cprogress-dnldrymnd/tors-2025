@@ -1,15 +1,16 @@
 <?php
 $products = get_posts(array(
   'post_type' => 'product',
-  'numberposts' => -1
+  'numberposts' => -1,
+  'fields' => 'ids'
 ));
 ?>
 
 <div class="get-a-quote-form">
   <div class="instruments">
     <div class="row">
-      <?php foreach ($products as  $product) { ?>
-        <?php $product = wc_get_product($product->ID) ?>
+      <?php foreach ($products as  $product_id) { ?>
+        <?php $product = wc_get_product($product) ?>
         <div class="col-lg-4">
           <input type="checkbox" name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
           <label for="instrument-<?= $product->get_id() ?>" class="d-flex align-items-center justify-content-between label-box">
