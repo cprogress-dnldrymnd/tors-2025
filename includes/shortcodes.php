@@ -158,6 +158,7 @@ function get_estimated_read_time_shortcode($atts)
 add_shortcode('import_to_woocommerce', 'import_to_woocommerce');
 function import_to_woocommerce()
 {
+    ob_start();
     $get_a_quote_form = carbon_get_theme_option('get_a_quote_form');
 
     foreach ($get_a_quote_form as $form) {
@@ -169,6 +170,7 @@ function import_to_woocommerce()
         $product_short_description = '';
         create_my_woocommerce_product($product_name, $product_sku, $product_price, $product_description, $product_short_description, $form['image']);
     }
+    return ob_get_clean();
 }
 /**
  * Programmatically create a new WooCommerce product.
@@ -218,10 +220,10 @@ function create_my_woocommerce_product($product_name, $product_sku, $product_pri
     $new_product_id = $product->save();
 
     if ($new_product_id) {
-        $set_thumbnail = set_post_thumbnail($new_product_id, $image_id);
-        error_log('Product "' . $product_name . '" created successfully with ID: ' . $new_product_id);
+        set_post_thumbnail($new_product_id, $image_id);
+        echo 'Product "' . $product_name . '" created successfully with ID: ' . $new_product_id;
         // You can add further actions here, e.g., set gallery images, attributes, etc.
     } else {
-        error_log('Failed to create product "' . $product_name . '".');
+        echo 'Failed to create product "' . $product_name . '".';
     }
 }
