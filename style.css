@@ -651,7 +651,8 @@ section.home-about-area .content ul + a {
 @media (min-width: 992px) {
   .custom-lists .right-box {
     padding-left: 115px !important;
-    padding-top: 115px !important; }
+    padding-top: 115px !important;
+    padding-right: 0 !important; }
     .custom-lists .right-box .elementor-image-box .line-box {
       transform: translate(-100%, -50%);
       left: -15px; }
