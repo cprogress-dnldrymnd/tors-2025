@@ -70,6 +70,7 @@ $products = get_posts(array(
 
         $append = '';
         $textarea_val = '';
+        $textarea_val_ids = '';
 
         jQuery.each(val_name, function(index, value) {
           $append = $append + '<li>' + value + '</li>';
