@@ -1,4 +1,5 @@
 <?php
+
 use Carbon_Fields\Container;
 use Carbon_Fields\Complex_Container;
 use Carbon_Fields\Field;
@@ -7,6 +8,7 @@ use Carbon_Fields\Field;
 /*-----------------------------------------------------------------------------------*/
 /* Get a Quote
 /*-----------------------------------------------------------------------------------*/
+/*
 Container::make('theme_options', __('Get a Quote Form'))
   ->add_fields(
     array(
@@ -21,11 +23,12 @@ Container::make('theme_options', __('Get a Quote Form'))
         ->set_header_template('<%- name  %>'),
 
     )
-  );
+  );*/
 
 /*-----------------------------------------------------------------------------------*/
 /* Recordings
 /*-----------------------------------------------------------------------------------*/
+
 Container::make('post_meta', 'Audio')
   ->where('post_type', '=', 'recordings')
   ->add_fields(
