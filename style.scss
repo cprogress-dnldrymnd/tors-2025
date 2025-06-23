@@ -876,7 +876,8 @@ section.home-about-area .content ul + a {
     }
   }
 
-  .left-box, .right-box {
+  .left-box,
+  .right-box {
     padding-right: 115px !important;
 
     .custom-list-box {
@@ -903,6 +904,9 @@ section.home-about-area .content ul + a {
       padding-left: 115px !important;
       padding-top: 115px !important;
       padding-right: 0 !important;
+      .custom-list-box {
+        margin-left: 0;
+      }
       .elementor-image-box {
         .line-box {
           transform: translate(-100%, -50%);

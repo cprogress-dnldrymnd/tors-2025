@@ -637,22 +637,29 @@ section.home-about-area .content ul + a {
     @media (max-width: 991px) {
       .custom-lists .elementor-image-box .line-box {
         width: 85px; } }
-.custom-lists .left-box, .custom-lists .right-box {
+.custom-lists .left-box,
+.custom-lists .right-box {
   padding-right: 115px !important; }
-  .custom-lists .left-box .custom-list-box, .custom-lists .right-box .custom-list-box {
+  .custom-lists .left-box .custom-list-box,
+  .custom-lists .right-box .custom-list-box {
     margin-left: auto; }
-  .custom-lists .left-box .elementor-image-box .line-box, .custom-lists .right-box .elementor-image-box .line-box {
+  .custom-lists .left-box .elementor-image-box .line-box,
+  .custom-lists .right-box .elementor-image-box .line-box {
     transform: translate(100%, -50%);
     right: -15px; }
-    .custom-lists .left-box .elementor-image-box .line-box .circle, .custom-lists .right-box .elementor-image-box .line-box .circle {
+    .custom-lists .left-box .elementor-image-box .line-box .circle,
+    .custom-lists .right-box .elementor-image-box .line-box .circle {
       left: 0; }
-    .custom-lists .left-box .elementor-image-box .line-box .circle-2, .custom-lists .right-box .elementor-image-box .line-box .circle-2 {
+    .custom-lists .left-box .elementor-image-box .line-box .circle-2,
+    .custom-lists .right-box .elementor-image-box .line-box .circle-2 {
       right: -13px; }
 @media (min-width: 992px) {
   .custom-lists .right-box {
     padding-left: 115px !important;
     padding-top: 115px !important;
     padding-right: 0 !important; }
+    .custom-lists .right-box .custom-list-box {
+      margin-left: 0; }
     .custom-lists .right-box .elementor-image-box .line-box {
       transform: translate(-100%, -50%);
       left: -15px; }
