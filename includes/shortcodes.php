@@ -228,4 +228,3 @@ function create_my_woocommerce_product($product_name, $product_sku, $product_pri
         echo 'Failed to create product "' . $product_name . '".';
     }
 }
-*/
