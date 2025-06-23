@@ -155,6 +155,8 @@ function get_estimated_read_time_shortcode($atts)
 
     return get_estimated_read_time($atts['post_id']);
 }
+/*
+add_shortcode('import_to_woocommerce', 'import_to_woocommerce');
 function import_to_woocommerce()
 {
     ob_start();
@@ -226,3 +228,4 @@ function create_my_woocommerce_product($product_name, $product_sku, $product_pri
         echo 'Failed to create product "' . $product_name . '".';
     }
 }
+*/
