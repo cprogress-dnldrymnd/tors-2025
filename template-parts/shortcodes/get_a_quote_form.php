@@ -9,7 +9,7 @@ $products = get_posts(array(
   <div class="instruments">
     <div class="row">
       <?php foreach ($products as  $product) { ?>
-        <?= $product = wc_get_product($product->ID) ?>
+        <?php $product = wc_get_product($product->ID) ?>
         <div class="col-lg-4">
           <input type="checkbox" name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
           <label for="instrument-<?= $product->get_id() ?>" class="d-flex align-items-center justify-content-between label-box">
