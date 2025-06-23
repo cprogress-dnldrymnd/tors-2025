@@ -22,7 +22,7 @@ $products = get_posts(array(
             <div class="name-icon-box d-flex align-items-center justify-content-between">
               <div class="name-box">
                 <?= $product->get_name() ?>
-                <div class="price-box"><?= $product->get_price() ?></div>
+                <div class="price-box">From <?= $product->get_price_html() ?></div>
               </div>
               <div class="plus-minus-box">
 
