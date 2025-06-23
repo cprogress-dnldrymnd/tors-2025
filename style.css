@@ -745,7 +745,7 @@ section.home-about-area .content ul + a {
     @media (max-width: 991px) {
       .get-a-quote-form .label-box .image-box {
         width: 100px; } }
-    @media (max-width: 575px) {
+    @media (max-width: 360px) {
       .get-a-quote-form .label-box .image-box {
         width: 100%; } }
   .get-a-quote-form .label-box .plus-minus-box {
