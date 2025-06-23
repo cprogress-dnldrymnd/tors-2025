@@ -1,29 +1,34 @@
 <?php
-$get_a_quote_form = carbon_get_theme_option('get_a_quote_form');
+$products = get_posts(array(
+  'post_type' => 'product',
+  'numberposts' => -1
+));
 ?>
 
 <div class="get-a-quote-form">
   <div class="instruments">
     <div class="row">
-      <?php foreach ($get_a_quote_form as $key => $form) { ?><div class="col-lg-4">
-        <input type="checkbox" name="instruments[]" value="<?= $form['name'] ?>" id="instrument-<?= $key ?>">
-        <label for="instrument-<?= $key ?>" class="d-flex align-items-center justify-content-between label-box">
-          <div class="image-holder">
-            <div class="image-box">
-              <img src="<?= wp_get_attachment_image_url($form['image'], 'medium') ?>" alt="<?= $form['name'] ?>">
+      <?php foreach ($products as  $product) { ?>
+        <?= $product = wc_get_product($product->ID) ?>
+        <div class="col-lg-4">
+          <input type="checkbox" name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
+          <label for="instrument-<?= $product->get_id() ?>" class="d-flex align-items-center justify-content-between label-box">
+            <div class="image-holder">
+              <div class="image-box">
+                <img src="<?= wp_get_attachment_image_url(get_post_thumbnail_id($product->ID), 'medium') ?>" alt="<?= $product->get_name() ?>">
+              </div>
             </div>
-          </div>
-          <div class="name-icon-box d-flex align-items-center justify-content-between">
-            <div class="name-box">
-              <?= $form['name'] ?>
-              <div class="price-box">From £100</div>
-            </div>
-            <div class="plus-minus-box">
+            <div class="name-icon-box d-flex align-items-center justify-content-between">
+              <div class="name-box">
+                <?= $product->get_name() ?>
+                <div class="price-box"><?= $product->get_price() ?></div>
+              </div>
+              <div class="plus-minus-box">
 
+              </div>
             </div>
-          </div>
-        </label>
-      </div>
+          </label>
+        </div>
       <?Php } ?>
     </div>
   </div>
@@ -51,18 +56,18 @@ $get_a_quote_form = carbon_get_theme_option('get_a_quote_form');
 </div>
 
 <script>
-  jQuery(document).ready(function () {
-    jQuery(".label-box").click(function (event) {
+  jQuery(document).ready(function() {
+    jQuery(".label-box").click(function(event) {
 
-      setTimeout(function () {
-        var val = jQuery(".instruments input:checkbox:checked").map(function () {
+      setTimeout(function() {
+        var val = jQuery(".instruments input:checkbox:checked").map(function() {
           return jQuery(this).val();
         }).get(); // <----
 
         $append = '';
         $textarea_val = '';
 
-        jQuery.each(val, function (index, value) {
+        jQuery.each(val, function(index, value) {
           $append = $append + '<li>' + value + '</li>';
           $textarea_val = $textarea_val + value + '\n';
         });
@@ -75,7 +80,7 @@ $get_a_quote_form = carbon_get_theme_option('get_a_quote_form');
       }, 100);
     });
 
-    jQuery('.clear-selection').click(function (e) {
+    jQuery('.clear-selection').click(function(e) {
       jQuery('.selection').html('');
       jQuery(".instruments input[type='checkbox']").removeAttr('checked');
       jQuery('textarea[name="instruments"]').val('');
