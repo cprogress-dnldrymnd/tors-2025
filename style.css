@@ -723,8 +723,9 @@ section.home-about-area .content ul + a {
         font-size: 20px; } }
   .get-a-quote-form .label-box .name-icon-box {
     width: 100%; }
-  .get-a-quote-form .label-box .image-holder {
-    width: 100%; }
+  @media (max-width: 575px) {
+    .get-a-quote-form .label-box .image-holder {
+      width: 100%; } }
   .get-a-quote-form .label-box .image-box {
     width: 159px;
     padding: 50%;
