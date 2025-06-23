@@ -793,6 +793,7 @@ section.home-about-area .content ul + a {
       left: auto;
       transform: none;
       right: 15px;
+      bottom: 0;
     }
   }
 
@@ -812,8 +813,9 @@ section.home-about-area .content ul + a {
   }
 
   .custom-list-box {
-    max-width: 565px;
-
+    @media (min-width: 992px) {
+      max-width: 565px;
+    }
     p {
       font-size: 20px;
       line-height: 1.4;
