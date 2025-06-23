@@ -1001,7 +1001,7 @@ section.home-about-area .content ul + a {
       width: 100%;
     }
     .image-holder {
-      @media (max-width: 360px) {
+      @media (max-width: 480px) {
         width: 100%;
       }
     }
@@ -1029,7 +1029,7 @@ section.home-about-area .content ul + a {
       @media (max-width: 575px) {
         width: 80px;
       }
-      @media (max-width: 360px) {
+      @media (max-width: 480px) {
         width: 100%;
       }
     }
@@ -1087,7 +1087,7 @@ section.home-about-area .content ul + a {
         flex: 0 0 40px;
       }
     }
-    @media (max-width: 360px) {
+    @media (max-width: 480px) {
       flex-direction: column;
       gap: 20px;
     }
