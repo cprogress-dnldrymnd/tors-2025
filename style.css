@@ -795,7 +795,8 @@ section.home-about-area .content ul + a {
         flex: 0 0 40px; } }
   @media (max-width: 360px) {
     .get-a-quote-form .label-box {
-      flex-direction: column; } }
+      flex-direction: column;
+      gap: 20px; } }
 .get-a-quote-form .form-box .form-box-header {
   margin-top: 75px;
   border-top: 2px solid #e2e2e2; }

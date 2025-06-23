@@ -1086,6 +1086,7 @@ section.home-about-area .content ul + a {
     }
     @media (max-width: 360px) {
       flex-direction: column;
+      gap: 20px;
     }
   }
 
