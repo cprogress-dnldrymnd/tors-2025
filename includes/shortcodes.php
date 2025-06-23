@@ -155,7 +155,7 @@ function get_estimated_read_time_shortcode($atts)
 
     return get_estimated_read_time($atts['post_id']);
 }
-
+add_shortcode('import_to_woocommerce', 'import_to_woocommerce');
 function import_to_woocommerce()
 {
     $get_a_quote_form = carbon_get_theme_option('get_a_quote_form');
