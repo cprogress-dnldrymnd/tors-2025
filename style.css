@@ -684,6 +684,12 @@ section.home-about-area .content ul + a {
 .content-margin > *:not(:last-child) {
   margin-bottom: 1.5rem; }
 
+@media (max-width: 1199px) {
+  .get-a-quote-form .col-lg-4 {
+    width: 33.3333333333%; } }
+@media (max-width: 991px) {
+  .get-a-quote-form .col-lg-4 {
+    width: 50%; } }
 .get-a-quote-form input[type="checkbox"]:checked + label .plus-minus-box {
   background-color: var(--e-global-color-accent); }
   .get-a-quote-form input[type="checkbox"]:checked + label .plus-minus-box:after {
@@ -744,11 +750,22 @@ section.home-about-area .content ul + a {
       width: 30px;
       height: 1px;
       background-color: var(--black-color); }
+      @media (max-width: 991px) {
+        .get-a-quote-form .label-box .plus-minus-box:before {
+          width: 15px; } }
     .get-a-quote-form .label-box .plus-minus-box:after {
       height: 30px;
       width: 1px;
       background-color: var(--black-color);
       transition: 300ms; }
+      @media (max-width: 991px) {
+        .get-a-quote-form .label-box .plus-minus-box:after {
+          height: 15px; } }
+    @media (max-width: 991px) {
+      .get-a-quote-form .label-box .plus-minus-box {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px; } }
 .get-a-quote-form .form-box .form-box-header {
   margin-top: 75px;
   border-top: 2px solid #e2e2e2; }
