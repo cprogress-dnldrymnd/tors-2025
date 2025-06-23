@@ -875,6 +875,9 @@ section.home-about-area .content ul + a {
       @media (max-width: 991px) {
         width: 85px;
       }
+      @media (max-width: 767px) {
+        width: 40px;
+      }
     }
   }
 
@@ -899,6 +902,12 @@ section.home-about-area .content ul + a {
           right: -13px;
         }
       }
+    }
+    @media (max-width: 991px) {
+      text-align: right;
+    }
+    @media (max-width: 767px) {
+      padding-right: 70px;
     }
   }
   @media (min-width: 992px) {

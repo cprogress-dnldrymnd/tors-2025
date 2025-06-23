@@ -639,6 +639,9 @@ section.home-about-area .content ul + a {
     @media (max-width: 991px) {
       .custom-lists .elementor-image-box .line-box {
         width: 85px; } }
+    @media (max-width: 767px) {
+      .custom-lists .elementor-image-box .line-box {
+        width: 40px; } }
 .custom-lists .left-box,
 .custom-lists .right-box {
   padding-right: 115px !important; }
@@ -655,6 +658,14 @@ section.home-about-area .content ul + a {
     .custom-lists .left-box .elementor-image-box .line-box .circle-2,
     .custom-lists .right-box .elementor-image-box .line-box .circle-2 {
       right: -13px; }
+  @media (max-width: 991px) {
+    .custom-lists .left-box,
+    .custom-lists .right-box {
+      text-align: right; } }
+  @media (max-width: 767px) {
+    .custom-lists .left-box,
+    .custom-lists .right-box {
+      padding-right: 70px; } }
 @media (min-width: 992px) {
   .custom-lists .right-box {
     padding-left: 115px !important;
