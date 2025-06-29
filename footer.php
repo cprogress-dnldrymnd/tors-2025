@@ -192,7 +192,7 @@ $query = new WP_Query($args);
             });
 
             $id.once('decode', () => {
-                document.querySelector('.play-before-audio-' + $id_val).addEventListener('click', () => {
+                document.querySelector('.play-before-audio-1943').addEventListener('click', () => {
                     $id.play()
                 })
             })
