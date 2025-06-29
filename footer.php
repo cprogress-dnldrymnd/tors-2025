@@ -130,29 +130,14 @@ $query = new WP_Query($args);
 </script>
 <script>
     if (jQuery('.audio-box').length > 0) {
-        <?php
-        while ($query->have_posts()) {
-            $query->the_post();
-            $before_audio = carbon_get_the_post_meta('before_audio');
-            $after_audio = carbon_get_the_post_meta('after_audio');
 
-            if ($before_audio) {
-        ?>
-                $id = 'before-audio-<?= get_the_ID() ?>';
-                $before_audio_url = '<?= wp_get_attachment_url($before_audio); ?>';
-                wavesurfer($id, $before_audio_url);
-            <?php
-            }
-            if ($after_audio) {
-            ?>
-                $id = 'after-audio-<?= get_the_ID() ?>';
-                $after_audio_url = '<?= wp_get_attachment_url($after_audio); ?>';
-                wavesurfer($id, $after_audio_url);
-        <?php
-            }
-        }
-        wp_reset_postdata();
-        ?>
+        jQuery(document).ready(function() {
+            jQuery('.audio-box-holder').each(function(index, element) {
+                $id = jQuery(this).find('.audio-box').attr('id');
+                $audio_url = jQuery(this).attr('audio_url');
+                wavesurfer($id, $audio_url);
+            });
+        });
 
         function wavesurfer($id, $url) {
             // With pre-decoded audio data
@@ -190,8 +175,6 @@ $query = new WP_Query($args);
             WaveSurfer_TORS.on('finish', () => {
                 wavesurfer.setTime(0);
             });
-
-        
         }
     }
 </script>
