@@ -145,14 +145,14 @@ $query = new WP_Query($args);
                     $target_val = 'audio-' + $target;
                     console.log($target_val);
 
-                   WaveSurfer_TORS[$target_val].play();
+                    WaveSurfer_TORS[$target_val].playPause();
                     e.preventDefault();
                 });
             });
             console.log(WaveSurfer_TORS);
         });
 
-        function wavesurfer($id, $url,) {
+        function wavesurfer($id, $url, ) {
             // With pre-decoded audio data
             WaveSurfer_TORS[$id] = WaveSurfer.create({
                 "container": document.getElementById($id),
