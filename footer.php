@@ -137,6 +137,10 @@ $query = new WP_Query($args);
                 $audio_url = jQuery(this).attr('audio_url');
                 wavesurfer($id, $audio_url);
             });
+
+            jQuery('.play-pause-btn').each(function(index, element) {
+                $target = jQuery(this).attr('target');
+            });
         });
 
         function wavesurfer($id, $url) {
@@ -175,10 +179,6 @@ $query = new WP_Query($args);
 
             WaveSurfer_TORS.on('finish', () => {
                 WaveSurfer_TORS.setTime(0);
-            });
-
-            playBTN.addEventListener('click', () => {
-                WaveSurfer_TORS.play();
             });
 
         }
