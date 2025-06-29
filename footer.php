@@ -139,8 +139,13 @@ $query = new WP_Query($args);
             });
 
             jQuery('.play-pause-btn').each(function(index, element) {
-                $target = jQuery(this).attr('target');
-                console.log($target);
+                var $target = jQuery(this).attr('target');
+                jQuery(this).click(function(e) {
+                    console.log($target);
+
+                    e.preventDefault();
+                });
+
             });
         });
 
