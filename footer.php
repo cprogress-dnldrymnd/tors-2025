@@ -151,7 +151,7 @@ $query = new WP_Query($args);
             console.log(WaveSurfer_TORS);
         });
 
-        function wavesurfer($id, $url) {
+        function wavesurfer($id, $url,) {
             // With pre-decoded audio data
             WaveSurfer_TORS[$id] = WaveSurfer.create({
                 "container": document.getElementById($id),
@@ -179,11 +179,11 @@ $query = new WP_Query($args);
             });
 
             WaveSurfer_TORS[$id].on('interaction', () => {
-                WaveSurfer_TORS.play();
+                WaveSurfer_TORS[$id].play();
             });
 
             WaveSurfer_TORS[$id].on('finish', () => {
-                WaveSurfer_TORS.setTime(0);
+                WaveSurfer_TORS[$id].setTime(0);
             });
 
 
