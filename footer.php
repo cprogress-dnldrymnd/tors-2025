@@ -170,15 +170,15 @@ $query = new WP_Query($args);
             });
 
             WaveSurfer_TORS.on('interaction', () => {
-                wavesurfer.play();
+                WaveSurfer_TORS.play();
             });
 
             WaveSurfer_TORS.on('finish', () => {
-                wavesurfer.setTime(0);
+                WaveSurfer_TORS.setTime(0);
             });
 
             playBTN.addEventListener('click', () => {
-                wavesurfer.play();
+                WaveSurfer_TORS.play();
             });
 
         }
