@@ -130,15 +130,14 @@ $query = new WP_Query($args);
 </script>
 <script>
     if (jQuery('.audio-box').length > 0) {
+        var WaveSurfer_TORS = [];
 
         jQuery(document).ready(function() {
-
             jQuery('.audio-box-holder').each(function(index, element) {
                 $id = jQuery(this).find('.audio-box').attr('id');
                 $audio_url = jQuery(this).attr('audio_url');
                 wavesurfer($id, $audio_url);
             });
-            var WaveSurfer_TORS = [];
 
             jQuery('.play-pause-btn').each(function(index, element) {
                 var $target = jQuery(this).attr('target');
