@@ -182,7 +182,7 @@ $query = new WP_Query($args);
                 "autoScroll": true,
                 "autoCenter": true,
                 "sampleRate": 8000
-            })
+            });
 
             WaveSurfer_TORS.on('interaction', () => {
                 wavesurfer.play();
@@ -192,11 +192,7 @@ $query = new WP_Query($args);
                 wavesurfer.setTime(0);
             });
 
-            WaveSurfer_TORS.once('decode', () => {
-                playBTN.addEventListener('click', () => {
-                    WaveSurfer_TORS.play();
-                });
-            })
+        
         }
     }
 </script>
