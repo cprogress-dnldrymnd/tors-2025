@@ -158,7 +158,7 @@ $query = new WP_Query($args);
             // With pre-decoded audio data
             var $id_val = $id;
             console.log($id_val);
-            WaveSurfer_TORS = WaveSurfer.create({
+            $id = WaveSurfer.create({
                 "container": document.getElementById($id),
                 "height": 50,
                 "splitChannels": false,
@@ -183,17 +183,17 @@ $query = new WP_Query($args);
                 "sampleRate": 8000
             })
 
-            WaveSurfer_TORS.on('interaction', () => {
+            $id.on('interaction', () => {
                 wavesurfer.play();
             });
 
-            WaveSurfer_TORS.on('finish', () => {
+            $id.on('finish', () => {
                 wavesurfer.setTime(0);
             });
 
-            WaveSurfer_TORS.once('decode', () => {
+            $id.once('decode', () => {
                 document.querySelector('.play-before-audio-1943').addEventListener('click', () => {
-                    WaveSurfer_TORS.play()
+                    $id.play()
                 })
             })
 
