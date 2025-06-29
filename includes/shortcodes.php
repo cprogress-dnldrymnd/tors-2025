@@ -50,13 +50,14 @@ function audio_box($atts)
     );
     $audio = carbon_get_the_post_meta($audio_type . '_audio');
     if ($audio) {
+        $audio_url = wp_get_attachment_url($audio);
         if ($audio_type == 'before') {
             $class = 'active';
         } else {
             $class = '';
         }
 ?>
-        <div class="audio-box-holder d-flex align-items-center audio-<?= $audio_type ?>">
+        <div class="audio-box-holder d-flex align-items-center audio-<?= $audio_type ?>" audio_url="<?= $audio_url ?>">
             <div class="audio-box <?= $class ?> <?= $audio_type ?>-audio" id="<?= $audio_type ?>-audio-<?= get_the_ID() ?>"></div>
         </div>
     <?php
