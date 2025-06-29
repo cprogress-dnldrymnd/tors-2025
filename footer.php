@@ -139,21 +139,10 @@ $query = new WP_Query($args);
                 wavesurfer($id, $audio_url);
             });
 
-            jQuery('.play-pause-btn').each(function(index, element) {
-                var $target = jQuery(this).attr('target');
-                jQuery(this).click(function(e) {
-                    console.log($target);
-                    $target_val = 'audio-' + $target;
-                    WaveSurfer_TORS[$target_val].once('decode', () => {
-                        WaveSurfer_TORS[$target_val].play()
-                    })
-                    e.preventDefault();
-                });
-            });
             console.log(WaveSurfer_TORS);
         });
 
-        function wavesurfer($id, $url, ) {
+        function wavesurfer($id, $url,) {
             // With pre-decoded audio data
             WaveSurfer_TORS[$id] = WaveSurfer.create({
                 "container": document.getElementById($id),
