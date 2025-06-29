@@ -138,28 +138,26 @@ $query = new WP_Query($args);
 
             if ($before_audio) {
         ?>
-                // Generate a unique ID for each WaveSurfer container
-                const beforeAudioId = 'before-audio-<?= get_the_ID() ?>';
-                const beforeAudioUrl = '<?= wp_get_attachment_url($before_audio); ?>';
-                initializeWaveSurfer(beforeAudioId, beforeAudioUrl);
+                $id = 'before-audio-<?= get_the_ID() ?>';
+                $before_audio_url = '<?= wp_get_attachment_url($before_audio); ?>';
+                wavesurfer($id, $before_audio_url);
             <?php
             }
             if ($after_audio) {
             ?>
-                // Generate a unique ID for each WaveSurfer container
-                const afterAudioId = 'after-audio-<?= get_the_ID() ?>';
-                const afterAudioUrl = '<?= wp_get_attachment_url($after_audio); ?>';
-                initializeWaveSurfer(afterAudioId, afterAudioUrl);
+                $id = 'after-audio-<?= get_the_ID() ?>';
+                $after_audio_url = '<?= wp_get_attachment_url($after_audio); ?>';
+                wavesurfer($id, $after_audio_url);
         <?php
             }
         }
         wp_reset_postdata();
         ?>
 
-        // Function to initialize a single WaveSurfer instance
-        function initializeWaveSurfer(containerId, audioUrl) {
-            const wavesurferInstance = WaveSurfer.create({
-                "container": document.getElementById(containerId),
+        function wavesurfer($id, $url) {
+            // With pre-decoded audio data
+            var $id = WaveSurfer.create({
+                "container": document.getElementById($id),
                 "height": 50,
                 "splitChannels": false,
                 "normalize": true,
@@ -173,7 +171,7 @@ $query = new WP_Query($args);
                 "barHeight": null,
                 "minPxPerSec": 1,
                 "fillParent": true,
-                "url": audioUrl, // Use the provided audio URL
+                "url": $url,
                 "autoplay": false,
                 "interact": true,
                 "hideScrollbar": false,
@@ -181,29 +179,22 @@ $query = new WP_Query($args);
                 "autoScroll": true,
                 "autoCenter": true,
                 "sampleRate": 8000
+            })
+
+            $id.on('interaction', () => {
+                wavesurfer.play();
             });
 
-            // Event listeners for this specific WaveSurfer instance
-            wavesurferInstance.on('interaction', () => {
-                wavesurferInstance.play();
+            $id.on('finish', () => {
+                wavesurfer.setTime(0);
             });
 
-            wavesurferInstance.on('finish', () => {
-                wavesurferInstance.setTime(0);
-            });
+            $id.once('decode', () => {
+                document.querySelector('.play').addEventListener('click', () => {
+                    $id.play()
+                })
+            })
 
-            // Assuming you have a play button associated with each audio box
-            // You'll need to make sure your HTML structure provides a unique
-            // play button for each instance, e.g., using data attributes or unique IDs.
-            // For example, if your play button has a class 'play-button' and a data-id attribute matching the containerId:
-            wavesurferInstance.once('decode', () => {
-                const playButton = document.querySelector(`[data-wavesurfer-id="${containerId}"] .play-button`);
-                if (playButton) {
-                    playButton.addEventListener('click', () => {
-                        wavesurferInstance.play();
-                    });
-                }
-            });
         }
     }
 </script>
