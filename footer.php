@@ -130,6 +130,7 @@ $query = new WP_Query($args);
 </script>
 <script>
     if (jQuery('.audio-box').length > 0) {
+        var WaveSurfer_TORS = [];
 
         jQuery(document).ready(function() {
             jQuery('.audio-box-holder').each(function(index, element) {
@@ -151,10 +152,7 @@ $query = new WP_Query($args);
 
         function wavesurfer($id, $url) {
             // With pre-decoded audio data
-            var $id_val = $id;
-            console.log($id_val);
-            const playBTN = document.getElementById('play-before-audio-1939');
-            const WaveSurfer_TORS = WaveSurfer.create({
+            WaveSurfer_TORS[$id] = WaveSurfer.create({
                 "container": document.getElementById($id),
                 "height": 50,
                 "splitChannels": false,
@@ -179,13 +177,16 @@ $query = new WP_Query($args);
                 "sampleRate": 8000
             });
 
-            WaveSurfer_TORS.on('interaction', () => {
+            WaveSurfer_TORS[$id].on('interaction', () => {
                 WaveSurfer_TORS.play();
             });
 
-            WaveSurfer_TORS.on('finish', () => {
+            WaveSurfer_TORS[$id].on('finish', () => {
                 WaveSurfer_TORS.setTime(0);
             });
+
+
+            return WaveSurfer_TORS[$id];
 
         }
     }
