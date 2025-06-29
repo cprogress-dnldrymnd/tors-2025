@@ -158,7 +158,7 @@ $query = new WP_Query($args);
             // With pre-decoded audio data
             var $id_val = $id;
             console.log($id_val);
-            const playBTN = document.getElementsByClassName('.play-before-audio-' + $id);
+            const playBTN = document.getElementById('.play-before-audio-' + $id);
             const WaveSurfer_TORS = WaveSurfer.create({
                 "container": document.getElementById($id),
                 "height": 50,
@@ -191,14 +191,6 @@ $query = new WP_Query($args);
             WaveSurfer_TORS.on('finish', () => {
                 wavesurfer.setTime(0);
             });
-
-            WaveSurfer_TORS.once('decode', () => {
-                playBTN.addEventListener('click', () => {
-                    WaveSurfer_TORS.play();
-                });
-            })
-
-
 
         }
     }
