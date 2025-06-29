@@ -156,7 +156,7 @@ $query = new WP_Query($args);
 
         function wavesurfer($id, $url) {
             // With pre-decoded audio data
-            var $id = WaveSurfer.create({
+            $id = WaveSurfer.create({
                 "container": document.getElementById($id),
                 "height": 50,
                 "splitChannels": false,
