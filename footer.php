@@ -147,8 +147,8 @@ $query = new WP_Query($args);
                     WaveSurfer_TORS[$target_val].play();
                     e.preventDefault();
                 });
-
             });
+            console.log(WaveSurfer_TORS);
         });
 
         function wavesurfer($id, $url) {
