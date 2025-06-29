@@ -190,7 +190,7 @@ $query = new WP_Query($args);
             });
 
             $id.once('decode', () => {
-                document.querySelector('.play-before-' + $id).addEventListener('click', () => {
+                document.querySelector('.play').addEventListener('click', () => {
                     $id.play()
                 })
             })
