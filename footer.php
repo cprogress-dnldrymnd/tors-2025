@@ -156,6 +156,7 @@ $query = new WP_Query($args);
 
         function wavesurfer($id, $url) {
             // With pre-decoded audio data
+            $id_val = $id;
             $id = WaveSurfer.create({
                 "container": document.getElementById($id),
                 "height": 50,
@@ -190,7 +191,7 @@ $query = new WP_Query($args);
             });
 
             $id.once('decode', () => {
-                document.querySelector('.play').addEventListener('click', () => {
+                document.querySelector('.play-before-' + $id_val).addEventListener('click', () => {
                     $id.play()
                 })
             })
