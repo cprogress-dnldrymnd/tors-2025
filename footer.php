@@ -143,7 +143,8 @@ $query = new WP_Query($args);
                 var $target = jQuery(this).attr('target');
                 jQuery(this).click(function(e) {
                     console.log($target);
-
+                    $target_val = 'audio-' + $target;
+                    WaveSurfer_TORS[$target_val].playPause();
                     e.preventDefault();
                 });
 
