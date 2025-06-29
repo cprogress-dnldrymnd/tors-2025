@@ -191,11 +191,6 @@ $query = new WP_Query($args);
                 wavesurfer.setTime(0);
             });
 
-            $id.once('decode', () => {
-                document.querySelector('.play-before-' + $id_val).addEventListener('click', () => {
-                    $id.play()
-                })
-            })
 
         }
     }
