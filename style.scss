@@ -1623,8 +1623,9 @@ input:checked + .slider.slider:before {
       gap: 20px;
       background-color: var(--e-global-color-cea108a);
       border-radius: 10px;
-      padding: 20px;
+      padding: 30px;
       .artist-songs--title {
+        margin-bottom: 20px;
         display: flex;
         gap: 20px;
         align-items: center;
@@ -1632,6 +1633,7 @@ input:checked + .slider.slider:before {
         h4 {
           color: var(--white-color);
           font-size: 25px;
+          font-weight: 400;
         }
       }
     }
