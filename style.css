@@ -1208,6 +1208,9 @@ input:checked + .slider.slider:before {
   .artists-songs-section .artists-songs-section-inner {
     display: flex;
     gap: 30px; }
+    @media (max-width: 991px) {
+      .artists-songs-section .artists-songs-section-inner {
+        flex-direction: column; } }
   .artists-songs-section .show-all-artists-song {
     text-align: right; }
     .artists-songs-section .show-all-artists-song a {
@@ -1242,6 +1245,9 @@ input:checked + .slider.slider:before {
       .artists-songs-section .artist-details .artist-details--content i {
         color: var(--e-global-color-accent);
         font-size: 48px; }
+    @media (max-width: 991px) {
+      .artists-songs-section .artist-details {
+        width: 100%; } }
   .artists-songs-section .artist-songs {
     width: 66.6666%; }
     .artists-songs-section .artist-songs .artist-songs--holder {
@@ -1289,6 +1295,9 @@ input:checked + .slider.slider:before {
             color: var(--e-global-color-accent); }
       .artists-songs-section .artist-songs .artist-songs--holder:not(.show-all) > .artist-songs--box:not(:first-child) {
         display: none; }
+    @media (max-width: 991px) {
+      .artists-songs-section .artist-songs {
+        width: 100%; } }
 
 @media (min-width: 768px) {
   .mobile-only {
