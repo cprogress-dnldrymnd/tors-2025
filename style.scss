@@ -1616,6 +1616,7 @@ input:checked + .slider.slider:before {
       display: flex;
       gap: 20px;
       flex-direction: column;
+      align-items: center;
       h3 {
         font-size: 25px;
         font-weight: bold;
