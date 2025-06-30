@@ -50,3 +50,11 @@ Container::make('post_meta', 'Audio')
       Field::make('text', 'read_time', __('Read Time'))
     )
   );
+
+
+
+Container::make('term_meta', __('Artists Properties'))
+  ->where('term_taxonomy', '=', 'category')
+  ->add_fields(array(
+    Field::make('image', 'image', __('Image')),
+  ));
