@@ -1612,6 +1612,7 @@ input:checked + .slider.slider:before {
       font-size: 20px;
       font-weight: 400;
       text-decoration: underline;
+      cursor: pointer;
     }
   }
   .artist-details {
