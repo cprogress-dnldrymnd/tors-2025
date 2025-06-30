@@ -192,7 +192,7 @@ $query = new WP_Query($args);
             // const currentTime = wavesurfer.getCurrentTime();
             const $totalTime = WaveSurfer_TORS[$id].getDuration();
 
-            document.getElementById($duration).innerText = formatTime(totalTime);
+            document.getElementById($duration).innerText = $totalTime;
 
             return WaveSurfer_TORS[$id];
 
