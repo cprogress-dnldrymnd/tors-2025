@@ -116,11 +116,11 @@ $query = new WP_Query($args);
         jQuery('.switch-input').each(function(index, element) {
             jQuery(this).change(function(e) {
                 if (jQuery(this).is(":checked")) {
-                    jQuery(this).parents('.audio-box-wrapper').removeClass('before-active').addClass('after-active');
-                    jQuery(this).parents('.audio-box-wrapper').find('.audio-box').addClass('active').removeClass('active');
+                    jQuery(this).parents('.audio-player--parent').removeClass('before-active').addClass('after-active');
+                    jQuery(this).parents('.audio-player--parent').find('.audio-box').addClass('active').removeClass('active');
                 } else {
-                    jQuery(this).parents('.audio-box-wrapper').addClass('before-active').removeClass('after-active');
-                    jQuery(this).parents('.audio-box-wrapper').find('.audio-box').removeClass('active').addClass('active');
+                    jQuery(this).parents('.audio-player--parent').addClass('before-active').removeClass('after-active');
+                    jQuery(this).parents('.audio-player--parent').find('.audio-box').removeClass('active').addClass('active');
 
                 }
                 e.preventDefault();
