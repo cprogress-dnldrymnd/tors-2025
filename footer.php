@@ -148,6 +148,11 @@ $query = new WP_Query($args);
                     e.preventDefault();
                 });
             });
+
+            jQuery('.show-all-song').click(function (e) { 
+                jQuery(this).parents('.artist-songs--holder').addClass('show-all');
+                e.preventDefault();
+            });
         });
 
         function formatTime(time) {
