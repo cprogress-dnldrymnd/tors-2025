@@ -66,13 +66,21 @@ function audio_box($atts)
 }
 add_shortcode('audio_box', 'audio_box');
 
-function audio_toggle()
+function audio_toggle($atts)
 {
     ob_start();
+    extract(
+        shortcode_atts(
+            array(
+                'class' => '',
+            ),
+            $atts
+        )
+    );
     ?>
     <div class="audio-toggle d-flex align-items-center">
         <span class="toggle-label toggle-label--before">Before</span>
-        <label class="switch" for="before-after-<?= get_the_ID() ?>"> <input class="switch-input" type="checkbox" id="before-after-<?= get_the_ID() ?>" name="before-after-<?= get_the_ID() ?>"> <span class="slider round"></span> </label>
+        <label class="switch" for="before-after-<?= $class . get_the_ID() ?>"> <input class="switch-input" type="checkbox" id="before-after-<?= $class . get_the_ID() ?>" name="before-after-<?= $class . get_the_ID() ?>"> <span class="slider round"></span> </label>
         <span class="toggle-label toggle-label--after">After</span>
     </div>
 <?php
