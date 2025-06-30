@@ -199,9 +199,7 @@ $query = new WP_Query($args);
                 var $current_time = '#' + $id + '-current-time .elementor-heading-title';
                 var $duration = '#' + $id + '-duration .elementor-heading-title';
                 const $totalTime = WaveSurfer_TORS[$id].getDuration();
-                jQuery($duration).text($totalTime);
-                console.log($totalTime);
-                console.log($duration);
+                jQuery($duration).text(formatTime($totalTime));
             });
 
             WaveSurfer_TORS[$id].on('audioprocess', function() {
