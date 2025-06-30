@@ -295,21 +295,24 @@ function test()
 
             echo '<div class="audio-player--player-holder">';
 
-            echo '<div class="audio-player--player audio-before">';
+            echo '<div class="play-pause-btn-holder">';
+            echo '<div class="play-pause-btn play"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16"> <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/> </svg></div>';
+            echo '<div class="play-pause-btn pause"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause-fill" viewBox="0 0 16 16"> <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5"/> </svg></div>';
+            echo '</div>';
 
+            echo '<div class="audio-player--player audio-before">';
             echo do_shortcode('[audio_box audio_type="before"]');
             echo '</div>';
 
-            echo '<div class="audio-player--player audio-after">';
-            echo do_shortcode('[audio_box audio_type="after"]');
-            echo '</div>';
-
-            echo '</div>';
 
             echo '<div class="audio-player--timer">';
             echo '<div class="audio-current-time" id="audio--duration"></div>';
             echo '<div class="audio-duration" id="audio--current-time"></div>';
             echo '</div>';
+
+
+            echo '</div>';
+
 
 
             echo '</div>';
