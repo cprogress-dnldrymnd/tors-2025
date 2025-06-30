@@ -365,7 +365,7 @@ function recordings_by_genres_artists($atts)
         }
 
         if ($query_recordings_count > 1) {
-            echo '<div class="show-all-artists-song">';
+            echo '<div class="show-all-artists-song desktop-only">';
             echo '<a class="show-all-song">Show All</a>';
             echo '</div>';
         }
