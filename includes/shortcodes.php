@@ -238,10 +238,18 @@ function create_my_woocommerce_product($product_name, $product_sku, $product_pri
     }
 }
 
-function test()
+function test($atts)
 {
     ob_start();
-    $artists = get__artists_by_genre('alternative');
+    extract(
+        shortcode_atts(
+            array(
+                'genre' => 'alternative',
+            ),
+            $atts
+        )
+    );
+    $artists = get__artists_by_genre($alternative);
     foreach ($artists as $artist) {
 
         $image = carbon_get_term_meta($artist['term_id'], 'image');
