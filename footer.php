@@ -196,11 +196,14 @@ $query = new WP_Query($args);
                 jQuery('#' + $id).parents('.audio-player--player').removeClass('playing');
 
             });
-
-            WaveSurfer_TORS[$id].on('audioprocess', function() {
+            wavesurfer.on('ready', function() {
                 const $totalTime = WaveSurfer_TORS[$id].getDuration();
                 document.querySelector($duration).innerText = formatTime($totalTime);
                 console.log($totalTime);
+            });
+
+            WaveSurfer_TORS[$id].on('audioprocess', function() {
+
 
                 if (WaveSurfer_TORS[$id].isPlaying()) {
                     const $currentTime = WaveSurfer_TORS[$id].getCurrentTime();
