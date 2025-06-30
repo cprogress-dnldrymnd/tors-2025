@@ -1613,6 +1613,17 @@ input:checked + .slider.slider:before {
     }
     .artist-details--content {
       width: 60%;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      h3 {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      i {
+        color: var(--e-global-color-accent);
+        font-size: 48px;
+      }
     }
   }
   .artist-songs {
