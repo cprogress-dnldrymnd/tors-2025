@@ -149,8 +149,15 @@ $query = new WP_Query($args);
                 });
             });
 
-            jQuery('.show-all-song').click(function (e) { 
-                jQuery(this).parents('.artist-songs--holder').addClass('show-all');
+            jQuery('.show-all-song').click(function(e) {
+                if (jQuery(this).parents('.artist-songs--holder').hasClass('show-all')) {
+                    jQuery(this).text('Show All');
+                    jQuery(this).parents('.artist-songs--holder').removeClass('show-all');
+                } else {
+                    jQuery(this).text('Show Less');
+                    jQuery(this).parents('.artist-songs--holder').addClass('show-all');
+                }
+
                 e.preventDefault();
             });
         });
