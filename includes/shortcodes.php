@@ -291,9 +291,9 @@ function test()
             echo '</div>';
             echo '</div>';
 
-            echo '<div class="artist-songs--body">';
+            echo '<div class="artist-songs--body audio-before">';
 
-            echo '<div class="audio-player--player-holder audio-before">';
+            echo '<div class="audio-player--player-holder">';
 
             echo '<div class="play-pause-btn-holder">';
             echo '<div class="play-pause-btn play" target="' . $before_audio . '"><i aria-hidden="true" class="fas fa-play"></i></div>';
