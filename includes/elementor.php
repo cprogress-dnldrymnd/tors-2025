@@ -4,6 +4,7 @@ function get__artists_by_genre($genre)
     $recordings = get_posts(array(
         'post_type' => 'recordings',
         'fields' => 'ids',
+        'numberposts' => -1,
         'tax_query' => array(
             array(
                 'taxonomy' => 'genres',
