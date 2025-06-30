@@ -1648,6 +1648,19 @@ input:checked + .slider.slider:before {
         }
         .audio-player--timer {
           width: 200px;
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          justify-content: flex-end;
+          font-size: 20px;
+          font-weight: bold;
+          .audio-current-time {
+            color: var(--white-color);
+          }
+          .audio-duration {
+            color: var( --e-global-color-accent );
+          }
+
         }
       }
       &:not(.show-all) {

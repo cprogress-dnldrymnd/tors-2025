@@ -1240,7 +1240,17 @@ input:checked + .slider.slider:before {
         .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .audio-player--player {
           width: calc(100% - 120px - 200px); }
         .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .audio-player--timer {
-          width: 200px; }
+          width: 200px;
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          justify-content: flex-end;
+          font-size: 20px;
+          font-weight: bold; }
+          .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .audio-player--timer .audio-current-time {
+            color: var(--white-color); }
+          .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .audio-player--timer .audio-duration {
+            color: var(--e-global-color-accent); }
       .artists-songs-section .artist-songs .artist-songs--holder:not(.show-all) > .artist-songs--box:not(:first-child) {
         display: none; }
 

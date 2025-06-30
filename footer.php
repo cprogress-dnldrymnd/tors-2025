@@ -195,14 +195,14 @@ $query = new WP_Query($args);
 
             });
             WaveSurfer_TORS[$id].on('ready', function() {
-                var $duration = '#' + $id + '-duration .elementor-heading-title';
+                var $duration = '#' + $id + '-duration';
                 const $totalTime = WaveSurfer_TORS[$id].getDuration();
                 jQuery($duration).text(formatTime($totalTime));
             });
 
             WaveSurfer_TORS[$id].on('audioprocess', function() {
                 if (WaveSurfer_TORS[$id].isPlaying()) {
-                    var $current_time = '#' + $id + '-current-time .elementor-heading-title';
+                    var $current_time = '#' + $id + '-current-time';
                     const $currentTime = WaveSurfer_TORS[$id].getCurrentTime();
                     jQuery($current_time).text(formatTime($currentTime));
 
