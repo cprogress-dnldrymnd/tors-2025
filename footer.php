@@ -203,11 +203,9 @@ $query = new WP_Query($args);
 
             WaveSurfer_TORS[$id].on('audioprocess', function() {
 
-
                 if (WaveSurfer_TORS[$id].isPlaying()) {
                     var $current_time = '#' + $id + '-current-time .elementor-heading-title';
                     const $currentTime = WaveSurfer_TORS[$id].getCurrentTime();
-x
                     jQuery($current_time).text(formatTime($currentTime));
 
                 }
