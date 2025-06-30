@@ -143,8 +143,6 @@ $query = new WP_Query($args);
                 var $target = jQuery(this).attr('target');
                 jQuery(this).click(function(e) {
                     $target_val = 'audio-' + $target;
-                    console.log($target_val);
-
                     WaveSurfer_TORS[$target_val].playPause();
                     jQuery(this).parents('.audio-player--player').toggleClass('playing');
                     e.preventDefault();
@@ -200,7 +198,7 @@ $query = new WP_Query($args);
             });
             // const currentTime = wavesurfer.getCurrentTime();
             const $totalTime = WaveSurfer_TORS[$id].getDuration();
-
+            console.log($totalTime);
             document.querySelector($duration).innerText = formatTime($totalTime);
 
             return WaveSurfer_TORS[$id];
