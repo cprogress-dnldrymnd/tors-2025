@@ -254,11 +254,21 @@ function test()
             ),
         );
         $query_recordings = new WP_Query($args);
+
+        echo '<section>';
+        echo '<div class="artist-details">';
+        echo do_shortcode('[elementor-template id="2130"]');
+        echo '</div>';
+        echo '<div class="artist-songs">';
         while ($query_recordings->have_posts()) {
             $query_recordings->the_post();
             echo do_shortcode('[elementor-template id="1324"]');
         }
+        echo '</div>';
+
         wp_reset_postdata();
+
+        echo '</section>';
     }
     return ob_get_clean();
 }
