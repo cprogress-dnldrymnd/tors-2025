@@ -25,6 +25,6 @@ function get__artists_by_genre($genre)
 function my_query_by_post_types($query)
 {
     $artists = get__artists_by_genre('alternative');
-    $query->set('taxonomy', ['artists']);
+    $query->set('taxonomy', 'artists');
 }
 add_action('elementor/query/query_genre_alternatives', 'my_query_by_post_types');
