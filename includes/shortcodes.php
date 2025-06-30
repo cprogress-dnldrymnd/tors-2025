@@ -282,7 +282,7 @@ function test()
             $query_recordings->the_post();
             $before_audio = carbon_get_the_post_meta('before_audio');
             $after_audio = carbon_get_the_post_meta('after_audio');
-            echo '<div class="artist-songs--box audio-player--parent before-active audio-player--player audio-before">';
+            echo '<div class="artist-songs--box audio-player--parent before-active audio-player--player">';
             echo '<div class="artist-songs--inner">';
             echo '<div class="artist-songs--title">';
             echo '<h4>' . get_the_title() . '</h4>';
@@ -293,7 +293,7 @@ function test()
 
             echo '<div class="artist-songs--body">';
 
-            echo '<div class="audio-player--player-holder">';
+            echo '<div class="audio-player--player-holder audio-before">';
 
             echo '<div class="play-pause-btn-holder">';
             echo '<div class="play-pause-btn play" target="' . $before_audio . '"><i aria-hidden="true" class="fas fa-play"></i></div>';
