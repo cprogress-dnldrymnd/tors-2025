@@ -196,7 +196,6 @@ $query = new WP_Query($args);
 
             });
             WaveSurfer_TORS[$id].on('ready', function() {
-                var $current_time = '#' + $id + '-current-time .elementor-heading-title';
                 var $duration = '#' + $id + '-duration .elementor-heading-title';
                 const $totalTime = WaveSurfer_TORS[$id].getDuration();
                 jQuery($duration).text(formatTime($totalTime));
@@ -206,9 +205,11 @@ $query = new WP_Query($args);
 
 
                 if (WaveSurfer_TORS[$id].isPlaying()) {
+                    var $current_time = '#' + $id + '-current-time .elementor-heading-title';
                     const $currentTime = WaveSurfer_TORS[$id].getCurrentTime();
+x
+                    jQuery($current_time).text(formatTime($currentTime));
 
-                    //  document.getElementById('current-time').innerText = formatTime(currentTime);
                 }
             });
             return WaveSurfer_TORS[$id];
