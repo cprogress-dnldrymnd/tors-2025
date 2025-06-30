@@ -153,9 +153,15 @@ $query = new WP_Query($args);
             console.log(WaveSurfer_TORS);
         });
 
+        function formatTime(time) {
+            const minutes = Math.floor(time / 60);
+            const seconds = Math.floor(time % 60);
+            return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }
+
         function wavesurfer($id, $url, ) {
             // With pre-decoded audio data
-            $current_time = $id + '-current-time';
+            $current_time = $id + '-current-time .elementor-heading-title';
             $duration = $id + '-duration';
             WaveSurfer_TORS[$id] = WaveSurfer.create({
                 "container": document.getElementById($id),
@@ -192,7 +198,7 @@ $query = new WP_Query($args);
             // const currentTime = wavesurfer.getCurrentTime();
             const $totalTime = WaveSurfer_TORS[$id].getDuration();
 
-            document.getElementById($duration).innerText = $totalTime;
+            document.querySelector($duration).innerText = formatTime($totalTime);
 
             return WaveSurfer_TORS[$id];
 
