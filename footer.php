@@ -161,8 +161,8 @@ $query = new WP_Query($args);
 
         function wavesurfer($id, $url, ) {
             // With pre-decoded audio data
-            $current_time = $id + '-current-time .elementor-heading-title';
-            $duration = $id + '-duration';
+            $current_time = '#' + $id + '-current-time .elementor-heading-title';
+            $duration = '#' + $id + '-duration .elementor-heading-title';
             WaveSurfer_TORS[$id] = WaveSurfer.create({
                 "container": document.getElementById($id),
                 "height": 50,
