@@ -200,10 +200,10 @@ $query = new WP_Query($args);
             WaveSurfer_TORS[$id].on('audioprocess', function() {
                 const $totalTime = WaveSurfer_TORS[$id].getDuration();
                 document.querySelector($duration).innerText = formatTime($totalTime);
+                console.log($totalTime);
 
                 if (WaveSurfer_TORS[$id].isPlaying()) {
                     const $currentTime = WaveSurfer_TORS[$id].getCurrentTime();
-                    console.log($totalTime);
 
                     //  document.getElementById('current-time').innerText = formatTime(currentTime);
                 }
