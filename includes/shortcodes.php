@@ -241,15 +241,15 @@ function create_my_woocommerce_product($product_name, $product_sku, $product_pri
 function test()
 {
     ob_start();
-    $alternative = get__artists_by_genre('alternative');
-    foreach ($alternative as $alt) {
+    $artists = get__artists_by_genre('alternative');
+    foreach ($artists as $artist) {
         $args = array(
             'post_type' => 'recordings',
             'tax_query' => array(
                 array(
                     'taxonomy' => 'artists',
                     'field' => 'slug',
-                    'terms' => $alt,
+                    'terms' => $artist['slug'],
                 ),
             ),
         );
@@ -257,7 +257,18 @@ function test()
 
         echo '<section>';
         echo '<div class="artist-details">';
-        echo do_shortcode('[elementor-template id="2130"]');
+
+        echo '<div class="artist-details--image">';
+
+        echo '</div>';
+
+
+        echo '<div class="artist-details--content">';
+
+        echo '<h3>' . $artist['name'] . '</h3>';
+
+        echo '</div>';
+
         echo '</div>';
         echo '<div class="artist-songs">';
         while ($query_recordings->have_posts()) {

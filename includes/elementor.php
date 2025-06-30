@@ -17,7 +17,11 @@ function get__artists_by_genre($genre)
     foreach ($recordings as $recording) {
         $artists = get_the_terms($recording, 'artists');
         foreach ($artists as $artist) {
-            $artists_arr[] = $artist->slug;
+            $artists_arr[] = array(
+                'term_id' => $artist->term_id,
+                'slug' => $artist->slug,
+                'name' => $artist->name,
+            );
         }
     }
     return array_unique($artists_arr);
