@@ -1201,6 +1201,13 @@ input:checked + .slider.slider:before {
 .artists-songs-section {
   display: flex;
   gap: 30px; }
+  .artists-songs-section .show-all-artists-song {
+    text-align: right; }
+    .artists-songs-section .show-all-artists-song a {
+      color: var(--white-color);
+      font-size: 20px;
+      font-weight: 400;
+      text-decoration: underline; }
   .artists-songs-section .artist-details {
     width: 33.3333%;
     display: flex;
