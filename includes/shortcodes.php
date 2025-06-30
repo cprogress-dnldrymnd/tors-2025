@@ -254,19 +254,10 @@ function test()
             ),
         );
         $query_recordings = new WP_Query($args);
-        echo $alt;
-        echo '<br>';
-
         while ($query_recordings->have_posts()) {
             $query_recordings->the_post();
-
-            echo get_the_title();
-            echo '<br>';
-            //echo do_shortcode('[elementor-template id="1324"]');
+            echo do_shortcode('[elementor-template id="1324"]');
         }
-        echo '<br>';
-        echo '<br>';
-
         wp_reset_postdata();
     }
     return ob_get_clean();
