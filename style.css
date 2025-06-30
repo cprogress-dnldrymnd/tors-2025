@@ -1211,6 +1211,10 @@ input:checked + .slider.slider:before {
     @media (max-width: 991px) {
       .artists-songs-section .artists-songs-section-inner {
         flex-direction: column; } }
+    @media (max-width: 575px) {
+      .artists-songs-section .artists-songs-section-inner {
+        gap: 0;
+        border: 1px solid rgba(112, 112, 112, 0.51); } }
   .artists-songs-section .show-all-artists-song {
     text-align: right; }
     .artists-songs-section .show-all-artists-song a {
@@ -1248,15 +1252,21 @@ input:checked + .slider.slider:before {
     @media (max-width: 991px) {
       .artists-songs-section .artist-details {
         width: 100%; } }
+    @media (max-width: 575px) {
+      .artists-songs-section .artist-details {
+        padding: 15px;
+        gap: 22px; } }
   .artists-songs-section .artist-songs {
     width: 66.6666%; }
     .artists-songs-section .artist-songs .artist-songs--holder {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      background-color: var(--e-global-color-cea108a);
-      border-radius: 10px;
-      padding: 30px; }
+      gap: 20px; }
+      @media (max-width: 575px) {
+        .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--box .artist-songs--inner {
+          background-color: var(--e-global-color-cea108a);
+          border-radius: 10px;
+          padding: 30px; } }
       .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--title {
         margin-bottom: 20px;
         display: flex;
@@ -1267,6 +1277,9 @@ input:checked + .slider.slider:before {
           color: var(--white-color);
           font-size: 25px;
           font-weight: 400; }
+          @media (max-width: 575px) {
+            .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--title h4 {
+              font-size: 20px; } }
       .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder {
         display: flex;
         align-items: center;
@@ -1295,6 +1308,11 @@ input:checked + .slider.slider:before {
             color: var(--e-global-color-accent); }
       .artists-songs-section .artist-songs .artist-songs--holder:not(.show-all) > .artist-songs--box:not(:first-child) {
         display: none; }
+      @media (min-width: 576px) {
+        .artists-songs-section .artist-songs .artist-songs--holder {
+          background-color: var(--e-global-color-cea108a);
+          border-radius: 10px;
+          padding: 30px; } }
     @media (max-width: 991px) {
       .artists-songs-section .artist-songs {
         width: 100%; } }
