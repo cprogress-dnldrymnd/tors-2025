@@ -256,6 +256,7 @@ function test()
         $query = new WP_Query($args);
         while ($query->have_posts()) {
             echo get_the_title();
+            echo do_shortcode('[elementor-template id="1324"]');
             $query->the_post();
         }
         wp_reset_postdata();
