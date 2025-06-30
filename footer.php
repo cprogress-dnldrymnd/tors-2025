@@ -148,7 +148,6 @@ $query = new WP_Query($args);
                     e.preventDefault();
                 });
             });
-            console.log(WaveSurfer_TORS);
         });
 
         function formatTime(time) {
