@@ -1200,7 +1200,6 @@ input:checked + .slider.slider:before {
 
 .artists-songs-section {
   display: flex;
-  align-items: center;
   gap: 30px; }
   .artists-songs-section .artist-details {
     width: 33.3333%;
@@ -1208,6 +1207,9 @@ input:checked + .slider.slider:before {
     gap: 40px; }
     .artists-songs-section .artist-details .artist-details--image {
       width: 40%; }
+      .artists-songs-section .artist-details .artist-details--image .image--style {
+        border-radius: 10px;
+        overflow: hidden; }
     .artists-songs-section .artist-details .artist-details--content {
       width: 60%; }
   .artists-songs-section .artist-songs {
