@@ -1599,16 +1599,18 @@ input:checked + .slider.slider:before {
 }
 
 .header-area.header-area {
+  padding-left: 10px;
+      padding-right: 10px;
   .container {
     padding-left: 10px;
     padding-right: 10px;
   }
   .row {
-    margin-left: -10px;
-    margin-left: -10px;
+    margin-left: 0;
+    margin-left: 0;
     > div {
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

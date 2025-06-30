@@ -1196,14 +1196,17 @@ input:checked + .slider.slider:before {
   .e-con.e-con {
     --content-width: 1670px !important; } }
 
-.header-area.header-area .container {
+.header-area.header-area {
   padding-left: 10px;
   padding-right: 10px; }
-.header-area.header-area .row {
-  margin-left: -10px;
-  margin-left: -10px; }
-  .header-area.header-area .row > div {
+  .header-area.header-area .container {
     padding-left: 10px;
     padding-right: 10px; }
+  .header-area.header-area .row {
+    margin-left: 0;
+    margin-left: 0; }
+    .header-area.header-area .row > div {
+      padding-left: 0;
+      padding-right: 0; }
 
 /*# sourceMappingURL=style.css.map */
