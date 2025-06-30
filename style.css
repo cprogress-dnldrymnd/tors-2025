@@ -1268,6 +1268,11 @@ input:checked + .slider.slider:before {
           background-color: var(--e-global-color-cea108a);
           border-radius: 10px;
           padding: 30px; } }
+      @media (max-width: 575px) {
+        .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--box {
+          display: flex;
+          flex-direction: column;
+          gap: 15px; } }
       .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--title {
         margin-bottom: 20px;
         display: flex;

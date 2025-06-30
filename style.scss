@@ -1678,6 +1678,11 @@ input:checked + .slider.slider:before {
             padding: 30px;
           }
         }
+        @media (max-width: 575px) {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
       }
       .artist-songs--title {
         margin-bottom: 20px;
