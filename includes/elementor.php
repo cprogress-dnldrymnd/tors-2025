@@ -22,9 +22,9 @@ function get__artists_by_genre($genre)
     }
     return $artists_arr;
 }
-function my_query_by_post_types($query)
+function query_genre_alternatives($query)
 {
     $artists = get__artists_by_genre('alternative');
     $query->set('taxonomy', 'artists');
 }
-add_action('elementor/query/query_genre_alternatives', 'my_query_by_post_types');
+add_action('elementor/query/query_genre_alternatives', 'query_genre_alternatives');
