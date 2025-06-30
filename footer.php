@@ -146,6 +146,7 @@ $query = new WP_Query($args);
                     console.log($target_val);
 
                     WaveSurfer_TORS[$target_val].playPause();
+                    jQuery(this).parents('.audio-player--parent').toggleClass('playing');
                     e.preventDefault();
                 });
             });
