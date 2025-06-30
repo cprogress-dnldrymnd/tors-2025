@@ -308,6 +308,29 @@ function test()
             echo '<div class="audio-duration" id="audio-' . $before_audio . '-duration">00:00</div>';
             echo '</div>';
 
+            echo '</div>';
+
+
+
+            echo '</div>';
+
+
+             echo '<div class="artist-songs--body audio-after">';
+
+            echo '<div class="audio-player--player-holder">';
+
+            echo '<div class="play-pause-btn-holder">';
+            echo '<div class="play-pause-btn play" target="' . $after_audio . '"><i aria-hidden="true" class="fas fa-play"></i></div>';
+            echo '<div class="play-pause-btn pause" target="' . $after_audio . '><i aria-hidden="true" class="fas fa-pause"></i></div>';
+            echo '</div>';
+
+            echo do_shortcode('[audio_box audio_type="after"]');
+
+
+            echo '<div class="audio-player--timer">';
+            echo '<div class="audio-current-time" id="audio-' . $after_audio . '-current-time">00:00</div>';
+            echo '<div class="audio-duration" id="audio-' . $after_audio . '-duration">00:00</div>';
+            echo '</div>';
 
             echo '</div>';
 
