@@ -1237,6 +1237,9 @@ input:checked + .slider.slider:before {
         gap: 20px; }
         .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .play-pause-btn-holder {
           width: 120px; }
+          .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .play-pause-btn-holder i {
+            font-size: 50px;
+            color: var(--white-color); }
           .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .play-pause-btn-holder svg {
             color: var(--white-color);
             width: 50px; }

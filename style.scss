@@ -1642,6 +1642,11 @@ input:checked + .slider.slider:before {
         gap: 20px;
         .play-pause-btn-holder {
           width: 120px;
+          i {
+            font-size: 50px;
+            color: var(--white-color);
+
+          }
           svg {
             color: var(--white-color);
             width: 50px;
