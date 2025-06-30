@@ -244,7 +244,7 @@ function test()
     $alternative = get__artists_by_genre('alternative');
     foreach ($alternative as $alt) {
         $args = array(
-            'post_type' => 'post',
+            'post_type' => 'recordings',
             'tax_query' => array(
                 array(
                     'taxonomy' => 'artists',
