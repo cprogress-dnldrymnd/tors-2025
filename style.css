@@ -1206,5 +1206,9 @@ input:checked + .slider.slider:before {
     width: 33.3333%; }
   .artists-songs-section .artist-songs {
     width: 66.6666%; }
+    .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--box {
+      background-color: var(--e-global-color-cea108a);
+      border-radius: 10px;
+      padding: 20px; }
 
 /*# sourceMappingURL=style.css.map */
