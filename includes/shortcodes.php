@@ -291,8 +291,6 @@ function test()
 
             echo '<div class="artist-songs--body">';
 
-
-
             echo '<div class="audio-player--player-holder">';
 
             echo '<div class="audio-player--player audio-before">';

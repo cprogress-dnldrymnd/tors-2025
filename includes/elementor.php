@@ -22,6 +22,7 @@ function get__artists_by_genre($genre)
                 'term_id' => $artist->term_id,
                 'slug' => $artist->slug,
                 'name' => $artist->name,
+                'description' => $artist->description,
             );
         }
     }
