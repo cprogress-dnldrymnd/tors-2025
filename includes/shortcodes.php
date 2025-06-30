@@ -240,6 +240,8 @@ function create_my_woocommerce_product($product_name, $product_sku, $product_pri
 
 function test()
 {
+            echo do_shortcode('[elementor-template id="2145"]');
+
     ob_start();
     $artists = get__artists_by_genre('alternative');
     foreach ($artists as $artist) {
