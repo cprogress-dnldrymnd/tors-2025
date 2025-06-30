@@ -1224,7 +1224,8 @@ input:checked + .slider.slider:before {
         align-items: center;
         justify-content: space-between; }
         .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--title h4 {
-          color: var(--white-color); }
+          color: var(--white-color);
+          font-size: 25px; }
       .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--inner {
         background-color: var(--e-global-color-cea108a);
         border-radius: 10px;

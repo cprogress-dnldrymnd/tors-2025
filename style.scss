@@ -1628,6 +1628,7 @@ input:checked + .slider.slider:before {
         justify-content: space-between;
         h4 {
           color: var(--white-color);
+          font-size: 25px;
         }
       }
       .artist-songs--inner {
