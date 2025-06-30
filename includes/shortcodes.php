@@ -253,11 +253,11 @@ function test()
                 ),
             ),
         );
-        $query = new WP_Query($args);
-        while ($query->have_posts()) {
+        $query_recordings = new WP_Query($args);
+        while ($query_recordings->have_posts()) {
+            $query_recordings->the_post();
             echo get_the_title();
             echo do_shortcode('[elementor-template id="1324"]');
-            $query->the_post();
         }
         wp_reset_postdata();
     }
