@@ -26,7 +26,7 @@ function get__artists_by_genre($genre)
             );
         }
     }
-    return array_unique($artists_arr);
+    return $artists_arr;
 }
 function query_genre_alternatives($query)
 {
