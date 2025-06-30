@@ -1603,12 +1603,14 @@ input:checked + .slider.slider:before {
   gap: 30px;
   .artist-details {
     width: 33.3333%;
+    display: flex;
+    gap: 40px;
   }
   .artist-songs {
     width: 66.6666%;
     .artist-songs--holder {
       .artist-songs--box {
-        background-color: var( --e-global-color-cea108a );
+        background-color: var(--e-global-color-cea108a);
         border-radius: 10px;
         padding: 20px;
       }

@@ -1203,7 +1203,9 @@ input:checked + .slider.slider:before {
   align-items: center;
   gap: 30px; }
   .artists-songs-section .artist-details {
-    width: 33.3333%; }
+    width: 33.3333%;
+    display: flex;
+    gap: 40px; }
   .artists-songs-section .artist-songs {
     width: 66.6666%; }
     .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--box {
