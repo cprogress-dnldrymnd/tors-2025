@@ -249,7 +249,7 @@ function recordings_by_genres_artists($atts)
             $atts
         )
     );
-    $artists = get__artists_by_genre($alternative);
+    $artists = get__artists_by_genre($genre);
     foreach ($artists as $artist) {
 
         $image = carbon_get_term_meta($artist['term_id'], 'image');
