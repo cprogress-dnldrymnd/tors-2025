@@ -1636,6 +1636,13 @@ input:checked + .slider.slider:before {
           font-weight: 400;
         }
       }
+      &:not(.show-all) {
+        > .artist-songs--box {
+          &:not(:first-child) {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
