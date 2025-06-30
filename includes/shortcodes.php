@@ -306,8 +306,8 @@ function test()
 
 
             echo '<div class="audio-player--timer">';
-            echo '<div class="audio-current-time" id="audio--duration"></div>';
-            echo '<div class="audio-duration" id="audio--current-time"></div>';
+            echo '<div class="audio-current-time" id="audio-' . $before_audio . '-duration">00:00</div>';
+            echo '<div class="audio-duration" id="audio-' . $before_audio . '-current-time">00:00</div>';
             echo '</div>';
 
 
