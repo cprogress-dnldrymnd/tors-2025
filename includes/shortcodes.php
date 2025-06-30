@@ -262,10 +262,12 @@ function test()
         echo '<div class="artist-details">';
 
         echo '<div class="artist-details--image">';
-        echo '<div class="image--style"></div>';
+        echo '<div class="image--style">';
         echo wp_get_attachment_image($image, 'medium');
         echo '</div>';
         echo '</div>';
+
+        
 
         echo '<div class="artist-details--content">';
 
