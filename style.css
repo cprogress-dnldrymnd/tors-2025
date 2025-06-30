@@ -1217,7 +1217,10 @@ input:checked + .slider.slider:before {
     .artists-songs-section .artist-songs .artist-songs--holder {
       display: flex;
       flex-direction: column;
-      gap: 20px; }
+      gap: 20px;
+      background-color: var(--e-global-color-cea108a);
+      border-radius: 10px;
+      padding: 20px; }
       .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--title {
         display: flex;
         gap: 20px;
@@ -1226,9 +1229,5 @@ input:checked + .slider.slider:before {
         .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--title h4 {
           color: var(--white-color);
           font-size: 25px; }
-      .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--holder {
-        background-color: var(--e-global-color-cea108a);
-        border-radius: 10px;
-        padding: 20px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1621,6 +1621,9 @@ input:checked + .slider.slider:before {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      background-color: var(--e-global-color-cea108a);
+      border-radius: 10px;
+      padding: 20px;
       .artist-songs--title {
         display: flex;
         gap: 20px;
@@ -1631,11 +1634,7 @@ input:checked + .slider.slider:before {
           font-size: 25px;
         }
       }
-      .artist-songs--holder {
-        background-color: var(--e-global-color-cea108a);
-        border-radius: 10px;
-        padding: 20px;
-      }
+   
     }
   }
 }
