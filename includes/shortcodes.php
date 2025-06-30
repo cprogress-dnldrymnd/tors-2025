@@ -244,11 +244,18 @@ function recordings_by_genres_artists($atts)
     extract(
         shortcode_atts(
             array(
-                'genre' => 'alternative',
+                'genre' => 'current_object',
             ),
             $atts
         )
     );
+
+    if ($genre == 'current_object') {
+        $genre = get_queried_object()->slug;
+    } else {
+        $genre = $genre;
+    }
+
     $artists = get__artists_by_genre($genre);
     echo '<section class="artists-songs-section">';
 
