@@ -1603,6 +1603,7 @@ input:checked + .slider.slider:before {
   .artists-songs-section-inner {
     display: flex;
     gap: 30px;
+    align-items: flex-start;
     @media (max-width: 991px) {
       flex-direction: column;
     }

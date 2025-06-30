@@ -1207,7 +1207,8 @@ input:checked + .slider.slider:before {
   flex-direction: column; }
   .artists-songs-section .artists-songs-section-inner {
     display: flex;
-    gap: 30px; }
+    gap: 30px;
+    align-items: flex-start; }
     @media (max-width: 991px) {
       .artists-songs-section .artists-songs-section-inner {
         flex-direction: column; } }
