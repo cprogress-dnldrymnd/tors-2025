@@ -1605,7 +1605,13 @@ input:checked + .slider.slider:before {
   }
 }
 
-.header-area {
-  padding-left: 10px;
-  padding-left: 10px;
+.header-area.header-area {
+  .row {
+    margin-left: -10px;
+    margin-left: -10px;
+    > div {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
 }
