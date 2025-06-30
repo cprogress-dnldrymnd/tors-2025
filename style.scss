@@ -1604,6 +1604,8 @@ input:checked + .slider.slider:before {
     width: 33.3333%;
     display: flex;
     gap: 40px;
+    align-items: center;
+
     .artist-details--image {
       width: 40%;
       .image--style {
@@ -1616,7 +1618,6 @@ input:checked + .slider.slider:before {
       display: flex;
       gap: 20px;
       flex-direction: column;
-      align-items: center;
       h3 {
         font-size: 25px;
         font-weight: bold;
@@ -1664,7 +1665,6 @@ input:checked + .slider.slider:before {
           i {
             font-size: 50px;
             color: var(--white-color);
-
           }
           svg {
             color: var(--white-color);
@@ -1686,9 +1686,8 @@ input:checked + .slider.slider:before {
             color: var(--white-color);
           }
           .audio-duration {
-            color: var( --e-global-color-accent );
+            color: var(--e-global-color-accent);
           }
-
         }
       }
       &:not(.show-all) {
