@@ -273,7 +273,7 @@ function test()
         echo '<div class="artist-songs">';
         while ($query_recordings->have_posts()) {
             $query_recordings->the_post();
-            echo do_shortcode('[elementor-template id="1324"]');
+            echo do_shortcode('[elementor-template id="2145"]');
         }
         echo '</div>';
 
