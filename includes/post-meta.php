@@ -54,7 +54,7 @@ Container::make('post_meta', 'Audio')
 
 
 Container::make('term_meta', __('Artists Properties'))
-  ->where('term_taxonomy', '=', 'category')
+  ->where('term_taxonomy', '=', 'artists')
   ->add_fields(array(
     Field::make('image', 'image', __('Image')),
   ));
