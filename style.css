@@ -1226,7 +1226,7 @@ input:checked + .slider.slider:before {
         .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--title h4 {
           color: var(--white-color);
           font-size: 25px; }
-      .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--inner {
+      .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--holder {
         background-color: var(--e-global-color-cea108a);
         border-radius: 10px;
         padding: 20px; }
