@@ -12,6 +12,21 @@ Text Domain:  tors-child
   --dark-color: #151515;
   --black-color: #000;
   --text-color: #666666; }
+  @media (min-width: 1300px) {
+    :root {
+      --content-width-var: 1270px !important; } }
+  @media (min-width: 1400px) {
+    :root {
+      --content-width-var: 1370px !important; } }
+  @media (min-width: 1500px) {
+    :root {
+      --content-width-var: 1470px !important; } }
+  @media (min-width: 1600px) {
+    :root {
+      --content-width-var: 1570px !important; } }
+  @media (min-width: 1700px) {
+    :root {
+      --content-width-var: 1670px !important; } }
 
 body {
   font-family: "CircularStd", sans-serif !important; }
@@ -508,21 +523,8 @@ section.home-about-area .content ul + a {
     margin-right: 10px;
     border-radius: 3px; }
 
-@media (min-width: 1300px) {
-  .container.large-container {
-    max-width: 1270px; } }
-@media (min-width: 1400px) {
-  .container.large-container {
-    max-width: 1370px; } }
-@media (min-width: 1500px) {
-  .container.large-container {
-    max-width: 1470px; } }
-@media (min-width: 1600px) {
-  .container.large-container {
-    max-width: 1570px; } }
-@media (min-width: 1700px) {
-  .container.large-container {
-    max-width: 1670px; } }
+.container.large-container {
+  max-width: var(--content-width-var) !important; }
 
 @media (min-width: 768px) {
   .header-area.header-area #menu-toggle {
@@ -1180,21 +1182,8 @@ input:checked + .slider.slider:before {
     width: 100%;
     height: 100%;
     object-fit: cover; } }
-@media (min-width: 1300px) {
-  .e-con.e-con {
-    --content-width: 1270px !important; } }
-@media (min-width: 1400px) {
-  .e-con.e-con {
-    --content-width: 1370px !important; } }
-@media (min-width: 1500px) {
-  .e-con.e-con {
-    --content-width: 1470px !important; } }
-@media (min-width: 1600px) {
-  .e-con.e-con {
-    --content-width: 1570px !important; } }
-@media (min-width: 1700px) {
-  .e-con.e-con {
-    --content-width: 1670px !important; } }
+.e-con.e-con {
+  --content-width: var(--content-width-var) !important; }
 
 .header-area.header-area {
   padding-left: 10px;

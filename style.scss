@@ -12,6 +12,25 @@ Text Domain:  tors-child
   --dark-color: #151515;
   --black-color: #000;
   --text-color: #666666;
+  @media (min-width: 1300px) {
+    --content-width-var: 1270px !important;
+  }
+
+  @media (min-width: 1400px) {
+    --content-width-var: 1370px !important;
+  }
+
+  @media (min-width: 1500px) {
+    --content-width-var: 1470px !important;
+  }
+
+  @media (min-width: 1600px) {
+    --content-width-var: 1570px !important;
+  }
+
+  @media (min-width: 1700px) {
+    --content-width-var: 1670px !important;
+  }
 }
 
 body {
@@ -681,25 +700,7 @@ section.home-about-area .content ul + a {
 
 .container {
   &.large-container {
-    @media (min-width: 1300px) {
-      max-width: 1270px;
-    }
-
-    @media (min-width: 1400px) {
-      max-width: 1370px;
-    }
-
-    @media (min-width: 1500px) {
-      max-width: 1470px;
-    }
-
-    @media (min-width: 1600px) {
-      max-width: 1570px;
-    }
-
-    @media (min-width: 1700px) {
-      max-width: 1670px;
-    }
+    max-width: var(--content-width-var) !important;
   }
 }
 
@@ -1576,25 +1577,7 @@ input:checked + .slider.slider:before {
 }
 
 .e-con.e-con {
-  @media (min-width: 1300px) {
-    --content-width: 1270px !important;
-  }
-
-  @media (min-width: 1400px) {
-    --content-width: 1370px !important;
-  }
-
-  @media (min-width: 1500px) {
-    --content-width: 1470px !important;
-  }
-
-  @media (min-width: 1600px) {
-    --content-width: 1570px !important;
-  }
-
-  @media (min-width: 1700px) {
-    --content-width: 1670px !important;
-  }
+  --content-width: var(--content-width-var) !important;
 }
 
 .header-area.header-area {
