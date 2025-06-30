@@ -198,13 +198,14 @@ $query = new WP_Query($args);
             });
 
             WaveSurfer_TORS[$id].on('audioprocess', function() {
+                const $totalTime = WaveSurfer_TORS[$id].getDuration();
+                document.querySelector($duration).innerText = formatTime($totalTime);
+
                 if (WaveSurfer_TORS[$id].isPlaying()) {
                     const $currentTime = WaveSurfer_TORS[$id].getCurrentTime();
-                    const $totalTime = WaveSurfer_TORS[$id].getDuration();
                     console.log($totalTime);
 
                     //  document.getElementById('current-time').innerText = formatTime(currentTime);
-                    document.querySelector($duration).innerText = formatTime($totalTime);
                 }
             });
             return WaveSurfer_TORS[$id];
