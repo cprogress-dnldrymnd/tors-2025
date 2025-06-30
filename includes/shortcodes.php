@@ -238,7 +238,7 @@ function create_my_woocommerce_product($product_name, $product_sku, $product_pri
     }
 }
 
-function test($atts)
+function recordings_by_genres_artists($atts)
 {
     ob_start();
     extract(
@@ -379,4 +379,4 @@ function test($atts)
     return ob_get_clean();
 }
 
-add_shortcode('test', 'test');
+add_shortcode('recordings_by_genres_artists', 'recordings_by_genres_artists');
