@@ -1621,7 +1621,7 @@ input:checked + .slider.slider:before {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      .artist-songs--box {
+      .artist-songs--inner {
         background-color: var(--e-global-color-cea108a);
         border-radius: 10px;
         padding: 20px;

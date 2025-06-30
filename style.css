@@ -1218,7 +1218,7 @@ input:checked + .slider.slider:before {
       display: flex;
       flex-direction: column;
       gap: 20px; }
-      .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--box {
+      .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--inner {
         background-color: var(--e-global-color-cea108a);
         border-radius: 10px;
         padding: 20px; }
