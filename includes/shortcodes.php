@@ -267,7 +267,7 @@ function test()
         echo '</div>';
         echo '</div>';
 
-        
+
 
         echo '<div class="artist-details--content">';
 
@@ -282,7 +282,7 @@ function test()
             $query_recordings->the_post();
             $before_audio = carbon_get_the_post_meta('before_audio');
             $after_audio = carbon_get_the_post_meta('after_audio');
-            echo '<div class="artist-songs--box">';
+            echo '<div class="artist-songs--box audio-player--parent before-active">';
 
             echo '<div class="artist-songs--title">';
             echo '<h4>' . get_the_title() . '</h4>';
