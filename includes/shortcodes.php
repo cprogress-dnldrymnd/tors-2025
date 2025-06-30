@@ -250,6 +250,8 @@ function recordings_by_genres_artists($atts)
         )
     );
     $artists = get__artists_by_genre($genre);
+    echo '<section class="artists-songs-section">';
+
     foreach ($artists as $artist) {
 
         $image = carbon_get_term_meta($artist['term_id'], 'image');
@@ -267,7 +269,7 @@ function recordings_by_genres_artists($atts)
         $query_recordings = new WP_Query($args);
         $query_recordings_count = $query_recordings->found_posts;
 
-        echo '<section class="artists-songs-section">';
+        echo '<div class="artists-songs-section-inner">';
         echo '<div class="artist-details">';
 
         echo '<div class="artist-details--image">';
@@ -374,8 +376,10 @@ function recordings_by_genres_artists($atts)
 
         wp_reset_postdata();
 
-        echo '</section>';
+        echo '</div>';
     }
+    echo '</section>';
+
     return ob_get_clean();
 }
 

@@ -1200,7 +1200,11 @@ input:checked + .slider.slider:before {
 
 .artists-songs-section {
   display: flex;
-  gap: 30px; }
+  gap: 40px;
+  flex-direction: column; }
+  .artists-songs-section .artists-songs-section-inner {
+    display: flex;
+    gap: 30px; }
   .artists-songs-section .show-all-artists-song {
     text-align: right; }
     .artists-songs-section .show-all-artists-song a {

@@ -1599,7 +1599,12 @@ input:checked + .slider.slider:before {
 
 .artists-songs-section {
   display: flex;
-  gap: 30px;
+  gap: 40px;
+  flex-direction: column;
+  .artists-songs-section-inner {
+    display: flex;
+    gap: 30px;
+  }
   .show-all-artists-song {
     text-align: right;
     a {
