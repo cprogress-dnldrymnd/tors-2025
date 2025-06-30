@@ -1198,4 +1198,13 @@ input:checked + .slider.slider:before {
       padding-left: 0;
       padding-right: 0; }
 
+.artists-songs-section {
+  display: flex;
+  align-items: center;
+  gap: 30px; }
+  .artists-songs-section .artist-details {
+    width: 33.3333%; }
+  .artists-songs-section .artist-songs {
+    width: 66.6666%; }
+
 /*# sourceMappingURL=style.css.map */

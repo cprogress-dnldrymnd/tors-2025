@@ -1596,3 +1596,15 @@ input:checked + .slider.slider:before {
     }
   }
 }
+
+.artists-songs-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  .artist-details {
+    width: 33.3333%;
+  }
+  .artist-songs {
+    width: 66.6666%;
+  }
+}
