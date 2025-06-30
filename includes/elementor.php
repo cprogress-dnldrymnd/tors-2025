@@ -9,7 +9,7 @@ function get__artists_by_genre($genre)
             array(
                 'taxonomy' => 'genres',
                 'field' => 'slug',
-                'terms' => 'alternative',
+                'terms' => $alternative,
             ),
         ),
     ));
