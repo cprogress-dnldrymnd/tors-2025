@@ -271,10 +271,19 @@ function test()
 
         echo '</div>';
         echo '<div class="artist-songs">';
+        echo '<div class="artist-songs--holder">';
         while ($query_recordings->have_posts()) {
             $query_recordings->the_post();
-            echo do_shortcode('[elementor-template id="1324"]');
+            echo '<div class="artist-songs--box">';
+
+            echo '<div class="artist-songs--title">';
+            echo '<h4>' . get_the_title() . '</h4>';
+            echo do_shortcode('[audio_toggle class="mobile"]');
+            echo '</div>';
+            echo '</div>';
         }
+        echo '</div>';
+
         echo '</div>';
 
         wp_reset_postdata();
