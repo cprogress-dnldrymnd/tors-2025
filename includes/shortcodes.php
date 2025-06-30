@@ -249,6 +249,7 @@ function recordings_by_genres_artists($atts)
             $atts
         )
     );
+    echo $genre;
     $artists = get__artists_by_genre($genre);
     foreach ($artists as $artist) {
 
