@@ -277,7 +277,6 @@ function test()
         while ($query_recordings->have_posts()) {
             $query_recordings->the_post();
             echo '<div class="artist-songs--box">';
-
             echo '<div class="artist-songs--title">';
             echo '<h4>' . get_the_title() . '</h4>';
             echo do_shortcode('[audio_toggle class="mobile"]');
