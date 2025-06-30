@@ -240,8 +240,26 @@ function create_my_woocommerce_product($product_name, $product_sku, $product_pri
 
 function test()
 {
-
-    return var_dump(get__artists_by_genre('alternative'));
+    ob_start();
+    $alternative = get__artists_by_genre('alternative');
+    foreach ($alternative as $alt) {
+        $args = array(
+            'post_type' => 'post',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'artists',
+                    'field' => 'slug',
+                    'terms' => $alt,
+                ),
+            ),
+        );
+        $query = new WP_Query($args);
+        while ($query->have_posts()) {
+            the_title();
+            $query->the_post();
+        }
+    }
+    return ob_clean();
 }
 
 add_shortcode('test', 'test');
