@@ -1185,6 +1185,9 @@ input:checked + .slider.slider:before {
 .e-con.e-con {
   --content-width: var(--content-width-var) !important; }
 
+.elementor-section.elementor-section-boxed > .elementor-container {
+  max-width: var(--content-width-var) !important; }
+
 .header-area.header-area {
   padding-left: 10px;
   padding-right: 10px; }
