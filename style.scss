@@ -1723,6 +1723,9 @@ input:checked + .slider.slider:before {
             color: var(--white-color);
             width: 50px;
           }
+          @media (max-width: 575px) {
+            width: 50px;
+          }
         }
         .audio-player--player {
           width: calc(100% - 120px - 200px);
