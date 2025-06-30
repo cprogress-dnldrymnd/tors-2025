@@ -237,3 +237,11 @@ function create_my_woocommerce_product($product_name, $product_sku, $product_pri
         echo 'Failed to create product "' . $product_name . '".';
     }
 }
+
+function test()
+{
+
+    return var_dump(get__artists_by_genre('alternative'));
+}
+
+add_shortcode('test', 'test');
