@@ -297,7 +297,7 @@ function test()
 
             echo '<div class="play-pause-btn-holder">';
             echo '<div class="play-pause-btn play" target="' . $before_audio . '"><i aria-hidden="true" class="fas fa-play"></i></div>';
-            echo '<div class="play-pause-btn pause" target="' . $before_audio . '><i aria-hidden="true" class="fas fa-pause"></i></div>';
+            echo '<div class="play-pause-btn pause" target="' . $before_audio . '"><i aria-hidden="true" class="fas fa-pause"></i></div>';
             echo '</div>';
 
             echo do_shortcode('[audio_box audio_type="before"]');
@@ -321,7 +321,7 @@ function test()
 
             echo '<div class="play-pause-btn-holder">';
             echo '<div class="play-pause-btn play" target="' . $after_audio . '"><i aria-hidden="true" class="fas fa-play"></i></div>';
-            echo '<div class="play-pause-btn pause" target="' . $after_audio . '><i aria-hidden="true" class="fas fa-pause"></i></div>';
+            echo '<div class="play-pause-btn pause" target="' . $after_audio . '"><i aria-hidden="true" class="fas fa-pause"></i></div>';
             echo '</div>';
 
             echo do_shortcode('[audio_box audio_type="after"]');
