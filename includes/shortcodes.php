@@ -276,8 +276,8 @@ function test()
         echo '<div class="artist-songs--holder">';
         while ($query_recordings->have_posts()) {
             $query_recordings->the_post();
-            $before_audio = carbon_get_post_meta('before_audio');
-            $after_audio = carbon_get_post_meta('after_audio');
+            $before_audio = carbon_get_the_post_meta('before_audio');
+            $after_audio = carbon_get_the_post_meta('after_audio');
             echo '<div class="artist-songs--box">';
 
             echo '<div class="artist-songs--title">';
