@@ -273,6 +273,13 @@ function test()
 
         echo '<h3>' . $artist['name'] . '</h3>';
 
+        echo '<div class="artist-details--desc">';
+        echo wpautop($artist['description']);
+        echo '</div>';
+
+
+        echo '<i aria-hidden="true" class="fab fa-youtube"></i>';
+
         echo '</div>';
 
         echo '</div>';
@@ -315,7 +322,7 @@ function test()
             echo '</div>';
 
 
-             echo '<div class="artist-songs--body audio-after">';
+            echo '<div class="artist-songs--body audio-after">';
 
             echo '<div class="audio-player--player-holder">';
 
