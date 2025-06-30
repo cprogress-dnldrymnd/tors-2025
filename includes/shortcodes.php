@@ -352,6 +352,11 @@ function test()
 
             echo '</div>';
         }
+
+        echo '<div class="show-all-artists-song">';
+        echo '<a class="show-all-song">Show All</a>';
+        echo '</div>';
+
         echo '</div>';
 
         echo '</div>';
