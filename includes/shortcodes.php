@@ -256,7 +256,10 @@ function test()
         $query_recordings = new WP_Query($args);
         while ($query_recordings->have_posts()) {
             $query_recordings->the_post();
-            echo do_shortcode('[elementor-template id="1324"]');
+
+            echo get_the_title();
+            echo'<br>';
+            //echo do_shortcode('[elementor-template id="1324"]');
         }
         wp_reset_postdata();
     }
