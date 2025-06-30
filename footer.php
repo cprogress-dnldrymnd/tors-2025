@@ -190,10 +190,13 @@ $query = new WP_Query($args);
 
             WaveSurfer_TORS[$id].on('interaction', () => {
                 WaveSurfer_TORS[$id].play();
+                jQuery($id).parents('.audio-player--player').addClass('playing');
             });
 
             WaveSurfer_TORS[$id].on('finish', () => {
                 WaveSurfer_TORS[$id].setTime(0);
+                jQuery($id).parents('.audio-player--player').removeClass('playing');
+
             });
             // const currentTime = wavesurfer.getCurrentTime();
             const $totalTime = WaveSurfer_TORS[$id].getDuration();
