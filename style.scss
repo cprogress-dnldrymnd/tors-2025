@@ -1642,6 +1642,10 @@ input:checked + .slider.slider:before {
         gap: 20px;
         .play-pause-btn-holder {
           width: 120px;
+          svg {
+            color: var(--white-color);
+            width: 50px;
+          }
         }
         .audio-player--player {
           width: calc(100% - 120px - 200px);

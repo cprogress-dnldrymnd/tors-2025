@@ -1237,6 +1237,9 @@ input:checked + .slider.slider:before {
         gap: 20px; }
         .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .play-pause-btn-holder {
           width: 120px; }
+          .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .play-pause-btn-holder svg {
+            color: var(--white-color);
+            width: 50px; }
         .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .audio-player--player {
           width: calc(100% - 120px - 200px); }
         .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .audio-player--timer {
