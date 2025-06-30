@@ -1609,6 +1609,7 @@ input:checked + .slider.slider:before {
     @media (max-width: 575px) {
       gap: 0;
       border: 1px solid rgba(112, 112, 112, 0.51);
+      border-radius: 10px;
     }
   }
   .show-all-artists-song {
