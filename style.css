@@ -1202,6 +1202,9 @@ input:checked + .slider.slider:before {
   .e-con.e-con {
     --content-width: 1770px !important; } }
 
+.header-area.header-area .container {
+  padding-left: 10px;
+  padding-right: 10px; }
 .header-area.header-area .row {
   margin-left: -10px;
   margin-left: -10px; }

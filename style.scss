@@ -1606,6 +1606,10 @@ input:checked + .slider.slider:before {
 }
 
 .header-area.header-area {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .row {
     margin-left: -10px;
     margin-left: -10px;
