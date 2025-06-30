@@ -523,9 +523,6 @@ section.home-about-area .content ul + a {
 @media (min-width: 1700px) {
   .container.large-container {
     max-width: 1670px; } }
-@media (min-width: 1700px) {
-  .container.large-container {
-    max-width: 1770px; } }
 
 @media (min-width: 768px) {
   .header-area.header-area #menu-toggle {
@@ -1198,9 +1195,6 @@ input:checked + .slider.slider:before {
 @media (min-width: 1700px) {
   .e-con.e-con {
     --content-width: 1670px !important; } }
-@media (min-width: 1700px) {
-  .e-con.e-con {
-    --content-width: 1770px !important; } }
 
 .header-area.header-area .container {
   padding-left: 10px;
