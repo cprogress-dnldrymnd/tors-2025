@@ -1636,6 +1636,20 @@ input:checked + .slider.slider:before {
           font-weight: 400;
         }
       }
+      .audio-player--player-holder {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .play-pause-btn-holder {
+          width: 120px;
+        }
+        .audio-player--player {
+          width: calc(100% - 120px - 200px);
+        }
+        .audio-player--timer {
+          width: 200px;
+        }
+      }
       &:not(.show-all) {
         > .artist-songs--box {
           &:not(:first-child) {

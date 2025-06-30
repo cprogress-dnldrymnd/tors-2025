@@ -1231,6 +1231,16 @@ input:checked + .slider.slider:before {
           color: var(--white-color);
           font-size: 25px;
           font-weight: 400; }
+      .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder {
+        display: flex;
+        align-items: center;
+        gap: 20px; }
+        .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .play-pause-btn-holder {
+          width: 120px; }
+        .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .audio-player--player {
+          width: calc(100% - 120px - 200px); }
+        .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .audio-player--timer {
+          width: 200px; }
       .artists-songs-section .artist-songs .artist-songs--holder:not(.show-all) > .artist-songs--box:not(:first-child) {
         display: none; }
 
