@@ -255,7 +255,7 @@ function test()
         );
         $query_recordings = new WP_Query($args);
 
-        echo '<section>';
+        echo '<section class="artists-songs-section">';
         echo '<div class="artist-details">';
 
         echo '<div class="artist-details--image">';
