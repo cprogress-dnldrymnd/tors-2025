@@ -249,9 +249,7 @@ function recordings_by_genres_artists($atts)
             $atts
         )
     );
-    echo $genre;
     $artists = get__artists_by_genre($genre);
-    var_dump($artists);
     foreach ($artists as $artist) {
 
         $image = carbon_get_term_meta($artist['term_id'], 'image');
