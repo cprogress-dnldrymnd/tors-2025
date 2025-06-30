@@ -255,7 +255,7 @@ function test()
         );
         $query = new WP_Query($args);
         while ($query->have_posts()) {
-            get_the_title();
+            echo get_the_title();
             $query->the_post();
         }
         wp_reset_postdata();
