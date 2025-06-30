@@ -1562,11 +1562,11 @@ input:checked + .slider.slider:before {
   margin-top: 20px;
 }
 @media (min-width: 768px) {
-  .image--style.image--style .elementor-widget-container {
+  .image--style.image--style {
     position: relative;
     padding: 50%;
   }
-  .image--style.image--style .elementor-widget-container img {
+  .image--style.image--style img {
     position: absolute;
     left: 0;
     top: 0;
