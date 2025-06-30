@@ -20,7 +20,7 @@ function get__artists_by_genre($genre)
             $artists_arr[] = $artist->slug;
         }
     }
-    return $artists_arr;
+    return array_unique($artists_arr);
 }
 function query_genre_alternatives($query)
 {
