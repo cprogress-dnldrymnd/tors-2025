@@ -13,23 +13,23 @@ Text Domain:  tors-child
   --black-color: #000;
   --text-color: #666666;
   @media (min-width: 1300px) {
-    --content-width-var: 1270px !important;
+    --content-width-var: 1270px;
   }
 
   @media (min-width: 1400px) {
-    --content-width-var: 1370px !important;
+    --content-width-var: 1370px;
   }
 
   @media (min-width: 1500px) {
-    --content-width-var: 1470px !important;
+    --content-width-var: 1470px;
   }
 
   @media (min-width: 1600px) {
-    --content-width-var: 1570px !important;
+    --content-width-var: 1570px;
   }
 
   @media (min-width: 1700px) {
-    --content-width-var: 1670px !important;
+    --content-width-var: 1670px;
   }
 }
 
