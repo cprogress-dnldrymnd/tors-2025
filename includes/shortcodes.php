@@ -257,6 +257,7 @@ function test()
             ),
         );
         $query_recordings = new WP_Query($args);
+        $query_recordings_count = $query_recordings->found_posts;
 
         echo '<section class="artists-songs-section">';
         echo '<div class="artist-details">';
@@ -353,9 +354,11 @@ function test()
             echo '</div>';
         }
 
-        echo '<div class="show-all-artists-song">';
-        echo '<a class="show-all-song">Show All</a>';
-        echo '</div>';
+        if ($query_recordings_count > 1) {
+            echo '<div class="show-all-artists-song">';
+            echo '<a class="show-all-song">Show All</a>';
+            echo '</div>';
+        }
 
         echo '</div>';
 
