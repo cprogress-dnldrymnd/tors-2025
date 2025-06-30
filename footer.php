@@ -198,7 +198,7 @@ $query = new WP_Query($args);
             });
             WaveSurfer_TORS[$id].on('ready', function() {
                 const $totalTime = WaveSurfer_TORS[$id].getDuration();
-                document.querySelector($duration).innerText = formatTime($totalTime);
+                jQuery($duration).text($totalTime);
                 console.log($totalTime);
             });
 
