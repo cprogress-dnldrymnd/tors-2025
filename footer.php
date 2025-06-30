@@ -206,11 +206,6 @@ $query = new WP_Query($args);
                     document.querySelector($duration).innerText = formatTime($totalTime);
                 }
             });
-            // const currentTime = wavesurfer.getCurrentTime();
-            const $totalTime = WaveSurfer_TORS[$id].getDuration();
-            console.log($totalTime);
-
-
             return WaveSurfer_TORS[$id];
 
         }
