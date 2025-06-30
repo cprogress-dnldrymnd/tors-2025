@@ -259,7 +259,7 @@ function test()
             $query->the_post();
         }
     }
-    return ob_clean();
+    return ob_get_clean();
 }
 
 add_shortcode('test', 'test');
