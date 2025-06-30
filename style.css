@@ -1266,7 +1266,8 @@ input:checked + .slider.slider:before {
       @media (max-width: 575px) {
         .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--box .artist-songs--inner .audio-toggle-v4 .audio-toggle {
           justify-content: flex-end;
-          margin-right: 15px; } }
+          margin-right: 15px;
+          margin-bottom: 0; } }
       @media (max-width: 575px) {
         .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--box .artist-songs--inner {
           background-color: var(--e-global-color-cea108a);

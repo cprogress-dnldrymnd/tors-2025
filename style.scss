@@ -1677,6 +1677,7 @@ input:checked + .slider.slider:before {
               @media (max-width: 575px) {
                 justify-content: flex-end;
                 margin-right: 15px;
+                margin-bottom: 0;
               }
             }
           }
