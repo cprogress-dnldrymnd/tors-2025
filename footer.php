@@ -155,7 +155,8 @@ $query = new WP_Query($args);
 
         function wavesurfer($id, $url, ) {
             // With pre-decoded audio data
-            console.log($id);
+            $current_time = $id + '-current-time';
+            $duration = $id + '-duration';
             WaveSurfer_TORS[$id] = WaveSurfer.create({
                 "container": document.getElementById($id),
                 "height": 50,
@@ -188,6 +189,10 @@ $query = new WP_Query($args);
             WaveSurfer_TORS[$id].on('finish', () => {
                 WaveSurfer_TORS[$id].setTime(0);
             });
+            // const currentTime = wavesurfer.getCurrentTime();
+            const $totalTime = WaveSurfer_TORS[$id].getDuration();
+
+            document.getElementById($duration).innerText = formatTime(totalTime);
 
             return WaveSurfer_TORS[$id];
 
