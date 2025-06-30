@@ -1230,4 +1230,12 @@ input:checked + .slider.slider:before {
           color: var(--white-color);
           font-size: 25px; }
 
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none !important; } }
+
+@media (max-width: 767px) {
+  .desktop-only {
+    display: none !important; } }
+
 /*# sourceMappingURL=style.css.map */

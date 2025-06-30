@@ -286,7 +286,9 @@ function test()
             echo '<div class="artist-songs--inner">';
             echo '<div class="artist-songs--title">';
             echo '<h4>' . get_the_title() . '</h4>';
+            echo '<div class="desktop-only audio-toggle-v3">';
             echo do_shortcode('[audio_toggle class="mobile"]');
+            echo '</div>';
             echo '</div>';
 
             echo '<div class="artist-songs--body">';
@@ -313,7 +315,9 @@ function test()
             echo '</div>';
             echo '</div>';
 
+            echo '<div class="audio-toggle-v4 mobile-only">';
             echo do_shortcode('[audio_toggle]');
+            echo '</div>';
 
             echo '</div>';
         }
