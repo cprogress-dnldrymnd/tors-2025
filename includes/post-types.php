@@ -155,7 +155,7 @@ new newPostType(
 		'icon'          => 'dashicons-playlist-audio',
 		'rewrite'       => array('slug' => 'testimonial'),
 		'has_archive'   => true,
-		'supports'      => array('title', 'revisions', 'editor'),
+		'supports'      => array('title', 'revisions', 'editor', 'excerpt', 'thumbnail'),
 		'show_in_rest'  => true,
 	)
 );
