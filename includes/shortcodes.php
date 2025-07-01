@@ -400,7 +400,8 @@ function recordings_box($atts)
 
         $image = carbon_get_term_meta($artist['term_id'], 'image');
 
-        echo '<div class="artist-songs--wrapper">';
+        echo '<section class="artists-songs-section">';
+        echo '<div class="artists-songs-section-inner">';
         echo do_shortcode('[artist_box image=' . $image . ' name=' . $artist['name'] . ' description=' . $artist['description'] . ']');
     }
     echo '<div class="artist-songs--inner">';
@@ -460,6 +461,7 @@ function recordings_box($atts)
     echo '</div>';
 
     if ($display_artist) {
+        echo '</div>';
         echo '</div>';
     }
 
