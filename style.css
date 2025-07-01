@@ -1375,11 +1375,23 @@ input:checked + .slider.slider:before {
     animation-name: spin;
     animation-duration: 5000ms;
     animation-iteration-count: infinite;
-    animation-timing-function: linear; }
+    animation-timing-function: linear;
+    width: 0;
+    height: 0; }
 
 .audio-box-holder {
   position: relative; }
+  .audio-box-holder .audio-box {
+    transition: 100ms;
+    opacity: 0;
+    visibility: hidden; }
   .audio-box-holder.audio-loading:not(.display-audio) .loading-animation {
+    opacity: 1;
+    visibility: visible; }
+    .audio-box-holder.audio-loading:not(.display-audio) .loading-animation svg {
+      height: 50px;
+      width: 50px; }
+  .audio-box-holder.audio-loading.display-audio .audio-box {
     opacity: 1;
     visibility: visible; }
 
