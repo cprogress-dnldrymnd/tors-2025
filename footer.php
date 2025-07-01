@@ -132,6 +132,7 @@ $query = new WP_Query($args);
 </script>
 <script>
     jQuery('.recordings-filter .e-filter-item').click(function(e) {
+        console.log('xxx');
         initialize_wavesurfer();
     });
 
