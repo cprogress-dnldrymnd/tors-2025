@@ -1342,9 +1342,9 @@ input:checked + .slider.slider:before {
   .desktop-only {
     display: none !important; } }
 
-nav .menu li .menu-item-has-children .menu {
+nav .menu li.menu-item-has-children .menu {
   border-radius: 10px; }
-  nav .menu li .menu-item-has-children .menu li {
+  nav .menu li.menu-item-has-children .menu li {
     opacity: 1;
     visibility: visible; }
 
