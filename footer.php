@@ -309,7 +309,7 @@ $query = new WP_Query($args);
     }
 
     function wavesurfer($id, $url, ) {
-        if (!jQuery('#' + $id).parents('.audio-box-holder').hasClass('audio-loading')) {
+        if (jQuery('#' + $id).parents('.audio-box-holder').hasClass('audio-loading')) {
             WaveSurfer_TORS[$id] = WaveSurfer.create({
                 "container": document.getElementById($id),
                 "height": 50,
