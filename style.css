@@ -1357,6 +1357,12 @@ input:checked + .slider.slider:before {
     flex-direction: column;
     gap: 15px; } }
 
+.loading-animation {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center; }
+
 .elementor-loop-container .artist-songs--box.artist-songs--box.artist-songs--box {
   background-color: var(--e-global-color-cea108a);
   border-radius: 10px;
