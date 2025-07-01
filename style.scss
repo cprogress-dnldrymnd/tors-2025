@@ -1792,20 +1792,10 @@ input:checked + .slider.slider:before {
   }
 }
 .loading-animation {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  z-index: 9;
   color: var(--white-color);
-  left: 0;
-  right: 0;
   opacity: 0;
   visibility: hidden;
   transition: 500ms;
-
   svg {
     animation-name: spin;
     animation-duration: 5000ms;
@@ -1813,7 +1803,12 @@ input:checked + .slider.slider:before {
     animation-timing-function: linear;
     width: 0;
     height: 0;
+    height: 50px;
+    width: 50px;
   }
+}
+.play-pause-btn-holder {
+  position: relative;
 }
 .audio-box-holder {
   position: relative;
@@ -1827,10 +1822,6 @@ input:checked + .slider.slider:before {
       .loading-animation {
         opacity: 1;
         visibility: visible;
-        svg {
-          height: 50px;
-          width: 50px;
-        }
       }
     }
   }
