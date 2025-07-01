@@ -722,7 +722,8 @@ section.home-about-area .content ul + a {
       transform: none;
       margin-bottom: 0;
       float: none;
-
+      padding-left: 0;
+      padding-right: 0;
       > li {
         opacity: 1;
         visibility: visible;
@@ -735,7 +736,7 @@ section.home-about-area .content ul + a {
             font-size: 18px;
           }
           @media (max-width: 991px) {
-            font-size: 16px;
+            font-size: 15px;
           }
         }
 
@@ -782,7 +783,7 @@ section.home-about-area .content ul + a {
       font-size: 25px;
     }
     @media (max-width: 991px) {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 }
@@ -1610,6 +1611,7 @@ input:checked + .slider.slider:before {
   .row {
     margin-left: 0;
     margin-right: 0;
+    justify-content: space-between;
     > div {
       padding-left: 0;
       padding-right: 0;
