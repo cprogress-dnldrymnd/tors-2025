@@ -1374,11 +1374,18 @@ input:checked + .slider.slider:before {
 
 .play-pause-btn-holder {
   position: relative; }
+  .play-pause-btn-holder .play,
+  .play-pause-btn-holder .pause {
+    transition: 500ms; }
 
 .audio-box-holder {
   position: relative; }
   .audio-box-holder .audio-box {
     transition: 300ms;
+    opacity: 0;
+    visibility: hidden; }
+  .audio-box-holder.audio-loading .play,
+  .audio-box-holder.audio-loading .pause {
     opacity: 0;
     visibility: hidden; }
   .audio-box-holder.audio-loading:not(.display-audio) .loading-animation {

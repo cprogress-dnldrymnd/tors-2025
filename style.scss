@@ -1809,6 +1809,10 @@ input:checked + .slider.slider:before {
 }
 .play-pause-btn-holder {
   position: relative;
+  .play,
+  .pause {
+    transition: 500ms;
+  }
 }
 .audio-box-holder {
   position: relative;
@@ -1818,6 +1822,11 @@ input:checked + .slider.slider:before {
     visibility: hidden;
   }
   &.audio-loading {
+    .play,
+    .pause {
+      opacity: 0;
+      visibility: hidden;
+    }
     &:not(.display-audio) {
       .loading-animation {
         opacity: 1;
