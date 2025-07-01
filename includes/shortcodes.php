@@ -469,8 +469,9 @@ function recordings_box($atts)
     echo '</div>';
 
     echo '</div>';
-    
+
     if ($display_artist) {
+        echo '</div>';
         echo '</section>';
     }
     return ob_get_clean();
