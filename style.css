@@ -549,11 +549,17 @@ section.home-about-area .content ul + a {
         @media (max-width: 1199px) {
           .header-area.header-area nav > .menu > li a {
             font-size: 18px; } }
+        @media (max-width: 991px) {
+          .header-area.header-area nav > .menu > li a {
+            font-size: 16px; } }
       .header-area.header-area nav > .menu > li:not(:last-child) {
         margin-right: 30px; }
         @media (max-width: 1199px) {
           .header-area.header-area nav > .menu > li:not(:last-child) {
             margin-right: 20px; } }
+        @media (max-width: 991px) {
+          .header-area.header-area nav > .menu > li:not(:last-child) {
+            margin-right: 10px; } }
     @media (max-width: 767px) {
       .header-area.header-area nav > .menu {
         display: none !important; } }
@@ -569,6 +575,9 @@ section.home-about-area .content ul + a {
 @media (max-width: 1199px) {
   .logo-box .text {
     font-size: 25px; } }
+@media (max-width: 991px) {
+  .logo-box .text {
+    font-size: 20px; } }
 
 .row {
   display: flex;
