@@ -1817,6 +1817,11 @@ input:checked + .slider.slider:before {
 }
 .audio-box-holder {
   position: relative;
+  .audio-box {
+    transition: 500ms;
+    opacity: 0;
+    visibility: hidden;
+  }
   &.audio-loading:not(.display-audio) {
     .loading-animation {
       opacity: 1;
@@ -1826,6 +1831,10 @@ input:checked + .slider.slider:before {
         width: 50px;
       }
     }
+  }
+  &.display-audio {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
