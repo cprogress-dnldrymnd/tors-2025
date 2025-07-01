@@ -1857,9 +1857,18 @@ input:checked + .slider.slider:before {
         color: var(--white-color);
       }
     }
+    @media (max-width: 991px) {
+      width: 100%;
+    }
   }
   .artist-songs--inner {
     width: 65%;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+  }
+  @media (max-width: 991px) {
+    flex-direction: column;
   }
 }
 .elementor-loop-container {

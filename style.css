@@ -1406,8 +1406,17 @@ input:checked + .slider.slider:before {
     .artist-songs--wrapper.artist-songs--wrapper .artist-details .artist-details--content h3,
     .artist-songs--wrapper.artist-songs--wrapper .artist-details .artist-details--content p {
       color: var(--white-color); }
+    @media (max-width: 991px) {
+      .artist-songs--wrapper.artist-songs--wrapper .artist-details {
+        width: 100%; } }
   .artist-songs--wrapper.artist-songs--wrapper .artist-songs--inner {
     width: 65%; }
+    @media (max-width: 991px) {
+      .artist-songs--wrapper.artist-songs--wrapper .artist-songs--inner {
+        width: 100%; } }
+  @media (max-width: 991px) {
+    .artist-songs--wrapper.artist-songs--wrapper {
+      flex-direction: column; } }
 
 .elementor-loop-container .artist-songs--box.artist-songs--box.artist-songs--box {
   background-color: var(--e-global-color-cea108a);
