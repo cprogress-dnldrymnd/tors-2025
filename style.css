@@ -1361,7 +1361,9 @@ input:checked + .slider.slider:before {
   color: var(--white-color);
   opacity: 0;
   visibility: hidden;
-  transition: 500ms; }
+  transition: 500ms;
+  top: 0;
+  left: 0; }
   .loading-animation svg {
     animation-name: spin;
     animation-duration: 5000ms;
