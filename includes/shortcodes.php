@@ -462,7 +462,6 @@ function recordings_box($atts)
 
     if ($display_artist) {
         echo '</div>';
-        echo '</div>';
     }
 
     echo '<div class="audio-toggle-v4 mobile-only">';
@@ -470,6 +469,10 @@ function recordings_box($atts)
     echo '</div>';
 
     echo '</div>';
+    
+    if ($display_artist) {
+        echo '</section>';
+    }
     return ob_get_clean();
 }
 add_shortcode('recordings_box', 'recordings_box');
