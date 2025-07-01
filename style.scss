@@ -731,6 +731,9 @@ section.home-about-area .content ul + a {
         a {
           color: var(--white-color);
           font-size: 20px;
+          @media (max-width: 1199px) {
+            font-size: 18px;
+          }
         }
 
         &:not(:last-child) {
@@ -756,6 +759,9 @@ section.home-about-area .content ul + a {
     .logo-box {
       .text {
         color: var(--e-global-color-cea108a);
+        @media (max-width: 1199px) {
+          font-size: 25px;
+        }
       }
     }
 
