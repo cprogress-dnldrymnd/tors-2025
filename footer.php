@@ -276,7 +276,7 @@ $query = new WP_Query($args);
     // Function to handle the scroll event
     function checkVisibility() {
         // Iterate over each element with the class 'my-element'
-        jQuery('.audio-box-holder').each(function() {
+        jQuery('.audio-box-holder:not(.audio-ready').each(function() {
             var $this = jQuery(this); // Cache the jQuery object for the current element
 
             // Check if the current element is in the viewport
