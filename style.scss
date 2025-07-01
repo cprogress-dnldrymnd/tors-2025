@@ -1811,8 +1811,6 @@ input:checked + .slider.slider:before {
     animation-duration: 5000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    width: 0;
-    height: 0;
   }
 }
 .audio-box-holder {
@@ -1826,10 +1824,6 @@ input:checked + .slider.slider:before {
     .loading-animation {
       opacity: 1;
       visibility: visible;
-      svg {
-        height: 50px;
-        width: 50px;
-      }
     }
   }
   &.display-audio {
