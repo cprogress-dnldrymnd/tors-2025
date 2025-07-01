@@ -123,7 +123,9 @@ $query = new WP_Query($args);
         initialize_wavesurfer();
         jQuery('.recordings-filter .e-filter-item').click(function(e) {
             console.log('xxx');
-            initialize_wavesurfer();
+            setTimeout(function() {
+                initialize_wavesurfer();
+            }, 1000);
         });
     });
 
