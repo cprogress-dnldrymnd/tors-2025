@@ -1815,7 +1815,7 @@ input:checked + .slider.slider:before {
 .audio-box-holder {
   position: relative;
   &.audio-loading {
-    .loading-animation {
+    .display-audio {
       opacity: 1;
       visibility: visible;
     }

@@ -1379,7 +1379,7 @@ input:checked + .slider.slider:before {
 
 .audio-box-holder {
   position: relative; }
-  .audio-box-holder.audio-loading .loading-animation {
+  .audio-box-holder.audio-loading .display-audio {
     opacity: 1;
     visibility: visible; }
 

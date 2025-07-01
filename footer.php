@@ -246,10 +246,10 @@ $query = new WP_Query($args);
             e.preventDefault();
         });
 
-    
+
         jQuery('.recordings-filter .e-filter-item').click(function(e) {
             setTimeout(function() {
-               checkVisibility();
+                checkVisibility();
             }, 2000);
         });
     });
@@ -349,6 +349,9 @@ $query = new WP_Query($args);
             jQuery($duration).text(formatTime($totalTime));
             jQuery('#' + $id).parents('.audio-box-holder').addClass('audio-ready');
             jQuery('#' + $id).parents('.audio-box-holder').removeClass('audio-loading');
+            setTimeout(function() {
+                jQuery('#' + $id).parents('.audio-box-holder').addClass('display-audio');
+            }, 1000);
         });
 
         WaveSurfer_TORS[$id].on('audioprocess', function() {
