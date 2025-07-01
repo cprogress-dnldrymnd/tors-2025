@@ -126,6 +126,11 @@ $query = new WP_Query($args);
                 e.preventDefault();
             });
         });
+
+        jQuery('.e-filter-item').click(function(e) {
+            console.log('xx');
+            e.preventDefault();
+        });
     });
 </script>
 <script>
