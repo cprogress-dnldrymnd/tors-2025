@@ -1403,6 +1403,8 @@ input:checked + .slider.slider:before {
   gap: 40px; }
   .artist-songs--wrapper.artist-songs--wrapper .artist-details {
     width: 150px; }
+    .artist-songs--wrapper.artist-songs--wrapper .artist-details .artist-details--image {
+      width: 100%; }
     .artist-songs--wrapper.artist-songs--wrapper .artist-details .artist-details--content {
       display: none; }
     @media (max-width: 991px) {

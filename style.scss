@@ -1852,6 +1852,7 @@ input:checked + .slider.slider:before {
   .artist-details {
     width: 150px;
     .artist-details--image {
+      width: 100%;
     }
     .artist-details--content {
       display: none;
