@@ -351,7 +351,7 @@ $query = new WP_Query($args);
             jQuery('#' + $id).parents('.audio-box-holder').removeClass('audio-loading');
             setTimeout(function() {
                 jQuery('#' + $id).parents('.audio-box-holder').addClass('display-audio');
-            }, 2000);
+            }, 1000);
         });
 
         WaveSurfer_TORS[$id].on('audioprocess', function() {
