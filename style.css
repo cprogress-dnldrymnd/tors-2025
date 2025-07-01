@@ -1287,63 +1287,6 @@ input:checked + .slider.slider:before {
       display: flex;
       flex-direction: column;
       gap: 20px; }
-      @media (max-width: 575px) {
-        .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--box .audio-toggle-v4 .audio-toggle {
-          justify-content: flex-end;
-          margin-right: 15px;
-          margin-bottom: 0; } }
-      @media (max-width: 575px) {
-        .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--box .artist-songs--inner {
-          background-color: var(--e-global-color-cea108a);
-          border-radius: 10px;
-          padding: 30px; } }
-      @media (max-width: 575px) {
-        .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--box {
-          display: flex;
-          flex-direction: column;
-          gap: 15px; } }
-      .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--title {
-        margin-bottom: 20px;
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        justify-content: space-between; }
-        .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--title h4 {
-          color: var(--white-color);
-          font-size: 25px;
-          font-weight: 400; }
-          @media (max-width: 575px) {
-            .artists-songs-section .artist-songs .artist-songs--holder .artist-songs--title h4 {
-              font-size: 20px; } }
-      .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder {
-        display: flex;
-        align-items: center;
-        gap: 20px; }
-        .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .play-pause-btn-holder {
-          width: 120px; }
-          .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .play-pause-btn-holder i {
-            font-size: 50px;
-            color: var(--white-color); }
-          .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .play-pause-btn-holder svg {
-            color: var(--white-color);
-            width: 50px; }
-          @media (max-width: 575px) {
-            .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .play-pause-btn-holder {
-              width: 50px; } }
-        .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .audio-player--player {
-          width: calc(100% - 120px - 200px); }
-        .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .audio-player--timer {
-          width: 200px;
-          display: flex;
-          gap: 20px;
-          align-items: center;
-          justify-content: flex-end;
-          font-size: 20px;
-          font-weight: bold; }
-          .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .audio-player--timer .audio-current-time {
-            color: var(--white-color); }
-          .artists-songs-section .artist-songs .artist-songs--holder .audio-player--player-holder .audio-player--timer .audio-duration {
-            color: var(--e-global-color-accent); }
       @media (min-width: 576px) {
         .artists-songs-section .artist-songs .artist-songs--holder:not(.show-all) > .artist-songs--box:not(:first-child) {
           display: none; } }
@@ -1355,6 +1298,64 @@ input:checked + .slider.slider:before {
     @media (max-width: 991px) {
       .artists-songs-section .artist-songs {
         width: 100%; } }
+
+@media (max-width: 575px) {
+  .artist-songs--box.artist-songs--box.artist-songs--box .audio-toggle-v4 .audio-toggle {
+    justify-content: flex-end;
+    margin-right: 15px;
+    margin-bottom: 0; } }
+@media (max-width: 575px) {
+  .artist-songs--box.artist-songs--box.artist-songs--box .artist-songs--inner {
+    background-color: var(--e-global-color-cea108a);
+    border-radius: 10px;
+    padding: 30px; } }
+.artist-songs--box.artist-songs--box.artist-songs--box .artist-songs--title {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between; }
+  .artist-songs--box.artist-songs--box.artist-songs--box .artist-songs--title h4 {
+    color: var(--white-color);
+    font-size: 25px;
+    font-weight: 400; }
+    @media (max-width: 575px) {
+      .artist-songs--box.artist-songs--box.artist-songs--box .artist-songs--title h4 {
+        font-size: 20px; } }
+.artist-songs--box.artist-songs--box.artist-songs--box .audio-player--player-holder {
+  display: flex;
+  align-items: center;
+  gap: 20px; }
+  .artist-songs--box.artist-songs--box.artist-songs--box .audio-player--player-holder .play-pause-btn-holder {
+    width: 120px; }
+    .artist-songs--box.artist-songs--box.artist-songs--box .audio-player--player-holder .play-pause-btn-holder i {
+      font-size: 50px;
+      color: var(--white-color); }
+    .artist-songs--box.artist-songs--box.artist-songs--box .audio-player--player-holder .play-pause-btn-holder svg {
+      color: var(--white-color);
+      width: 50px; }
+    @media (max-width: 575px) {
+      .artist-songs--box.artist-songs--box.artist-songs--box .audio-player--player-holder .play-pause-btn-holder {
+        width: 50px; } }
+  .artist-songs--box.artist-songs--box.artist-songs--box .audio-player--player-holder .audio-player--player {
+    width: calc(100% - 120px - 200px); }
+  .artist-songs--box.artist-songs--box.artist-songs--box .audio-player--player-holder .audio-player--timer {
+    width: 200px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 20px;
+    font-weight: bold; }
+    .artist-songs--box.artist-songs--box.artist-songs--box .audio-player--player-holder .audio-player--timer .audio-current-time {
+      color: var(--white-color); }
+    .artist-songs--box.artist-songs--box.artist-songs--box .audio-player--player-holder .audio-player--timer .audio-duration {
+      color: var(--e-global-color-accent); }
+@media (max-width: 575px) {
+  .artist-songs--box.artist-songs--box.artist-songs--box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; } }
 
 @media (min-width: 768px) {
   .mobile-only {
