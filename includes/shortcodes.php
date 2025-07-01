@@ -330,10 +330,21 @@ function recordings_by_genres_artists($atts)
 add_shortcode('recordings_by_genres_artists', 'recordings_by_genres_artists');
 
 
-function recordings_box()
+function recordings_box($atts)
 {
+    ob_start();
+    extract(
+        shortcode_atts(
+            array(
+                'display_artist' => false,
+            ),
+            $atts
+        )
+    );
+
     $before_audio = carbon_get_the_post_meta('before_audio');
     $after_audio = carbon_get_the_post_meta('after_audio');
+
     echo '<div class="artist-songs--box audio-player--parent before-active audio-player--player">';
     echo '<div class="artist-songs--inner">';
     echo '<div class="artist-songs--title">';
@@ -396,5 +407,6 @@ function recordings_box()
     echo '</div>';
 
     echo '</div>';
+    return ob_get_clean();
 }
 add_shortcode('recordings_box', 'recordings_box');
