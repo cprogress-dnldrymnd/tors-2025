@@ -206,10 +206,8 @@ $query = new WP_Query($args);
 </script>
 <script>
     var WaveSurfer_TORS = [];
-
     jQuery(document).ready(function() {
         checkVisibility();
-
 
         jQuery('.switch-input').each(function(index, element) {
             jQuery(this).change(function(e) {
