@@ -399,7 +399,7 @@ function recordings_box($atts)
 
     echo '<div class="artist-songs--box audio-player--parent before-active audio-player--player ' . $class . '">';
     if ($display_artist) {
-        
+
 
         $image = carbon_get_term_meta($artist['term_id'], 'image');
 
@@ -481,9 +481,9 @@ function artist_box($atts)
     extract(
         shortcode_atts(
             array(
-                $image => '',
-                $name => '',
-                $description => '',
+                'image' => '',
+                'name' => '',
+                'description' => '',
             ),
             $atts
         )
