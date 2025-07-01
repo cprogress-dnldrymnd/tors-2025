@@ -344,30 +344,9 @@ function recordings_by_genres_artists($atts)
         $query_recordings_count = $query_recordings->found_posts;
 
         echo '<div class="artists-songs-section-inner">';
-        echo '<div class="artist-details">';
 
-        echo '<div class="artist-details--image">';
-        echo '<div class="image--style">';
-        echo wp_get_attachment_image($image, 'medium');
-        echo '</div>';
-        echo '</div>';
+        echo do_shortcode('[artists_box image=' . $image . ' name=' . $artist['name'] . ' description=' . $artist['description'] . ']');
 
-
-
-        echo '<div class="artist-details--content">';
-
-        echo '<h3>' . $artist['name'] . '</h3>';
-
-        echo '<div class="artist-details--desc">';
-        echo wpautop($artist['description']);
-        echo '</div>';
-
-
-        echo '<i aria-hidden="true" class="fab fa-youtube"></i>';
-
-        echo '</div>';
-
-        echo '</div>';
         echo '<div class="artist-songs">';
         echo '<div class="artist-songs--holder">';
         while ($query_recordings->have_posts()) {
@@ -490,3 +469,43 @@ function recordings_box($atts)
     return ob_get_clean();
 }
 add_shortcode('recordings_box', 'recordings_box');
+
+function artist_box($atts)
+{
+    ob_start();
+    extract(
+        shortcode_atts(
+            array(
+                $image => '',
+                $name => '',
+                $description => '',
+            ),
+            $atts
+        )
+    );
+    echo '<div class="artist-details">';
+
+    echo '<div class="artist-details--image">';
+    echo '<div class="image--style">';
+    echo wp_get_attachment_image($image, 'medium');
+    echo '</div>';
+    echo '</div>';
+
+
+
+    echo '<div class="artist-details--content">';
+
+    echo '<h3>' . $name . '</h3>';
+
+    echo '<div class="artist-details--desc">';
+    echo wpautop($description);
+    echo '</div>';
+
+
+    echo '<i aria-hidden="true" class="fab fa-youtube"></i>';
+
+    echo '</div>';
+
+    echo '</div>';
+    return ob_get_clean();
+}
