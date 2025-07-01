@@ -1385,10 +1385,10 @@ input:checked + .slider.slider:before {
     transition: 100ms;
     opacity: 0;
     visibility: hidden; }
-  .audio-box-holder.audio-loading:not(.display-audio) .loading-animation {
+  .audio-box-holder.audio-loading .loading-animation, .audio-box-holder:not(.display-audio) .loading-animation {
     opacity: 1;
     visibility: visible; }
-    .audio-box-holder.audio-loading:not(.display-audio) .loading-animation svg {
+    .audio-box-holder.audio-loading .loading-animation svg, .audio-box-holder:not(.display-audio) .loading-animation svg {
       height: 50px;
       width: 50px; }
   .audio-box-holder.display-audio .audio-box {

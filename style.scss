@@ -1822,15 +1822,14 @@ input:checked + .slider.slider:before {
     opacity: 0;
     visibility: hidden;
   }
-  &.audio-loading {
-    &:not(.display-audio) {
-      .loading-animation {
-        opacity: 1;
-        visibility: visible;
-        svg {
-          height: 50px;
-          width: 50px;
-        }
+  &.audio-loading,
+  &:not(.display-audio) {
+    .loading-animation {
+      opacity: 1;
+      visibility: visible;
+      svg {
+        height: 50px;
+        width: 50px;
       }
     }
   }
