@@ -509,3 +509,5 @@ function artist_box($atts)
     echo '</div>';
     return ob_get_clean();
 }
+
+add_shortcode('artist_box', 'artist_box');
