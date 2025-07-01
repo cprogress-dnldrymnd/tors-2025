@@ -1849,10 +1849,16 @@ input:checked + .slider.slider:before {
   display: flex;
   gap: 20px;
   .artist-details {
-    width: 40%;
+    width: 35%;
+    .artist-details--content {
+      h3,
+      p {
+        color: var(--white-color);
+      }
+    }
   }
   .artist-songs--inner {
-    width: 60%;
+    width: 65%;
   }
 }
 .elementor-loop-container {

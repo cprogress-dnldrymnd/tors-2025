@@ -1401,9 +1401,12 @@ input:checked + .slider.slider:before {
   display: flex;
   gap: 20px; }
   .artist-songs--wrapper.artist-songs--wrapper .artist-details {
-    width: 40%; }
+    width: 35%; }
+    .artist-songs--wrapper.artist-songs--wrapper .artist-details .artist-details--content h3,
+    .artist-songs--wrapper.artist-songs--wrapper .artist-details .artist-details--content p {
+      color: var(--white-color); }
   .artist-songs--wrapper.artist-songs--wrapper .artist-songs--inner {
-    width: 60%; }
+    width: 65%; }
 
 .elementor-loop-container .artist-songs--box.artist-songs--box.artist-songs--box {
   background-color: var(--e-global-color-cea108a);
