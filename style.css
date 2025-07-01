@@ -1352,7 +1352,8 @@ nav .menu.menu.menu li.menu-item-has-children ul {
     opacity: 1;
     visibility: visible;
     transform: none;
-    background-color: transparent; }
+    background-color: transparent;
+    padding: 0; }
     nav .menu.menu.menu li.menu-item-has-children ul li a {
       font-size: 16px;
       color: var(--black-color);
