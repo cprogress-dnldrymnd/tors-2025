@@ -246,13 +246,12 @@ $query = new WP_Query($args);
             e.preventDefault();
         });
 
-        /*
+    
         jQuery('.recordings-filter .e-filter-item').click(function(e) {
-            console.log('xxx');
             setTimeout(function() {
-                initialize_wavesurfer();
+               checkVisibility();
             }, 2000);
-        });*/
+        });
     });
 
     // Function to check if an element is visible in the viewport
