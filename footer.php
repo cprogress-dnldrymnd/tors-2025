@@ -342,6 +342,7 @@ $query = new WP_Query($args);
             var $duration = '#' + $id + '-duration';
             const $totalTime = WaveSurfer_TORS[$id].getDuration();
             jQuery($duration).text(formatTime($totalTime));
+            jQuery('#' + $id).parents('.audio-box-holder').addClass('audio-ready');
         });
 
         WaveSurfer_TORS[$id].on('audioprocess', function() {
