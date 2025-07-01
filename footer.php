@@ -131,7 +131,6 @@ $query = new WP_Query($args);
         if (jQuery('.audio-box').length > 0) {
             var WaveSurfer_TORS = [];
             jQuery(document).ready(function() {
-
                 jQuery('.switch-input').each(function(index, element) {
                     jQuery(this).change(function(e) {
                         if (jQuery(this).is(":checked")) {
