@@ -1848,7 +1848,7 @@ input:checked + .slider.slider:before {
 .artist-songs--wrapper.artist-songs--wrapper {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   .artist-details {
     width: 150px;
     .artist-details--image {
@@ -1868,6 +1868,7 @@ input:checked + .slider.slider:before {
   }
   @media (max-width: 991px) {
     flex-direction: column;
+    gap: 20px;
   }
 }
 .elementor-loop-container {
