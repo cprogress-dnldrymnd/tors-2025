@@ -1363,7 +1363,8 @@ input:checked + .slider.slider:before {
   visibility: hidden;
   transition: 500ms;
   top: 0;
-  left: 0; }
+  left: 0;
+  position: absolute; }
   .loading-animation svg {
     animation-name: spin;
     animation-duration: 5000ms;
