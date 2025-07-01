@@ -284,14 +284,14 @@ $query = new WP_Query($args);
                 // If visible, add the 'is-visible' class
                 // This class can be used for styling or triggering animations
 
-                if (!$this.hasClass('audio-loading')) {
+                if (!$this.hasClass('audio-loading') && !$this.hasClass('audio-ready')) {
                     $this.addClass('audio-loading');
                 }
 
                 $id = jQuery(this).find('.audio-box').attr('id');
                 $audio_url = jQuery(this).attr('audio_url');
 
-                if (!$this.hasClass('audio-ready') && !$this.hasClass('audio-loading')) {
+                if (!$this.hasClass('audio-ready')) {
                     wavesurfer($id, $audio_url);
                 }
             }
