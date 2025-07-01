@@ -759,9 +759,6 @@ section.home-about-area .content ul + a {
     .logo-box {
       .text {
         color: var(--e-global-color-cea108a);
-        @media (max-width: 1199px) {
-          font-size: 25px;
-        }
       }
     }
 
@@ -770,7 +767,13 @@ section.home-about-area .content ul + a {
     }
   }
 }
-
+.logo-box {
+  .text {
+    @media (max-width: 1199px) {
+      font-size: 25px;
+    }
+  }
+}
 .row {
   display: flex;
   flex-wrap: wrap;

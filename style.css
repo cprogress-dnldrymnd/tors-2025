@@ -560,11 +560,12 @@ section.home-about-area .content ul + a {
     color: var(--e-global-color-cea108a); }
 .header-area.header-area.navbar-fixed-top .logo-box .text {
   color: var(--e-global-color-cea108a); }
-  @media (max-width: 1199px) {
-    .header-area.header-area.navbar-fixed-top .logo-box .text {
-      font-size: 25px; } }
 .header-area.header-area.navbar-fixed-top nav .menu li a {
   color: var(--e-global-color-cea108a); }
+
+@media (max-width: 1199px) {
+  .logo-box .text {
+    font-size: 25px; } }
 
 .row {
   display: flex;
