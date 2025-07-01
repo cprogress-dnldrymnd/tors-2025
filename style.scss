@@ -1779,3 +1779,13 @@ input:checked + .slider.slider:before {
     display: none !important;
   }
 }
+
+nav .menu li .menu-item-has-children {
+  .menu {
+    border-radius: 10px;
+    li {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
