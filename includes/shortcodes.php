@@ -346,7 +346,6 @@ function recordings_by_genres_artists($atts)
         echo '<div class="artists-songs-section-inner">';
 
         echo do_shortcode('[artist_box image=' . $image . ' name=' . $artist['name'] . ' description=' . $artist['description'] . ']');
-        echo $artist['description'];
 
         echo '<div class="artist-songs">';
         echo '<div class="artist-songs--holder">';
