@@ -1850,19 +1850,16 @@ input:checked + .slider.slider:before {
   align-items: center;
   gap: 20px;
   .artist-details {
-    width: 35%;
+    width: 150px;
     .artist-details--content {
-      h3,
-      p {
-        color: var(--white-color);
-      }
+      display: none;
     }
     @media (max-width: 991px) {
       width: 100%;
     }
   }
   .artist-songs--inner {
-    width: 65%;
+    width: calc(100% - 150px);
     @media (max-width: 991px) {
       width: 100%;
     }

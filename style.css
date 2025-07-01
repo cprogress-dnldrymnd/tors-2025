@@ -1402,15 +1402,14 @@ input:checked + .slider.slider:before {
   align-items: center;
   gap: 20px; }
   .artist-songs--wrapper.artist-songs--wrapper .artist-details {
-    width: 35%; }
-    .artist-songs--wrapper.artist-songs--wrapper .artist-details .artist-details--content h3,
-    .artist-songs--wrapper.artist-songs--wrapper .artist-details .artist-details--content p {
-      color: var(--white-color); }
+    width: 150px; }
+    .artist-songs--wrapper.artist-songs--wrapper .artist-details .artist-details--content {
+      display: none; }
     @media (max-width: 991px) {
       .artist-songs--wrapper.artist-songs--wrapper .artist-details {
         width: 100%; } }
   .artist-songs--wrapper.artist-songs--wrapper .artist-songs--inner {
-    width: 65%; }
+    width: calc(100% - 150px); }
     @media (max-width: 991px) {
       .artist-songs--wrapper.artist-songs--wrapper .artist-songs--inner {
         width: 100%; } }
