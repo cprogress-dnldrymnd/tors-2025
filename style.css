@@ -1343,9 +1343,13 @@ input:checked + .slider.slider:before {
     display: none !important; } }
 
 nav .menu.menu.menu li.menu-item-has-children ul {
-  border-radius: 10px; }
+  border-radius: 10px;
+  width: 250px; }
   nav .menu.menu.menu li.menu-item-has-children ul li {
     opacity: 1;
-    visibility: visible; }
+    visibility: visible;
+    transform: none; }
+    nav .menu.menu.menu li.menu-item-has-children ul li a {
+      font-size: 16px; }
 
 /*# sourceMappingURL=style.css.map */

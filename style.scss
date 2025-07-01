@@ -1783,9 +1783,14 @@ input:checked + .slider.slider:before {
 nav .menu.menu.menu li.menu-item-has-children {
   ul {
     border-radius: 10px;
+    width: 250px;
     li {
       opacity: 1;
       visibility: visible;
+      transform: none;
+      a {
+        font-size: 16px;
+      }
     }
   }
 }
