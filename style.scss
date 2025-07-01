@@ -1805,7 +1805,6 @@ input:checked + .slider.slider:before {
   opacity: 0;
   visibility: hidden;
   transition: 500ms;
-
   svg {
     animation-name: spin;
     animation-duration: 5000ms;
