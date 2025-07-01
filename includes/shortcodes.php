@@ -104,7 +104,7 @@ function loading_animation()
                 <path id="Path_256" data-name="Path 256" d="M194.523,185.771c-4.8,0-7.858,3.187-7.83,8.229a7.03,7.03,0,0,0,2.225,5.158,8.432,8.432,0,0,0,6.543,2.238,7.777,7.777,0,0,0,7.169-8.061,7.672,7.672,0,0,0-8.107-7.563m.122,7.141a.883.883,0,0,1,.757.686.91.91,0,0,1-.73.779.847.847,0,0,1-.761-.679.988.988,0,0,1,.734-.786" transform="translate(-194.719 -166.425)" fill="currentColor"></path>
             </g>
         </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="57" viewBox="0 0 56 57">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="57" viewBox="0 0 56 57">
             <defs>
                 <clipPath id="clip-path">
                     <rect id="Rectangle_183" data-name="Rectangle 183" width="56" height="57" transform="translate(-28 0.142)" fill="currentColor" stroke="#707070" stroke-width="1"></rect>
@@ -115,7 +115,7 @@ function loading_animation()
                 <path id="Path_256" data-name="Path 256" d="M194.523,185.771c-4.8,0-7.858,3.187-7.83,8.229a7.03,7.03,0,0,0,2.225,5.158,8.432,8.432,0,0,0,6.543,2.238,7.777,7.777,0,0,0,7.169-8.061,7.672,7.672,0,0,0-8.107-7.563m.122,7.141a.883.883,0,0,1,.757.686.91.91,0,0,1-.73.779.847.847,0,0,1-.761-.679.988.988,0,0,1,.734-.786" transform="translate(-194.719 -166.425)" fill="currentColor"></path>
             </g>
         </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="57" viewBox="0 0 56 57">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="57" viewBox="0 0 56 57">
             <defs>
                 <clipPath id="clip-path">
                     <rect id="Rectangle_183" data-name="Rectangle 183" width="56" height="57" transform="translate(-28 0.142)" fill="currentColor" stroke="#707070" stroke-width="1"></rect>
@@ -126,7 +126,7 @@ function loading_animation()
                 <path id="Path_256" data-name="Path 256" d="M194.523,185.771c-4.8,0-7.858,3.187-7.83,8.229a7.03,7.03,0,0,0,2.225,5.158,8.432,8.432,0,0,0,6.543,2.238,7.777,7.777,0,0,0,7.169-8.061,7.672,7.672,0,0,0-8.107-7.563m.122,7.141a.883.883,0,0,1,.757.686.91.91,0,0,1-.73.779.847.847,0,0,1-.761-.679.988.988,0,0,1,.734-.786" transform="translate(-194.719 -166.425)" fill="currentColor"></path>
             </g>
         </svg>
-        
+
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="57" viewBox="0 0 56 57">
             <defs>
                 <clipPath id="clip-path">
@@ -412,7 +412,13 @@ function recordings_box($atts)
     $before_audio = carbon_get_the_post_meta('before_audio');
     $after_audio = carbon_get_the_post_meta('after_audio');
 
-    echo '<div class="artist-songs--box audio-player--parent before-active audio-player--player">';
+    if ($display_artist) {
+        $class = 'has--artists';
+    } else {
+        $class = '';
+    }
+
+    echo '<div class="artist-songs--box audio-player--parent before-active audio-player--player ' . $class . '">';
     echo '<div class="artist-songs--inner">';
     echo '<div class="artist-songs--title">';
     echo '<h4>' . get_the_title() . '</h4>';
