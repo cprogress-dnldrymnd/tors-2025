@@ -119,6 +119,92 @@ $query = new WP_Query($args);
     });
 </script>
 <script>
+    (function($) { // Ensure jQuery is available and used within this scope
+
+        /**
+         * Function to execute when the filter is deemed "finished".
+         * Place your custom code here.
+         */
+        function onElementorTaxonomyFilterFinish() {
+            console.log('Elementor Taxonomy Filter has likely finished updating the content.');
+            // --- Your custom code goes here ---
+            // For example, you might want to:
+            // - Reinitialize a custom script that depends on the filtered content
+            // - Update UI elements
+            // - Log analytics
+            // - Re-run any third-party script that needs to operate on new DOM elements
+            // --- End of your custom code ---
+        }
+
+        // Check if Elementor is loaded and ready
+        $(window).on('elementor/frontend/init', function() {
+            console.log('Elementor frontend initialized.');
+
+            // Identify the container that holds the posts/content being filtered.
+            // You will likely need to inspect your Elementor page to find the
+            // correct selector for the container that gets updated after filtering.
+            // Common selectors might be:
+            // - '.elementor-posts-container'
+            // - '.elementor-widget-posts'
+            // - A custom class you've added to your posts widget
+            const targetNode = document.querySelector('.elementor-posts-container'); // <<< ADJUST THIS SELECTOR
+
+            if (!targetNode) {
+                console.warn('Elementor Taxonomy Filter: Target container not found. Please adjust the `targetNode` selector.');
+                return;
+            }
+
+            // Options for the MutationObserver (what to observe)
+            const config = {
+                childList: true, // Observe direct children additions/removals
+                subtree: true, // Observe all descendants
+                attributes: false, // Do not observe attribute changes
+                characterData: false // Do not observe text content changes
+            };
+
+            // Callback function to execute when mutations are observed
+            const callback = function(mutationsList, observer) {
+                for (const mutation of mutationsList) {
+                    if (mutation.type === 'childList') {
+                        // Check if new nodes were added or existing ones removed.
+                        // This often indicates content has been updated.
+                        if (mutation.addedNodes.length > 0 || mutation.removedNodes.length > 0) {
+                            // A small debounce might be useful here to prevent
+                            // multiple calls during a rapid series of DOM changes.
+                            // For simplicity, we'll call it directly for now.
+                            onElementorTaxonomyFilterFinish();
+                            // If you only want it to fire once per filter action,
+                            // you might need more sophisticated logic, like checking
+                            // if the filter button was clicked recently.
+                        }
+                    }
+                }
+            };
+
+            // Create an instance of the MutationObserver
+            const observer = new MutationObserver(callback);
+
+            // Start observing the target node for configured mutations
+            observer.observe(targetNode, config);
+
+            console.log('Elementor Taxonomy Filter: MutationObserver started on:', targetNode);
+
+            // Optional: If you know the specific filter element, you could also
+            // listen for clicks on the filter buttons/links, and then perhaps
+            // add a small delay before calling onElementorTaxonomyFilterFinish,
+            // or wait for the observer to detect changes.
+            // Example:
+            // $('.elementor-filter-button').on('click', function() {
+            //     console.log('Filter button clicked. Waiting for content update...');
+            //     // You might want to set a flag here and clear it in the observer callback
+            //     // to ensure your `onElementorTaxonomyFilterFinish` only runs once
+            //     // per actual filter completion.
+            // });
+        });
+
+    })(jQuery); // Pass jQuery to the immediately invoked function expression
+</script>
+<script>
     jQuery(document).ready(function() {
         initialize_wavesurfer();
         jQuery('.recordings-filter .e-filter-item').click(function(e) {
