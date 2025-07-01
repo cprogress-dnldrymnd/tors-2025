@@ -1792,13 +1792,20 @@ input:checked + .slider.slider:before {
   }
 }
 .loading-animation {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  z-index: 9;
   color: var(--white-color);
+  left: 0;
+  right: 0;
   opacity: 0;
   visibility: hidden;
   transition: 500ms;
-  top: 0;
-  left: 0;
-  position: absolute;
+
   svg {
     animation-name: spin;
     animation-duration: 5000ms;
@@ -1806,40 +1813,31 @@ input:checked + .slider.slider:before {
     animation-timing-function: linear;
     width: 0;
     height: 0;
-    height: 50px;
-    width: 50px;
   }
 }
-.play-pause-btn-holder {
+.audio-box-holder {
   position: relative;
-  .play,
-  .pause {
-    transition: 500ms;
-  }
-}
-.artist-songs--box {
   .audio-box {
-    transition: 300ms;
+    transition: 100ms;
     opacity: 0;
     visibility: hidden;
   }
   &.audio-loading {
-    .play,
-    .pause {
-      opacity: 0;
-      visibility: hidden;
-    }
     &:not(.display-audio) {
       .loading-animation {
         opacity: 1;
         visibility: visible;
+        svg {
+          height: 50px;
+          width: 50px;
+        }
       }
     }
-  }
-  &.display-audio {
-    .audio-box {
-      opacity: 1;
-      visibility: visible;
+    &.display-audio {
+      .audio-box {
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 }
