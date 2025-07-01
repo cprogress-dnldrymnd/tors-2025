@@ -1847,6 +1847,7 @@ input:checked + .slider.slider:before {
 }
 .artist-songs--wrapper.artist-songs--wrapper {
   display: flex;
+  align-items: center;
   gap: 20px;
   .artist-details {
     width: 35%;

@@ -1399,6 +1399,7 @@ input:checked + .slider.slider:before {
     transform: rotate(360deg); } }
 .artist-songs--wrapper.artist-songs--wrapper {
   display: flex;
+  align-items: center;
   gap: 20px; }
   .artist-songs--wrapper.artist-songs--wrapper .artist-details {
     width: 35%; }
