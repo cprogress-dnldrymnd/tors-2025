@@ -1371,9 +1371,6 @@ input:checked + .slider.slider:before {
   opacity: 0;
   visibility: hidden;
   transition: 500ms; }
-  .loading-animation svg {
-    width: 40px;
-    height: 40px; }
 
 .audio-box-holder {
   position: relative; }
