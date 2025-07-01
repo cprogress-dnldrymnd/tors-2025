@@ -1791,6 +1791,13 @@ input:checked + .slider.slider:before {
     gap: 15px;
   }
 }
+.elementor-loop-container {
+  .artist-songs--box.artist-songs--box.artist-songs--box {
+    background-color: var(--e-global-color-cea108a);
+    border-radius: 10px;
+    padding: 30px;
+  }
+}
 .mobile-only {
   @media (min-width: 768px) {
     display: none !important;
