@@ -1833,8 +1833,10 @@ input:checked + .slider.slider:before {
     }
   }
   &.display-audio {
-    opacity: 1;
-    visibility: visible;
+    .audio-box {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 
