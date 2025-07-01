@@ -1833,11 +1833,11 @@ input:checked + .slider.slider:before {
         }
       }
     }
-    &.display-audio {
-      .audio-box {
-        opacity: 1;
-        visibility: visible;
-      }
+  }
+  &.display-audio {
+    .audio-box {
+      opacity: 1;
+      visibility: visible;
     }
   }
 }

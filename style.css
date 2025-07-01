@@ -1391,7 +1391,7 @@ input:checked + .slider.slider:before {
     .audio-box-holder.audio-loading:not(.display-audio) .loading-animation svg {
       height: 50px;
       width: 50px; }
-  .audio-box-holder.audio-loading.display-audio .audio-box {
+  .audio-box-holder.display-audio .audio-box {
     opacity: 1;
     visibility: visible; }
 
