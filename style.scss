@@ -1794,9 +1794,30 @@ input:checked + .slider.slider:before {
 .loading-animation {
   display: flex;
   gap: 10px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  color: var(--white-color);
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 500ms;
+  svg {
+  }
 }
+.audio-box-holder {
+  position: relative;
+  &.audio-loading {
+    .loading-animation {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
 .elementor-loop-container {
   .artist-songs--box.artist-songs--box.artist-songs--box {
     background-color: var(--e-global-color-cea108a);
