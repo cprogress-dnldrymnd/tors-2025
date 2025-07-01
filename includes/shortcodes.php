@@ -58,6 +58,7 @@ function audio_box($atts)
         }
 ?>
         <div class="audio-box-holder d-flex align-items-center audio-<?= $audio_type ?>" audio_url="<?= $audio_url ?>">
+            <div class="loading-animation"></div>
             <div class="audio-box <?= $class ?> <?= $audio_type ?>-audio" id="audio-<?= $audio ?>"></div>
         </div>
     <?php
