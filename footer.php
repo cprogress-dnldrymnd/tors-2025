@@ -205,6 +205,8 @@ $query = new WP_Query($args);
     })(jQuery); // Pass jQuery to the immediately invoked function expression
 </script>
 <script>
+    var WaveSurfer_TORS = [];
+
     jQuery(document).ready(function() {
         checkVisibility();
         initialize_wavesurfer();
@@ -244,18 +246,11 @@ $query = new WP_Query($args);
             if (isElementInViewport($this)) {
                 // If visible, add the 'is-visible' class
                 // This class can be used for styling or triggering animations
-                if (!$this.hasClass('is-visible')) {
-                    $this.addClass('is-visible');
-                    console.log('Element ' + $this.data('index') + ' is now visible!');
-                    // You can trigger other actions here, e.g., load content, animate
-                }
-            } else {
-                // If not visible, remove the 'is-visible' class
-                // This allows elements to "un-trigger" if they scroll out of view
-                if ($this.hasClass('is-visible')) {
-                    $this.removeClass('is-visible');
-                    console.log('Element ' + $this.data('index') + ' is no longer visible.');
-                }
+                if (!$this.hasClass('is-visible')) {}
+
+                $id = jQuery(this).find('.audio-box').attr('id');
+                $audio_url = jQuery(this).attr('audio_url');
+                wavesurfer($id, $audio_url);
             }
         });
     }
@@ -267,7 +262,7 @@ $query = new WP_Query($args);
 
     function initialize_wavesurfer() {
         if (jQuery('.audio-box').length > 0) {
-            var WaveSurfer_TORS = [];
+
             jQuery(document).ready(function() {
                 jQuery('.switch-input').each(function(index, element) {
                     jQuery(this).change(function(e) {
@@ -283,11 +278,6 @@ $query = new WP_Query($args);
                     });
                 });
 
-                jQuery('.audio-box-holder').each(function(index, element) {
-                    $id = jQuery(this).find('.audio-box').attr('id');
-                    $audio_url = jQuery(this).attr('audio_url');
-                    wavesurfer($id, $audio_url);
-                });
 
                 jQuery('.play-pause-btn').each(function(index, element) {
                     var $target = jQuery(this).attr('target');
