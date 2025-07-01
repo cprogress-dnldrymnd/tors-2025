@@ -1206,7 +1206,7 @@ input:checked + .slider.slider:before {
     padding-right: 0; }
   .header-area.header-area .row {
     margin-left: 0;
-    margin-left: 0; }
+    margin-right: 0; }
     .header-area.header-area .row > div {
       padding-left: 0;
       padding-right: 0; }
