@@ -1780,8 +1780,8 @@ input:checked + .slider.slider:before {
   }
 }
 
-nav .menu li.menu-item-has-children {
-  .menu {
+nav .menu.menu.menu li.menu-item-has-children {
+  ul {
     border-radius: 10px;
     li {
       opacity: 1;
