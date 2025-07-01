@@ -305,70 +305,7 @@ function recordings_by_genres_artists($atts)
         echo '<div class="artist-songs--holder">';
         while ($query_recordings->have_posts()) {
             $query_recordings->the_post();
-            $before_audio = carbon_get_the_post_meta('before_audio');
-            $after_audio = carbon_get_the_post_meta('after_audio');
-            echo '<div class="artist-songs--box audio-player--parent before-active audio-player--player">';
-            echo '<div class="artist-songs--inner">';
-            echo '<div class="artist-songs--title">';
-            echo '<h4>' . get_the_title() . '</h4>';
-            echo '<div class="desktop-only audio-toggle-v3">';
-            echo do_shortcode('[audio_toggle class="mobile"]');
-            echo '</div>';
-            echo '</div>';
-
-            echo '<div class="artist-songs--body audio-before">';
-
-            echo '<div class="audio-player--player-holder">';
-
-            echo '<div class="play-pause-btn-holder">';
-            echo '<div class="play-pause-btn play" target="' . $before_audio . '"><i aria-hidden="true" class="fas fa-play"></i></div>';
-            echo '<div class="play-pause-btn pause" target="' . $before_audio . '"><i aria-hidden="true" class="fas fa-pause"></i></div>';
-            echo '</div>';
-
-            echo do_shortcode('[audio_box audio_type="before"]');
-
-
-            echo '<div class="audio-player--timer desktop-only">';
-            echo '<div class="audio-current-time" id="audio-' . $before_audio . '-current-time">00:00</div>';
-            echo '<div class="audio-duration" id="audio-' . $before_audio . '-duration">00:00</div>';
-            echo '</div>';
-
-            echo '</div>';
-
-
-
-            echo '</div>';
-
-
-            echo '<div class="artist-songs--body audio-after">';
-
-            echo '<div class="audio-player--player-holder">';
-
-            echo '<div class="play-pause-btn-holder">';
-            echo '<div class="play-pause-btn play" target="' . $after_audio . '"><i aria-hidden="true" class="fas fa-play"></i></div>';
-            echo '<div class="play-pause-btn pause" target="' . $after_audio . '"><i aria-hidden="true" class="fas fa-pause"></i></div>';
-            echo '</div>';
-
-            echo do_shortcode('[audio_box audio_type="after"]');
-
-
-            echo '<div class="audio-player--timer">';
-            echo '<div class="audio-current-time" id="audio-' . $after_audio . '-current-time">00:00</div>';
-            echo '<div class="audio-duration" id="audio-' . $after_audio . '-duration">00:00</div>';
-            echo '</div>';
-
-            echo '</div>';
-
-
-
-            echo '</div>';
-            echo '</div>';
-
-            echo '<div class="audio-toggle-v4 mobile-only">';
-            echo do_shortcode('[audio_toggle]');
-            echo '</div>';
-
-            echo '</div>';
+            echo do_shortcode('[recordings_box]');
         }
 
         if ($query_recordings_count > 1) {
@@ -391,3 +328,73 @@ function recordings_by_genres_artists($atts)
 }
 
 add_shortcode('recordings_by_genres_artists', 'recordings_by_genres_artists');
+
+
+function recordings_box()
+{
+    $before_audio = carbon_get_the_post_meta('before_audio');
+    $after_audio = carbon_get_the_post_meta('after_audio');
+    echo '<div class="artist-songs--box audio-player--parent before-active audio-player--player">';
+    echo '<div class="artist-songs--inner">';
+    echo '<div class="artist-songs--title">';
+    echo '<h4>' . get_the_title() . '</h4>';
+    echo '<div class="desktop-only audio-toggle-v3">';
+    echo do_shortcode('[audio_toggle class="mobile"]');
+    echo '</div>';
+    echo '</div>';
+
+    echo '<div class="artist-songs--body audio-before">';
+
+    echo '<div class="audio-player--player-holder">';
+
+    echo '<div class="play-pause-btn-holder">';
+    echo '<div class="play-pause-btn play" target="' . $before_audio . '"><i aria-hidden="true" class="fas fa-play"></i></div>';
+    echo '<div class="play-pause-btn pause" target="' . $before_audio . '"><i aria-hidden="true" class="fas fa-pause"></i></div>';
+    echo '</div>';
+
+    echo do_shortcode('[audio_box audio_type="before"]');
+
+
+    echo '<div class="audio-player--timer desktop-only">';
+    echo '<div class="audio-current-time" id="audio-' . $before_audio . '-current-time">00:00</div>';
+    echo '<div class="audio-duration" id="audio-' . $before_audio . '-duration">00:00</div>';
+    echo '</div>';
+
+    echo '</div>';
+
+
+
+    echo '</div>';
+
+
+    echo '<div class="artist-songs--body audio-after">';
+
+    echo '<div class="audio-player--player-holder">';
+
+    echo '<div class="play-pause-btn-holder">';
+    echo '<div class="play-pause-btn play" target="' . $after_audio . '"><i aria-hidden="true" class="fas fa-play"></i></div>';
+    echo '<div class="play-pause-btn pause" target="' . $after_audio . '"><i aria-hidden="true" class="fas fa-pause"></i></div>';
+    echo '</div>';
+
+    echo do_shortcode('[audio_box audio_type="after"]');
+
+
+    echo '<div class="audio-player--timer">';
+    echo '<div class="audio-current-time" id="audio-' . $after_audio . '-current-time">00:00</div>';
+    echo '<div class="audio-duration" id="audio-' . $after_audio . '-duration">00:00</div>';
+    echo '</div>';
+
+    echo '</div>';
+
+
+
+    echo '</div>';
+    echo '</div>';
+
+    echo '<div class="audio-toggle-v4 mobile-only">';
+    echo do_shortcode('[audio_toggle]');
+    echo '</div>';
+
+    echo '</div>';
+}
+add_shortcode('recordings_box', 'recordings_box');
