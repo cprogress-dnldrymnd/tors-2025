@@ -327,9 +327,6 @@ function recordings_by_genres_artists($atts)
     echo '<section class="artists-songs-section">';
 
     foreach ($artists as $artist) {
-
-        $image = carbon_get_term_meta($artist['term_id'], 'image');
-
         $args = array(
             'post_type' => 'recordings',
             'tax_query' => array(
@@ -345,7 +342,7 @@ function recordings_by_genres_artists($atts)
 
         echo '<div class="artists-songs-section-inner">';
 
-        echo do_shortcode('[artist_box image=' . $image . ' name=' . $artist['name'] . ' description=' . $artist['description'] . ']');
+        echo do_shortcode('[artist_box term_id=' . $artist['term_id'] . ']');
 
         echo '<div class="artist-songs">';
         echo '<div class="artist-songs--holder">';
@@ -481,13 +478,16 @@ function artist_box($atts)
     extract(
         shortcode_atts(
             array(
-                'image' => '',
-                'name' => '',
-                'description' => '',
+                'term_id' => '',
             ),
             $atts
         )
     );
+
+    $artist = get_term_by('id', $term_id, 'artists');
+
+    $image = carbon_get_term_meta($term_id, 'image');
+
     echo '<div class="artist-details">';
 
     echo '<div class="artist-details--image">';
@@ -500,10 +500,10 @@ function artist_box($atts)
 
     echo '<div class="artist-details--content">';
 
-    echo '<h3>' . $name . '</h3>';
+    echo '<h3>' . $artist->name . '</h3>';
 
     echo '<div class="artist-details--desc">';
-    echo wpautop($description);
+    echo wpautop($artist->description);
     echo '</div>';
 
 

@@ -21,8 +21,6 @@ function get__artists_by_genre($genre)
             $artists_arr[$artist->term_id] = array(
                 'term_id' => $artist->term_id,
                 'slug' => $artist->slug,
-                'name' => $artist->name,
-                'description' => $artist->description,
             );
         }
     }
