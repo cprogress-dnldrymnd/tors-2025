@@ -209,13 +209,52 @@ $query = new WP_Query($args);
 
     jQuery(document).ready(function() {
         checkVisibility();
-        initialize_wavesurfer();
+
+
+        jQuery('.switch-input').each(function(index, element) {
+            jQuery(this).change(function(e) {
+                if (jQuery(this).is(":checked")) {
+                    jQuery(this).parents('.audio-player--parent').removeClass('before-active').addClass('after-active');
+                    jQuery(this).parents('.audio-player--parent').find('.audio-box').addClass('active').removeClass('active');
+                } else {
+                    jQuery(this).parents('.audio-player--parent').addClass('before-active').removeClass('after-active');
+                    jQuery(this).parents('.audio-player--parent').find('.audio-box').removeClass('active').addClass('active');
+
+                }
+                e.preventDefault();
+            });
+        });
+
+
+        jQuery('.play-pause-btn').each(function(index, element) {
+            var $target = jQuery(this).attr('target');
+            jQuery(this).click(function(e) {
+                $target_val = 'audio-' + $target;
+                WaveSurfer_TORS[$target_val].playPause();
+                jQuery(this).parents('.audio-player--player').toggleClass('playing');
+                e.preventDefault();
+            });
+        });
+
+        jQuery('.show-all-song').click(function(e) {
+            if (jQuery(this).parents('.artist-songs--holder').hasClass('show-all')) {
+                jQuery(this).text('Show All');
+                jQuery(this).parents('.artist-songs--holder').removeClass('show-all');
+            } else {
+                jQuery(this).text('Show Less');
+                jQuery(this).parents('.artist-songs--holder').addClass('show-all');
+            }
+
+            e.preventDefault();
+        });
+
+        /*
         jQuery('.recordings-filter .e-filter-item').click(function(e) {
             console.log('xxx');
             setTimeout(function() {
                 initialize_wavesurfer();
             }, 2000);
-        });
+        });*/
     });
 
     // Function to check if an element is visible in the viewport
@@ -259,110 +298,63 @@ $query = new WP_Query($args);
     jQuery(window).on('scroll', checkVisibility);
 
 
+    function formatTime(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }
 
-    function initialize_wavesurfer() {
-        if (jQuery('.audio-box').length > 0) {
+    function wavesurfer($id, $url, ) {
+        WaveSurfer_TORS[$id] = WaveSurfer.create({
+            "container": document.getElementById($id),
+            "height": 50,
+            "splitChannels": false,
+            "normalize": true,
+            "waveColor": "#fff",
+            "progressColor": "#FECD55",
+            "cursorColor": "#ddd5e9",
+            "cursorWidth": 4,
+            "barWidth": 4,
+            "barGap": 3,
+            "barRadius": 50,
+            "barHeight": null,
+            "minPxPerSec": 1,
+            "fillParent": true,
+            "url": $url,
+            "autoplay": false,
+            "interact": true,
+            "hideScrollbar": false,
+            "audioRate": 1,
+            "autoScroll": true,
+            "autoCenter": true,
+            "sampleRate": 8000
+        });
 
-            jQuery(document).ready(function() {
-                jQuery('.switch-input').each(function(index, element) {
-                    jQuery(this).change(function(e) {
-                        if (jQuery(this).is(":checked")) {
-                            jQuery(this).parents('.audio-player--parent').removeClass('before-active').addClass('after-active');
-                            jQuery(this).parents('.audio-player--parent').find('.audio-box').addClass('active').removeClass('active');
-                        } else {
-                            jQuery(this).parents('.audio-player--parent').addClass('before-active').removeClass('after-active');
-                            jQuery(this).parents('.audio-player--parent').find('.audio-box').removeClass('active').addClass('active');
+        WaveSurfer_TORS[$id].on('interaction', () => {
+            WaveSurfer_TORS[$id].play();
+            jQuery('#' + $id).parents('.audio-player--player').addClass('playing');
+        });
 
-                        }
-                        e.preventDefault();
-                    });
-                });
+        WaveSurfer_TORS[$id].on('finish', () => {
+            WaveSurfer_TORS[$id].setTime(0);
+            jQuery('#' + $id).parents('.audio-player--player').removeClass('playing');
 
+        });
+        WaveSurfer_TORS[$id].on('ready', function() {
+            var $duration = '#' + $id + '-duration';
+            const $totalTime = WaveSurfer_TORS[$id].getDuration();
+            jQuery($duration).text(formatTime($totalTime));
+        });
 
-                jQuery('.play-pause-btn').each(function(index, element) {
-                    var $target = jQuery(this).attr('target');
-                    jQuery(this).click(function(e) {
-                        $target_val = 'audio-' + $target;
-                        WaveSurfer_TORS[$target_val].playPause();
-                        jQuery(this).parents('.audio-player--player').toggleClass('playing');
-                        e.preventDefault();
-                    });
-                });
-
-                jQuery('.show-all-song').click(function(e) {
-                    if (jQuery(this).parents('.artist-songs--holder').hasClass('show-all')) {
-                        jQuery(this).text('Show All');
-                        jQuery(this).parents('.artist-songs--holder').removeClass('show-all');
-                    } else {
-                        jQuery(this).text('Show Less');
-                        jQuery(this).parents('.artist-songs--holder').addClass('show-all');
-                    }
-
-                    e.preventDefault();
-                });
-            });
-
-            function formatTime(time) {
-                const minutes = Math.floor(time / 60);
-                const seconds = Math.floor(time % 60);
-                return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-            }
-
-            function wavesurfer($id, $url, ) {
-                // With pre-decoded audio data
-
-                WaveSurfer_TORS[$id] = WaveSurfer.create({
-                    "container": document.getElementById($id),
-                    "height": 50,
-                    "splitChannels": false,
-                    "normalize": true,
-                    "waveColor": "#fff",
-                    "progressColor": "#FECD55",
-                    "cursorColor": "#ddd5e9",
-                    "cursorWidth": 4,
-                    "barWidth": 4,
-                    "barGap": 3,
-                    "barRadius": 50,
-                    "barHeight": null,
-                    "minPxPerSec": 1,
-                    "fillParent": true,
-                    "url": $url,
-                    "autoplay": false,
-                    "interact": true,
-                    "hideScrollbar": false,
-                    "audioRate": 1,
-                    "autoScroll": true,
-                    "autoCenter": true,
-                    "sampleRate": 8000
-                });
-
-                WaveSurfer_TORS[$id].on('interaction', () => {
-                    WaveSurfer_TORS[$id].play();
-                    jQuery('#' + $id).parents('.audio-player--player').addClass('playing');
-                });
-
-                WaveSurfer_TORS[$id].on('finish', () => {
-                    WaveSurfer_TORS[$id].setTime(0);
-                    jQuery('#' + $id).parents('.audio-player--player').removeClass('playing');
-
-                });
-                WaveSurfer_TORS[$id].on('ready', function() {
-                    var $duration = '#' + $id + '-duration';
-                    const $totalTime = WaveSurfer_TORS[$id].getDuration();
-                    jQuery($duration).text(formatTime($totalTime));
-                });
-
-                WaveSurfer_TORS[$id].on('audioprocess', function() {
-                    if (WaveSurfer_TORS[$id].isPlaying()) {
-                        var $current_time = '#' + $id + '-current-time';
-                        const $currentTime = WaveSurfer_TORS[$id].getCurrentTime();
-                        jQuery($current_time).text(formatTime($currentTime));
-
-                    }
-                });
-                return WaveSurfer_TORS[$id];
+        WaveSurfer_TORS[$id].on('audioprocess', function() {
+            if (WaveSurfer_TORS[$id].isPlaying()) {
+                var $current_time = '#' + $id + '-current-time';
+                const $currentTime = WaveSurfer_TORS[$id].getCurrentTime();
+                jQuery($current_time).text(formatTime($currentTime));
 
             }
-        }
+        });
+        return WaveSurfer_TORS[$id];
+
     }
 </script>
