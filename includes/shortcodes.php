@@ -345,7 +345,7 @@ function recordings_by_genres_artists($atts)
 
         echo '<div class="artists-songs-section-inner">';
 
-        echo do_shortcode('[artists_box image=' . $image . ' name=' . $artist['name'] . ' description=' . $artist['description'] . ']');
+        echo do_shortcode('[artist_box image=' . $image . ' name=' . $artist['name'] . ' description=' . $artist['description'] . ']');
 
         echo '<div class="artist-songs">';
         echo '<div class="artist-songs--holder">';
@@ -404,7 +404,7 @@ function recordings_box($atts)
         $image = carbon_get_term_meta($artist['term_id'], 'image');
 
         echo '<div class="artist-songs--wrapper">';
-        echo do_shortcode('[artists_box image=' . $image . ' name=' . $artist['name'] . ' description=' . $artist['description'] . ']');
+        echo do_shortcode('[artist_box image=' . $image . ' name=' . $artist['name'] . ' description=' . $artist['description'] . ']');
     }
     echo '<div class="artist-songs--inner">';
     echo '<div class="artist-songs--title">';
