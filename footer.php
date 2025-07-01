@@ -113,33 +113,39 @@ $query = new WP_Query($args);
 </script>
 <script>
     jQuery(document).ready(function() {
-        jQuery('.switch-input').each(function(index, element) {
-            jQuery(this).change(function(e) {
-                if (jQuery(this).is(":checked")) {
-                    jQuery(this).parents('.audio-player--parent').removeClass('before-active').addClass('after-active');
-                    jQuery(this).parents('.audio-player--parent').find('.audio-box').addClass('active').removeClass('active');
-                } else {
-                    jQuery(this).parents('.audio-player--parent').addClass('before-active').removeClass('after-active');
-                    jQuery(this).parents('.audio-player--parent').find('.audio-box').removeClass('active').addClass('active');
 
-                }
-                e.preventDefault();
-            });
-        });
 
 
     });
 </script>
 <script>
-    jQuery('.recordings-filter .e-filter-item').click(function(e) {
-        console.log('xxx');
+    jQuery(document).ready(function() {
         initialize_wavesurfer();
+        jQuery('.recordings-filter .e-filter-item').click(function(e) {
+            console.log('xxx');
+            initialize_wavesurfer();
+        });
     });
 
     function initialize_wavesurfer() {
         if (jQuery('.audio-box').length > 0) {
             var WaveSurfer_TORS = [];
             jQuery(document).ready(function() {
+
+                jQuery('.switch-input').each(function(index, element) {
+                    jQuery(this).change(function(e) {
+                        if (jQuery(this).is(":checked")) {
+                            jQuery(this).parents('.audio-player--parent').removeClass('before-active').addClass('after-active');
+                            jQuery(this).parents('.audio-player--parent').find('.audio-box').addClass('active').removeClass('active');
+                        } else {
+                            jQuery(this).parents('.audio-player--parent').addClass('before-active').removeClass('after-active');
+                            jQuery(this).parents('.audio-player--parent').find('.audio-box').removeClass('active').addClass('active');
+
+                        }
+                        e.preventDefault();
+                    });
+                });
+
                 jQuery('.audio-box-holder').each(function(index, element) {
                     $id = jQuery(this).find('.audio-box').attr('id');
                     $audio_url = jQuery(this).attr('audio_url');
