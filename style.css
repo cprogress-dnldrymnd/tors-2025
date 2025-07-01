@@ -1380,7 +1380,7 @@ input:checked + .slider.slider:before {
 .audio-box-holder {
   position: relative; }
   .audio-box-holder .audio-box {
-    transition: 300ms;
+    transition: 200ms;
     opacity: 0;
     visibility: hidden; }
   .audio-box-holder.audio-loading:not(.display-audio) .loading-animation {
