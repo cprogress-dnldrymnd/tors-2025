@@ -125,7 +125,7 @@ $query = new WP_Query($args);
             console.log('xxx');
             setTimeout(function() {
                 initialize_wavesurfer();
-            }, 1000);
+            }, 2000);
         });
     });
 
