@@ -1844,6 +1844,16 @@ input:checked + .slider.slider:before {
     transform: rotate(360deg);
   }
 }
+.artist-songs--wrapper {
+  display: flex;
+  gap: 20px;
+  .artist-details {
+    width: 40%;
+  }
+  .artist-songs--inner {
+    width: 60%;
+  }
+}
 .elementor-loop-container {
   .artist-songs--box.artist-songs--box.artist-songs--box {
     background-color: var(--e-global-color-cea108a);
