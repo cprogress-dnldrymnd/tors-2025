@@ -1821,8 +1821,10 @@ input:checked + .slider.slider:before {
     .loading-animation {
       opacity: 1;
       visibility: visible;
-      height: 50px;
-      width: 50px;
+      svg {
+        height: 50px;
+        width: 50px;
+      }
     }
   }
 }

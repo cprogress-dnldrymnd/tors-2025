@@ -1383,9 +1383,10 @@ input:checked + .slider.slider:before {
   position: relative; }
   .audio-box-holder.audio-loading:not(.display-audio) .loading-animation {
     opacity: 1;
-    visibility: visible;
-    height: 50px;
-    width: 50px; }
+    visibility: visible; }
+    .audio-box-holder.audio-loading:not(.display-audio) .loading-animation svg {
+      height: 50px;
+      width: 50px; }
 
 @keyframes spin {
   from {
