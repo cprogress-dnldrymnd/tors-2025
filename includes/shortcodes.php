@@ -405,6 +405,7 @@ function recordings_box($atts)
 
         echo '<div class="artist-songs--wrapper">';
         echo do_shortcode('[artist_box image=' . $image . ' name=' . $artist['name'] . ' description=' . $artist['description'] . ']');
+        echo $artist['description'];
     }
     echo '<div class="artist-songs--inner">';
     echo '<div class="artist-songs--title">';
