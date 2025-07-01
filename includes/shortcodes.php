@@ -395,15 +395,6 @@ function recordings_box($atts)
     }
 
     echo '<div class="artist-songs--box audio-player--parent before-active audio-player--player ' . $class . '">';
-    if ($display_artist) {
-
-
-        $image = carbon_get_term_meta($artist['term_id'], 'image');
-
-        echo '<section class="artists-songs-section">';
-        echo '<div class="artists-songs-section-inner">';
-        echo do_shortcode('[artist_box image=' . $image . ' name=' . $artist['name'] . ' description=' . $artist['description'] . ']');
-    }
     echo '<div class="artist-songs--inner">';
     echo '<div class="artist-songs--title">';
     echo '<h4>' . get_the_title() . '</h4>';
@@ -460,20 +451,12 @@ function recordings_box($atts)
     echo '</div>';
     echo '</div>';
 
-    if ($display_artist) {
-        echo '</div>';
-    }
 
     echo '<div class="audio-toggle-v4 mobile-only">';
     echo do_shortcode('[audio_toggle]');
     echo '</div>';
 
     echo '</div>';
-
-    if ($display_artist) {
-        echo '</div>';
-        echo '</section>';
-    }
     return ob_get_clean();
 }
 add_shortcode('recordings_box', 'recordings_box');
