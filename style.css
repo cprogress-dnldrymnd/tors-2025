@@ -1359,7 +1359,8 @@ nav .menu.menu.menu li.menu-item-has-children ul {
       color: var(--black-color);
       line-height: 1.3;
       padding: 10px;
-      display: block; }
+      display: block;
+      text-align: center; }
       nav .menu.menu.menu li.menu-item-has-children ul li a:hover, nav .menu.menu.menu li.menu-item-has-children ul li a:focus, nav .menu.menu.menu li.menu-item-has-children ul li a:active {
         background-color: var(--e-global-color-accent); }
 
