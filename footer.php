@@ -283,12 +283,15 @@ $query = new WP_Query($args);
             if (isElementInViewport($this)) {
                 // If visible, add the 'is-visible' class
                 // This class can be used for styling or triggering animations
-                if (!$this.hasClass('is-visible')) {}
+
+                if (!$this.hasClass('audio-loading')) {
+                    $this.addClass('audio-loading');
+                }
 
                 $id = jQuery(this).find('.audio-box').attr('id');
                 $audio_url = jQuery(this).attr('audio_url');
 
-                if (!$this.hasClass('audio-ready')) {
+                if (!$this.hasClass('audio-ready') && !$this.hasClass('audio-loading')) {
                     wavesurfer($id, $audio_url);
                 }
             }
@@ -346,6 +349,7 @@ $query = new WP_Query($args);
             const $totalTime = WaveSurfer_TORS[$id].getDuration();
             jQuery($duration).text(formatTime($totalTime));
             jQuery('#' + $id).parents('.audio-box-holder').addClass('audio-ready');
+            jQuery('#' + $id).parents('.audio-box-holder').removeClass('audio-loading');
         });
 
         WaveSurfer_TORS[$id].on('audioprocess', function() {
