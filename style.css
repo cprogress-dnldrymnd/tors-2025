@@ -1344,12 +1344,19 @@ input:checked + .slider.slider:before {
 
 nav .menu.menu.menu li.menu-item-has-children ul {
   border-radius: 10px;
-  width: 250px; }
+  width: 250px;
+  overflow: hidden;
+  padding: 0; }
   nav .menu.menu.menu li.menu-item-has-children ul li {
     opacity: 1;
     visibility: visible;
     transform: none; }
     nav .menu.menu.menu li.menu-item-has-children ul li a {
-      font-size: 16px; }
+      font-size: 16px;
+      color: var(--white-color);
+      line-height: 1.3;
+      padding: 10px; }
+      nav .menu.menu.menu li.menu-item-has-children ul li a:hover, nav .menu.menu.menu li.menu-item-has-children ul li a:focus, nav .menu.menu.menu li.menu-item-has-children ul li a:active {
+        background-color: var(--e-global-color-accent); }
 
 /*# sourceMappingURL=style.css.map */
