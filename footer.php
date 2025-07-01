@@ -285,6 +285,8 @@ $query = new WP_Query($args);
 
                 if (!$this.hasClass('audio-loading') && !$this.hasClass('audio-ready')) {
                     $this.addClass('audio-loading');
+                    $this.parents('.artist-songs--box').addClass('audio-loading');
+
                 }
 
                 $id = jQuery(this).find('.audio-box').attr('id');
@@ -349,8 +351,10 @@ $query = new WP_Query($args);
             jQuery($duration).text(formatTime($totalTime));
             jQuery('#' + $id).parents('.audio-box-holder').addClass('audio-ready');
             jQuery('#' + $id).parents('.audio-box-holder').removeClass('audio-loading');
+            jQuery('#' + $id).parents('.artist-songs--box').removeClass('audio-loading');
             setTimeout(function() {
                 jQuery('#' + $id).parents('.audio-box-holder').addClass('display-audio');
+                jQuery('#' + $id).parents('.artist-songs--box').addClass('display-audio');
             }, 1000);
         });
 

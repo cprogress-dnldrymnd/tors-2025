@@ -1816,8 +1816,7 @@ input:checked + .slider.slider:before {
     transition: 500ms;
   }
 }
-.audio-box-holder {
-  position: relative;
+.artist-songs--box {
   .audio-box {
     transition: 300ms;
     opacity: 0;
