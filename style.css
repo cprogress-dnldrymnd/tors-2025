@@ -1381,12 +1381,19 @@ input:checked + .slider.slider:before {
 
 .audio-box-holder {
   position: relative; }
+  .audio-box-holder .audio-box {
+    transition: 300ms;
+    opacity: 0;
+    visibility: hidden; }
   .audio-box-holder.audio-loading:not(.display-audio) .loading-animation {
     opacity: 1;
     visibility: visible; }
     .audio-box-holder.audio-loading:not(.display-audio) .loading-animation svg {
       height: 50px;
       width: 50px; }
+  .audio-box-holder.display-audio .audio-box {
+    opacity: 1;
+    visibility: visible; }
 
 @keyframes spin {
   from {

@@ -1817,7 +1817,11 @@ input:checked + .slider.slider:before {
 }
 .audio-box-holder {
   position: relative;
- 
+  .audio-box {
+    transition: 300ms;
+    opacity: 0;
+    visibility: hidden;
+  }
   &.audio-loading {
     &:not(.display-audio) {
       .loading-animation {
@@ -1830,7 +1834,12 @@ input:checked + .slider.slider:before {
       }
     }
   }
-  
+  &.display-audio {
+    .audio-box {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }
 
 @keyframes spin {
