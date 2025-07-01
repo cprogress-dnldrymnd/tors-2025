@@ -1805,6 +1805,7 @@ input:checked + .slider.slider:before {
   opacity: 0;
   visibility: hidden;
   transition: 500ms;
+
   svg {
     animation-name: spin;
     animation-duration: 5000ms;
@@ -1814,23 +1815,13 @@ input:checked + .slider.slider:before {
 }
 .audio-box-holder {
   position: relative;
-  .audio-box {
-    transition: 200ms;
-    opacity: 0;
-    visibility: hidden;
-  }
   &.audio-loading:not(.display-audio) {
     .loading-animation {
       opacity: 1;
       visibility: visible;
     }
   }
-  &.display-audio {
-    .audio-box {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
+
 }
 
 @keyframes spin {
