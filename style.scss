@@ -738,6 +738,9 @@ section.home-about-area .content ul + a {
 
         &:not(:last-child) {
           margin-right: 30px;
+          @media (max-width: 1199px) {
+            margin-right: 20px;
+          }
         }
       }
 

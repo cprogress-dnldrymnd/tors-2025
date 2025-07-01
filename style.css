@@ -551,6 +551,9 @@ section.home-about-area .content ul + a {
             font-size: 18px; } }
       .header-area.header-area nav > .menu > li:not(:last-child) {
         margin-right: 30px; }
+        @media (max-width: 1199px) {
+          .header-area.header-area nav > .menu > li:not(:last-child) {
+            margin-right: 20px; } }
     @media (max-width: 767px) {
       .header-area.header-area nav > .menu {
         display: none !important; } }
