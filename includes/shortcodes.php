@@ -327,6 +327,8 @@ function recordings_by_genres_artists($atts)
     echo '<section class="artists-songs-section">';
 
     foreach ($artists as $artist) {
+
+
         $args = array(
             'post_type' => 'recordings',
             'tax_query' => array(
@@ -396,8 +398,12 @@ function recordings_box($atts)
 
     echo '<div class="artist-songs--box audio-player--parent before-active audio-player--player ' . $class . '">';
     if ($display_artist) {
-        $artist = get_the_terms(get_the_ID(), 'artists');
-        echo do_shortcode('[artist_box term_id=' . $artist[0]->term_id . ']');
+
+
+        $image = carbon_get_term_meta($artist['term_id'], 'image');
+
+        echo '<div class="artist-songs--wrapper">';
+        echo do_shortcode('[artist_box image=' . $image . ' name=' . $artist['name'] . ' description=' . $artist['description'] . ']');
     }
     echo '<div class="artist-songs--inner">';
     echo '<div class="artist-songs--title">';
