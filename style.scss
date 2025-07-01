@@ -1647,48 +1647,7 @@ input:checked + .slider.slider:before {
       cursor: pointer;
     }
   }
-  .artist-details {
-    width: 33.3333%;
-    display: flex;
-    gap: 40px;
-    align-items: center;
 
-    .artist-details--image {
-      width: 40%;
-      .image--style {
-        border-radius: 10px;
-        overflow: hidden;
-      }
-    }
-    .artist-details--content {
-      width: 60%;
-      display: flex;
-      gap: 20px;
-      flex-direction: column;
-      h3 {
-        font-size: 25px;
-        font-weight: bold;
-      }
-      .artist-details--desc {
-        font-size: 18px;
-        * {
-          font-size: inherit;
-          line-height: 1.3;
-        }
-      }
-      i {
-        color: var(--e-global-color-accent);
-        font-size: 48px;
-      }
-    }
-    @media (max-width: 991px) {
-      width: 100%;
-    }
-    @media (max-width: 575px) {
-      padding: 15px;
-      gap: 22px;
-    }
-  }
   .artist-songs {
     width: 66.6666%;
     .artist-songs--holder {
@@ -1714,6 +1673,48 @@ input:checked + .slider.slider:before {
     @media (max-width: 991px) {
       width: 100%;
     }
+  }
+}
+.artist-details.artist-details {
+  width: 33.3333%;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+  .artist-details--image {
+    width: 40%;
+    .image--style {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  }
+  .artist-details--content {
+    width: 60%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    h3 {
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .artist-details--desc {
+      font-size: 18px;
+      * {
+        font-size: inherit;
+        line-height: 1.3;
+      }
+    }
+    i {
+      color: var(--e-global-color-accent);
+      font-size: 48px;
+    }
+  }
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+  @media (max-width: 575px) {
+    padding: 15px;
+    gap: 22px;
   }
 }
 .artist-songs--box.artist-songs--box.artist-songs--box {
@@ -1844,7 +1845,7 @@ input:checked + .slider.slider:before {
     transform: rotate(360deg);
   }
 }
-.artist-songs--wrapper {
+.artist-songs--wrapper.artist-songs--wrapper {
   display: flex;
   gap: 20px;
   .artist-details {
