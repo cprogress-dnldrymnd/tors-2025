@@ -1851,6 +1851,8 @@ input:checked + .slider.slider:before {
   gap: 20px;
   .artist-details {
     width: 150px;
+    .artist-details--image {
+    }
     .artist-details--content {
       display: none;
     }
