@@ -309,58 +309,59 @@ $query = new WP_Query($args);
     }
 
     function wavesurfer($id, $url, ) {
-        WaveSurfer_TORS[$id] = WaveSurfer.create({
-            "container": document.getElementById($id),
-            "height": 50,
-            "splitChannels": false,
-            "normalize": true,
-            "waveColor": "#fff",
-            "progressColor": "#FECD55",
-            "cursorColor": "#ddd5e9",
-            "cursorWidth": 4,
-            "barWidth": 4,
-            "barGap": 3,
-            "barRadius": 50,
-            "barHeight": null,
-            "minPxPerSec": 1,
-            "fillParent": true,
-            "url": $url,
-            "autoplay": false,
-            "interact": true,
-            "hideScrollbar": false,
-            "audioRate": 1,
-            "autoScroll": true,
-            "autoCenter": true,
-            "sampleRate": 8000
-        });
+        if (!jQuery('#' + $id).parents('.audio-box-holder').hasClass('audio-loading')) {
+            WaveSurfer_TORS[$id] = WaveSurfer.create({
+                "container": document.getElementById($id),
+                "height": 50,
+                "splitChannels": false,
+                "normalize": true,
+                "waveColor": "#fff",
+                "progressColor": "#FECD55",
+                "cursorColor": "#ddd5e9",
+                "cursorWidth": 4,
+                "barWidth": 4,
+                "barGap": 3,
+                "barRadius": 50,
+                "barHeight": null,
+                "minPxPerSec": 1,
+                "fillParent": true,
+                "url": $url,
+                "autoplay": false,
+                "interact": true,
+                "hideScrollbar": false,
+                "audioRate": 1,
+                "autoScroll": true,
+                "autoCenter": true,
+                "sampleRate": 8000
+            });
 
-        WaveSurfer_TORS[$id].on('interaction', () => {
-            WaveSurfer_TORS[$id].play();
-            jQuery('#' + $id).parents('.audio-player--player').addClass('playing');
-        });
+            WaveSurfer_TORS[$id].on('interaction', () => {
+                WaveSurfer_TORS[$id].play();
+                jQuery('#' + $id).parents('.audio-player--player').addClass('playing');
+            });
 
-        WaveSurfer_TORS[$id].on('finish', () => {
-            WaveSurfer_TORS[$id].setTime(0);
-            jQuery('#' + $id).parents('.audio-player--player').removeClass('playing');
+            WaveSurfer_TORS[$id].on('finish', () => {
+                WaveSurfer_TORS[$id].setTime(0);
+                jQuery('#' + $id).parents('.audio-player--player').removeClass('playing');
 
-        });
-        WaveSurfer_TORS[$id].on('ready', function() {
-            var $duration = '#' + $id + '-duration';
-            const $totalTime = WaveSurfer_TORS[$id].getDuration();
-            jQuery($duration).text(formatTime($totalTime));
-            jQuery('#' + $id).parents('.audio-box-holder').addClass('audio-ready');
-            jQuery('#' + $id).parents('.audio-box-holder').removeClass('audio-loading');
-        });
+            });
+            WaveSurfer_TORS[$id].on('ready', function() {
+                var $duration = '#' + $id + '-duration';
+                const $totalTime = WaveSurfer_TORS[$id].getDuration();
+                jQuery($duration).text(formatTime($totalTime));
+                jQuery('#' + $id).parents('.audio-box-holder').addClass('audio-ready');
+                jQuery('#' + $id).parents('.audio-box-holder').removeClass('audio-loading');
+            });
 
-        WaveSurfer_TORS[$id].on('audioprocess', function() {
-            if (WaveSurfer_TORS[$id].isPlaying()) {
-                var $current_time = '#' + $id + '-current-time';
-                const $currentTime = WaveSurfer_TORS[$id].getCurrentTime();
-                jQuery($current_time).text(formatTime($currentTime));
+            WaveSurfer_TORS[$id].on('audioprocess', function() {
+                if (WaveSurfer_TORS[$id].isPlaying()) {
+                    var $current_time = '#' + $id + '-current-time';
+                    const $currentTime = WaveSurfer_TORS[$id].getCurrentTime();
+                    jQuery($current_time).text(formatTime($currentTime));
 
-            }
-        });
-        return WaveSurfer_TORS[$id];
-
+                }
+            });
+            return WaveSurfer_TORS[$id];
+        }
     }
 </script>
