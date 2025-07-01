@@ -395,10 +395,7 @@ function recordings_box($atts)
     }
 
     echo '<div class="artist-songs--box audio-player--parent before-active audio-player--player ' . $class . '">';
-    if ($display_artist) {
-    echo '<div class="artist-songs--wrapper">';
-        $artist = get_the_terms(get_the_ID(), 'artists');
-    }
+
     echo '<div class="artist-songs--inner">';
     echo '<div class="artist-songs--title">';
     echo '<h4>' . get_the_title() . '</h4>';
@@ -455,9 +452,6 @@ function recordings_box($atts)
     echo '</div>';
     echo '</div>';
 
-    if ($display_artist) {
-        echo '</div>';
-    }
 
     echo '<div class="audio-toggle-v4 mobile-only">';
     echo do_shortcode('[audio_toggle]');
