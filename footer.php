@@ -206,6 +206,7 @@ $query = new WP_Query($args);
 </script>
 <script>
     jQuery(document).ready(function() {
+
         initialize_wavesurfer();
         jQuery('.recordings-filter .e-filter-item').click(function(e) {
             console.log('xxx');
@@ -214,6 +215,58 @@ $query = new WP_Query($args);
             }, 2000);
         });
     });
+
+    function check_visibility() {
+        // Function to check if an element is visible in the viewport
+        // This function takes a jQuery element as input.
+        function isElementInViewport(el) {
+            // Get the position of the element relative to the document
+            var rect = el[0].getBoundingClientRect();
+
+            // Get the viewport height
+            var viewportHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+            // Check if the element is within the viewport vertically
+            // The element is visible if its top edge is above the bottom of the viewport
+            // AND its bottom edge is below the top of the viewport.
+            return (
+                rect.top <= viewportHeight && // Top of element is above or at the bottom of the viewport
+                rect.bottom >= 0 // Bottom of element is below or at the top of the viewport
+            );
+        }
+
+        // Function to handle the scroll event
+        function checkVisibility() {
+            // Iterate over each element with the class 'my-element'
+            jQuery('.audio-box-holder').each(function() {
+                var $this = jQuery(this); // Cache the jQuery object for the current element
+
+                // Check if the current element is in the viewport
+                if (isElementInViewport($this)) {
+                    // If visible, add the 'is-visible' class
+                    // This class can be used for styling or triggering animations
+                    if (!$this.hasClass('is-visible')) {
+                        $this.addClass('is-visible');
+                        console.log('Element ' + $this.data('index') + ' is now visible!');
+                        // You can trigger other actions here, e.g., load content, animate
+                    }
+                } else {
+                    // If not visible, remove the 'is-visible' class
+                    // This allows elements to "un-trigger" if they scroll out of view
+                    if ($this.hasClass('is-visible')) {
+                        $this.removeClass('is-visible');
+                        console.log('Element ' + $this.data('index') + ' is no longer visible.');
+                    }
+                }
+            });
+        }
+
+        // Bind the checkVisibility function to the window's scroll event
+        jQuery(window).on('scroll', checkVisibility);
+
+        // Also run the check once on document ready to catch elements already in view
+        checkVisibility();
+    }
 
     function initialize_wavesurfer() {
         if (jQuery('.audio-box').length > 0) {
