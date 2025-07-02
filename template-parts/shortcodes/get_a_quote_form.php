@@ -2,7 +2,14 @@
 $products = get_posts(array(
   'post_type' => 'product',
   'numberposts' => -1,
-  'fields' => 'ids'
+  'fields' => 'ids',
+  'tax_query' => array(
+    array(
+      'taxonomy' => 'product_cat',
+      'field'    => 'slug',
+      'terms'    => 'instruments'
+    )
+  )
 ));
 ?>
 
