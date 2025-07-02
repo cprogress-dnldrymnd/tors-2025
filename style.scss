@@ -1058,59 +1058,6 @@ section.home-about-area .content ul + a {
       }
     }
 
-    .plus-minus-box {
-      width: 68px;
-      height: 68px;
-      flex: 0 0 68px;
-      border: 1px solid var(--e-global-color-accent);
-      border-radius: 50%;
-      position: relative;
-      transition: 300ms;
-
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      &:before {
-        width: 30px;
-        height: 1px;
-        background-color: var(--black-color);
-        @media (max-width: 1199px) {
-          width: 20px;
-        }
-        @media (max-width: 991px) {
-          width: 15px;
-        }
-      }
-
-      &:after {
-        height: 30px;
-        width: 1px;
-        background-color: var(--black-color);
-        transition: 300ms;
-        @media (max-width: 1199px) {
-          height: 20px;
-        }
-        @media (max-width: 991px) {
-          height: 15px;
-        }
-      }
-      @media (max-width: 1199px) {
-        width: 50px;
-        height: 50px;
-        flex: 0 0 50px;
-      }
-      @media (max-width: 991px) {
-        width: 40px;
-        height: 40px;
-        flex: 0 0 40px;
-      }
-    }
     @media (max-width: 480px) {
       flex-direction: column;
       gap: 20px;
@@ -1198,7 +1145,59 @@ section.home-about-area .content ul + a {
     }
   }
 }
+.plus-minus-box.plus-minus-box {
+  width: 68px;
+  height: 68px;
+  flex: 0 0 68px;
+  border: 1px solid var(--e-global-color-accent);
+  border-radius: 50%;
+  position: relative;
+  transition: 300ms;
 
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:before {
+    width: 30px;
+    height: 1px;
+    background-color: var(--black-color);
+    @media (max-width: 1199px) {
+      width: 20px;
+    }
+    @media (max-width: 991px) {
+      width: 15px;
+    }
+  }
+
+  &:after {
+    height: 30px;
+    width: 1px;
+    background-color: var(--black-color);
+    transition: 300ms;
+    @media (max-width: 1199px) {
+      height: 20px;
+    }
+    @media (max-width: 991px) {
+      height: 15px;
+    }
+  }
+  @media (max-width: 1199px) {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+  }
+  @media (max-width: 991px) {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+  }
+}
 .justify-content-between {
   justify-content: space-between !important;
 }
