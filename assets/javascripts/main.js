@@ -3,7 +3,7 @@ jQuery(document).ready(function () {
     Fancybox.bind("[data-fancybox]", {
         Carousel: {
             Video: {
-                autoplay: false,
+                autoplay: true,
             },
         },
     });
