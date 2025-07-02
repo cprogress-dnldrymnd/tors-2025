@@ -242,7 +242,6 @@ $query = new WP_Query($args);
                 jQuery(this).text('Show Less');
                 jQuery(this).parents('.artist-songs--holder').addClass('show-all');
             }
-
             e.preventDefault();
         });
 
@@ -359,6 +358,7 @@ $query = new WP_Query($args);
                 var $current_time = '#' + $id + '-current-time';
                 const $currentTime = WaveSurfer_TORS[$id].getCurrentTime();
                 jQuery($current_time).text(formatTime($currentTime));
+                console.log('is-playing');
 
             }
         });
