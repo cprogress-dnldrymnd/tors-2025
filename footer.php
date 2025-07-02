@@ -224,15 +224,28 @@ $query = new WP_Query($args);
         });
 
 
-        jQuery('.play-pause-btn').each(function(index, element) {
+        jQuery('.play-pause-btn.play').each(function(index, element) {
             var $target = jQuery(this).attr('target');
             jQuery(this).click(function(e) {
                 $target_val = 'audio-' + $target;
-                WaveSurfer_TORS[$target_val].playPause();
-                jQuery(this).parents('.audio-player--player').toggleClass('playing');
+                play_wavesurfer($target_val);
+                jQuery(this).parents('.audio-player--player').addClass('playing');
                 e.preventDefault();
             });
         });
+
+
+        jQuery('.play-pause-btn.pause').each(function(index, element) {
+            var $target = jQuery(this).attr('target');
+            jQuery(this).click(function(e) {
+                $target_val = 'audio-' + $target;
+                WaveSurfer_TORS[$target_val].pause();
+                jQuery(this).parents('.audio-player--player').removeClass('playing');
+                e.preventDefault();
+            });
+        });
+
+
 
         jQuery('.show-all-song').click(function(e) {
             if (jQuery(this).parents('.artist-songs--holder').hasClass('show-all')) {
