@@ -1096,13 +1096,15 @@ section.home-about-area .content ul + a {
 
       input:not([type="submit"]):not([type="checkbox"]),
       textarea {
-        border: 1px solid #b1b1b1;
-        border-radius: 50px;
-        padding: 15px 30px;
-        line-height: 1;
-        font-size: 19px;
-        margin-bottom: 20px;
-        width: 100%;
+        &:not(.elementor-field) {
+          border: 1px solid #b1b1b1;
+          border-radius: 50px;
+          padding: 15px 30px;
+          line-height: 1;
+          font-size: 19px;
+          margin-bottom: 20px;
+          width: 100%;
+        }
       }
 
       .row-buttons {
