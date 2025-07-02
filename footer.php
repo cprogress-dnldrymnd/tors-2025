@@ -333,15 +333,7 @@ $query = new WP_Query($args);
         });
 
         WaveSurfer_TORS[$id].on('interaction', () => {
-            for (let key in WaveSurfer_TORS) {
-                if (key !== $id && WaveSurfer_TORS[key].isPlaying()) {
-                    WaveSurfer_TORS[key].pause();
-                    // Optionally, remove the 'playing' class from other players
-                    jQuery('#' + key).parents('.audio-player--player').removeClass('playing');
-                }
-            }
-            WaveSurfer_TORS[$id].play();
-            jQuery('#' + $id).parents('.audio-player--player').addClass('playing');
+            play_wavesurfer($id);
         });
 
         WaveSurfer_TORS[$id].on('finish', () => {
@@ -368,5 +360,17 @@ $query = new WP_Query($args);
             }
         });
         return WaveSurfer_TORS[$id];
+    }
+
+    function play_wavesurfer($id) {
+        for (let key in WaveSurfer_TORS) {
+            if (key !== $id && WaveSurfer_TORS[key].isPlaying()) {
+                WaveSurfer_TORS[key].pause();
+                // Optionally, remove the 'playing' class from other players
+                jQuery('#' + key).parents('.audio-player--player').removeClass('playing');
+            }
+        }
+        WaveSurfer_TORS[$id].play();
+        jQuery('#' + $id).parents('.audio-player--player').addClass('playing');
     }
 </script>
