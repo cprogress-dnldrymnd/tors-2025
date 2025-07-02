@@ -1934,3 +1934,11 @@ nav .menu.menu.menu li.menu-item-has-children {
     right: 20px;
   }
 }
+
+.video-bg--delay {
+  &:not(.display-video) {
+    .elementor-background-video-container {
+      opacity: 0 !important;
+    }
+  }
+}

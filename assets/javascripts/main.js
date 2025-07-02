@@ -1,5 +1,10 @@
 var WaveSurfer_TORS = [];
 jQuery(document).ready(function () {
+
+    setTimeout(function () {
+        jQuery('.video-bg--delay').addClass('display-video');
+    }, 1500);
+
     Fancybox.bind("[data-fancybox]", {
         Carousel: {
             Video: {
