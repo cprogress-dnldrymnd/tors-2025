@@ -1466,4 +1466,7 @@ nav .menu.menu.menu li.menu-item-has-children ul {
     top: 20px;
     right: 20px; }
 
+.video--yt.video--yt .elementor-background-video-container {
+  transform: scale(1.1); }
+
 /*# sourceMappingURL=style.css.map */
