@@ -877,6 +877,13 @@ section.home-about-area .content ul + a {
       height: 40px;
       flex: 0 0 40px; } }
 
+.instrument--box {
+  cursor: p; }
+  .instrument--box.selected .plus-minus-box {
+    background-color: var(--e-global-color-accent); }
+    .instrument--box.selected .plus-minus-box:after {
+      opacity: 0; }
+
 .justify-content-between {
   justify-content: space-between !important; }
 

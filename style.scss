@@ -1198,6 +1198,17 @@ section.home-about-area .content ul + a {
     flex: 0 0 40px;
   }
 }
+.instrument--box {
+  cursor: p;
+  &.selected {
+    .plus-minus-box {
+      background-color: var(--e-global-color-accent);
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+}
 .justify-content-between {
   justify-content: space-between !important;
 }

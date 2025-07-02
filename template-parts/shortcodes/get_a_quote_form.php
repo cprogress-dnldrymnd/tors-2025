@@ -65,7 +65,7 @@ $products = get_posts(array(
 
 <script>
   jQuery(document).ready(function() {
-    jQuery(".label-box").click(function(event) {
+    jQuery(".instrument--box").click(function(event) {
       setTimeout(function() {
         var val_name = jQuery(".instruments input:checkbox:checked").map(function() {
           return jQuery(this).val();
