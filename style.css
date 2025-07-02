@@ -818,7 +818,6 @@ section.home-about-area .content ul + a {
   font-size: 14px;
   font-weight: 400; }
 .get-a-quote-form .selection {
-  margin-top: 40px;
   padding-left: 0;
   font-size: 19px;
   color: var(--text-color); }
