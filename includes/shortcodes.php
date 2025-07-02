@@ -518,6 +518,7 @@ function artist_box($atts)
     $artist = get_term_by('id', $term_id, 'artists');
 
     $image = carbon_get_term_meta($term_id, 'image');
+    $video = carbon_get_term_meta($term_id, 'video');
 
     echo '<div class="artist-details">';
 
@@ -537,8 +538,9 @@ function artist_box($atts)
     echo wpautop($artist->description);
     echo '</div>';
 
-
-    echo '<i aria-hidden="true" class="fab fa-youtube"></i>';
+    if ($video) {
+        echo '<a href="' . $video . '"> <i aria-hidden="true" class="fab fa-youtube"></i></a>';
+    }
 
     echo '</div>';
 
