@@ -1,6 +1,6 @@
 var WaveSurfer_TORS = [];
 jQuery(document).ready(function () {
-
+    console.log('ss')
     jQuery(".fancybox").fancybox();
 
     checkVisibility();
