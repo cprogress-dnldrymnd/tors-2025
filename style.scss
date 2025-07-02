@@ -1924,5 +1924,13 @@ nav .menu.menu.menu li.menu-item-has-children {
 }
 
 .fancybox-wrap.fancybox-wrap.fancybox-wrap.fancybox-wrap {
-    z-index: 999999;
+  z-index: 999999;
+}
+
+.f-html.f-html {
+  position: static;
+  .f-button {
+    top: 20px;
+    right: 20px;
+  }
 }

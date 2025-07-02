@@ -1460,4 +1460,10 @@ nav .menu.menu.menu li.menu-item-has-children ul {
 .fancybox-wrap.fancybox-wrap.fancybox-wrap.fancybox-wrap {
   z-index: 999999; }
 
+.f-html.f-html {
+  position: static; }
+  .f-html.f-html .f-button {
+    top: 20px;
+    right: 20px; }
+
 /*# sourceMappingURL=style.css.map */
