@@ -333,6 +333,13 @@ $query = new WP_Query($args);
         });
 
         WaveSurfer_TORS[$id].on('interaction', () => {
+            for (let key in WaveSurfer_TORS) {
+                if (key !== $id && WaveSurfer_TORS[key].isPlaying()) {
+                    WaveSurfer_TORS[key].pause();
+                    // Optionally, remove the 'playing' class from other players
+                    jQuery('#' + key).parents('.audio-player--player').removeClass('playing');
+                }
+            }
             WaveSurfer_TORS[$id].play();
             jQuery('#' + $id).parents('.audio-player--player').addClass('playing');
         });
@@ -358,8 +365,6 @@ $query = new WP_Query($args);
                 var $current_time = '#' + $id + '-current-time';
                 const $currentTime = WaveSurfer_TORS[$id].getCurrentTime();
                 jQuery($current_time).text(formatTime($currentTime));
-                console.log('is-playing');
-
             }
         });
         return WaveSurfer_TORS[$id];
