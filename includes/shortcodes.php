@@ -539,7 +539,7 @@ function artist_box($atts)
     echo '</div>';
 
     if ($video) {
-        echo '<a data-fancybox-type="iframe" href="' . $video . '" class="fancybox"><svg xmlns="http://www.w3.org/2000/svg" width="52.005" height="37.733" viewBox="0 0 52.005 37.733">
+        echo '<a data-fancybox-type="iframe" href="' . convertToEmbedLink($video) . '" class="fancybox"><svg xmlns="http://www.w3.org/2000/svg" width="52.005" height="37.733" viewBox="0 0 52.005 37.733">
   <g id="Group_1766" data-name="Group 1766" transform="translate(0 -3)">
     <path id="Path_9769" data-name="Path 9769" d="M49,10.28a6.065,6.065,0,0,0-4.233-4.364C41.014,5,26,5,26,5S10.991,5,7.238,6A6.066,6.066,0,0,0,3,10.368,63.275,63.275,0,0,0,2,21.91,63.275,63.275,0,0,0,3,33.54a6.066,6.066,0,0,0,4.233,4.189c3.753,1,18.765,1,18.765,1s15.012,0,18.765-1A6.066,6.066,0,0,0,49,33.365,63.278,63.278,0,0,0,50,21.91,63.272,63.272,0,0,0,49,10.28Z" transform="translate(0)" fill="none" stroke="#fecd55" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
     <path id="Path_9770" data-name="Path 9770" d="M9.75,10.934c0-1.146,0-1.718.239-2.038a1.2,1.2,0,0,1,.875-.478c.4-.028.88.281,1.844.9L22.172,15.4c.836.537,1.254.806,1.4,1.148a1.2,1.2,0,0,1,0,.934c-.144.342-.563.611-1.4,1.148l-9.464,6.084c-.964.62-1.445.929-1.844.9a1.2,1.2,0,0,1-.875-.478c-.239-.32-.239-.892-.239-2.038Z" transform="translate(10.852 4.784)" fill="none" stroke="#fecd55" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>

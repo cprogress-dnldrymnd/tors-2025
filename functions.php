@@ -29,7 +29,6 @@ function enqueue_scripts()
 	wp_enqueue_style('swiper--css', vendor_dir . 'swiper/swiper-bundle.min.css');
 	wp_enqueue_script('swiper--js', vendor_dir . 'swiper/swiper-bundle.min.js');
 	wp_enqueue_script('main--js', assets_dir . 'javascripts/main.js');
-
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_scripts'); // Register this fxn and allow Wordpress to call it automatcally in the header
@@ -53,3 +52,28 @@ require_once('includes/elementor.php');
 
 
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+function convertToEmbedLink($youtubeUrl)
+{
+	$videoId = false;
+
+	// Regex patterns to match different YouTube URL formats
+	$patterns = [
+		'/^(?:https?:\/\/)?(?:www\.)?(?:m\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=|embed\/|v\/|)([\w-]{11})(?:\S+)?$/',
+		'/^(?:https?:\/\/)?(?:www\.)?(?:m\.)?(?:youtube\.com|youtu\.be)\/shorts\/([\w-]{11})(?:\S+)?$/'
+	];
+
+	foreach ($patterns as $pattern) {
+		if (preg_match($pattern, $youtubeUrl, $matches)) {
+			$videoId = $matches[1];
+			break;
+		}
+	}
+
+	if ($videoId) {
+		return "https://www.youtube.com/embed/" . $videoId;
+	} else {
+		// Return false if no video ID could be extracted
+		return false;
+	}
+}
