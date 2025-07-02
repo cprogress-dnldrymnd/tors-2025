@@ -22,7 +22,7 @@ function instrument_box()
     ob_start();
     $product = wc_get_product(get_the_ID());
 ?>
-    <input type="checkbox" instrument_id="<?= $product->get_id() ?>" name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
+    <input type="checkbox" price="<?= $product->get_price() ?>" instrument_id="<?= $product->get_id() ?>" name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
     <label for="instrument-<?= $product->get_id() ?>" class="d-flex align-items-center justify-content-between label-box">
         <div class="image-holder">
             <div class="image-box">
