@@ -9,6 +9,7 @@ function tors_logo()
 
 add_shortcode('tors_logo', 'tors_logo');
 
+/*
 function get_a_quote_form()
 {
     ob_start();
@@ -16,6 +17,7 @@ function get_a_quote_form()
     return ob_get_clean();
 }
 add_shortcode('get_a_quote_form', 'get_a_quote_form');
+*/
 
 function instrument_box()
 {
