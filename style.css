@@ -800,8 +800,8 @@ section.home-about-area .content ul + a {
     margin: 3px 3px 3px 4px;
     padding: initial;
     border: initial; }
-  .get-a-quote-form .form-box .inner input:not([type="submit"]):not([type="checkbox"]),
-  .get-a-quote-form .form-box .inner textarea {
+  .get-a-quote-form .form-box .inner input:not([type="submit"]):not([type="checkbox"]):not(.elementor-field),
+  .get-a-quote-form .form-box .inner textarea:not(.elementor-field) {
     border: 1px solid #b1b1b1;
     border-radius: 50px;
     padding: 15px 30px;
