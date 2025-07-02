@@ -37,6 +37,8 @@ Container::make('post_meta', 'Audio')
         ->set_type(array('audio')),
       Field::make('file', 'after_audio', __('After Audio'))->set_width(80)
         ->set_type(array('audio')),
+      Field::make('oembed', 'video', __('Video'))
+
     )
   );
 
