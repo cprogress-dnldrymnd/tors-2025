@@ -891,7 +891,8 @@ section.home-about-area .content ul + a {
 
 .clear-selection {
   cursor: pointer;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
 
 .mySwiperRecordings {
   overflow: hidden; }
