@@ -1457,7 +1457,7 @@ nav .menu.menu.menu li.menu-item-has-children ul {
       nav .menu.menu.menu li.menu-item-has-children ul li a:hover, nav .menu.menu.menu li.menu-item-has-children ul li a:focus, nav .menu.menu.menu li.menu-item-has-children ul li a:active {
         background-color: var(--e-global-color-accent); }
 
-.fancybox-wrap.fancybox-wrap {
+.fancybox-wrap.fancybox-wrap.fancybox-wrap.fancybox-wrap {
   z-index: 999999; }
 
 /*# sourceMappingURL=style.css.map */
