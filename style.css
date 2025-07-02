@@ -890,7 +890,8 @@ section.home-about-area .content ul + a {
   background-color: #fdcd556e !important; }
 
 .clear-selection {
-  cursor: pointer; }
+  cursor: pointer;
+  width: 100%; }
 
 .mySwiperRecordings {
   overflow: hidden; }
