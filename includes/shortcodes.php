@@ -539,7 +539,7 @@ function artist_box($atts)
     echo '</div>';
 
     if ($video) {
-        echo '<a href="' . $video . '" data-fancybox> <i aria-hidden="true" class="fab fa-youtube"></i></a>';
+        echo '<a href="' . $video . '" class="fancybox"> <i aria-hidden="true" class="fab fa-youtube"></i></a>';
     }
 
     echo '</div>';
