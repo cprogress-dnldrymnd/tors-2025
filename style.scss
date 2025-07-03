@@ -1598,9 +1598,12 @@ input:checked + .slider.slider:before {
   height: 100%;
   object-fit: cover;
 }
-.e-con.e-con {
-  --content-width: var(--content-width-var) !important;
+.e-con-boxed:not(.remove-default-width) {
+  .e-con.e-con {
+    --content-width: var(--content-width-var) !important;
+  }
 }
+
 .elementor-section.elementor-section-boxed > .elementor-container {
   max-width: var(--content-width-var) !important;
 }
