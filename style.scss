@@ -107,6 +107,7 @@ body {
     width: 240px !important;
     left: 0;
     transform: translateX(-100%);
+    display: block !important;
     > ul {
       padding-left: 20px;
       li {
@@ -124,7 +125,7 @@ body {
       }
     }
   }
-  body.openmenu.openmenu.openmenu {
+  body {
     margin: 0 !important;
     #side-panel-menu {
       transform: translateX(0);
