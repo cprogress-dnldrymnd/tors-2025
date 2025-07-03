@@ -1460,8 +1460,7 @@ nav .menu.menu.menu li.menu-item-has-children ul {
       nav .menu.menu.menu li.menu-item-has-children ul li a:hover, nav .menu.menu.menu li.menu-item-has-children ul li a:focus, nav .menu.menu.menu li.menu-item-has-children ul li a:active {
         background-color: var(--e-global-color-accent); }
 nav .menu.menu.menu li.menu-item-has-children:hover ul {
-  visibility: visible;
-  display: block; }
+  visibility: visible; }
 
 .fancybox-wrap.fancybox-wrap.fancybox-wrap.fancybox-wrap {
   z-index: 999999; }
