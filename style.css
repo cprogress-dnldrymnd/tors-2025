@@ -9,7 +9,7 @@ Error: Undefined mixin 'after'.
 127:             align-items: center;
 128:             justify-content: space-between;
 129:             @include after {
-130:               content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/></svg>');
+130:               content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23fff" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/></svg>')
 131:             }
 132:           }
 133:           ul {
@@ -131,4 +131,4 @@ C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/sass-listen-4.0.0/lib/sass-listen/interna
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'after'.\A         on line 129 of style.scss, in `after'\A         from line 129 of style.scss\A \A 124:           > a {\A 125:             display: flex;\A 126:             gap: 20px;\A 127:             align-items: center;\A 128:             justify-content: space-between;\A 129:             @include after {\A 130:               content: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-chevron-down\" viewBox=\"0 0 16 16\"><path fill-rule=\"evenodd\" d=\"M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708\"/></svg>');\A 131:             }\A 132:           }\A 133:           ul {\A 134:             background-color: transparent !important;"; }
+  content: "Error: Undefined mixin 'after'.\A         on line 129 of style.scss, in `after'\A         from line 129 of style.scss\A \A 124:           > a {\A 125:             display: flex;\A 126:             gap: 20px;\A 127:             align-items: center;\A 128:             justify-content: space-between;\A 129:             @include after {\A 130:               content: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"%23fff\" class=\"bi bi-chevron-down\" viewBox=\"0 0 16 16\"><path fill-rule=\"evenodd\" d=\"M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708\"/></svg>')\A 131:             }\A 132:           }\A 133:           ul {\A 134:             background-color: transparent !important;"; }
