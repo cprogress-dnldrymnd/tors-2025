@@ -84,7 +84,8 @@ body {
     width: 240px !important;
     left: 0;
     transform: translateX(-100%);
-    display: block !important; }
+    display: block !important;
+    transition: 500ms; }
     #side-panel-menu > ul {
       padding-left: 20px; }
       #side-panel-menu > ul li a:hover {

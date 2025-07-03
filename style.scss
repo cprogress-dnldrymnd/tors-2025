@@ -108,6 +108,7 @@ body {
     left: 0;
     transform: translateX(-100%);
     display: block !important;
+    transition: 500ms;
     > ul {
       padding-left: 20px;
       li {
