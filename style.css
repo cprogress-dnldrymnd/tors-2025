@@ -1442,7 +1442,8 @@ nav .menu.menu.menu li.menu-item-has-children ul {
   overflow: hidden;
   padding: 0;
   background-color: var(--white-color);
-  visibility: hidden; }
+  visibility: hidden;
+  display: none; }
   nav .menu.menu.menu li.menu-item-has-children ul li {
     opacity: 1;
     visibility: visible;
@@ -1459,7 +1460,8 @@ nav .menu.menu.menu li.menu-item-has-children ul {
       nav .menu.menu.menu li.menu-item-has-children ul li a:hover, nav .menu.menu.menu li.menu-item-has-children ul li a:focus, nav .menu.menu.menu li.menu-item-has-children ul li a:active {
         background-color: var(--e-global-color-accent); }
 nav .menu.menu.menu li.menu-item-has-children:hover ul {
-  visibility: visible; }
+  visibility: visible;
+  display: block; }
 
 .fancybox-wrap.fancybox-wrap.fancybox-wrap.fancybox-wrap {
   z-index: 999999; }
