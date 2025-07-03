@@ -107,8 +107,14 @@ body {
     > ul {
       padding-left: 20px;
       li {
+        a {
+          &:hover {
+            background-color: transparent !important;
+          }
+        }
         &.menu-item-has-children {
           .menu {
+            background-color: transparent !important;
             position: static !important;
           }
         }

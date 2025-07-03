@@ -82,7 +82,10 @@ body {
 
   #side-panel-menu > ul {
     padding-left: 20px; }
+    #side-panel-menu > ul li a:hover {
+      background-color: transparent !important; }
     #side-panel-menu > ul li.menu-item-has-children .menu {
+      background-color: transparent !important;
       position: static !important; } }
 /*-------- Comment -----------*/
 .comment-form-cookies-consent,
