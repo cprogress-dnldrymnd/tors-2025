@@ -105,12 +105,12 @@ body {
   }
   #side-panel-menu {
     width: 100% !important;
-    max-width: calc(100% - 60px);
+    max-width: 240px;
     left: 0;
     transform: translateX(-100%);
     display: block !important;
     transition: 500ms;
-      transition-delay: 100ms;
+    transition-delay: 100ms;
 
     > ul {
       padding-left: 20px;
@@ -127,6 +127,9 @@ body {
           }
         }
       }
+    }
+    @media (max-width: 300px) {
+      max-width: calc(100% - 60px);
     }
   }
   body {
