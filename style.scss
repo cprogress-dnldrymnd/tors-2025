@@ -146,6 +146,7 @@ body {
       opacity: 0;
       transition: 500ms;
       visibility: hidden;
+      z-index: 2;
     }
     &.openmenu.openmenu.openmenu {
       position: static !important;

@@ -113,7 +113,8 @@ body {
       left: 0;
       opacity: 0;
       transition: 500ms;
-      visibility: hidden; }
+      visibility: hidden;
+      z-index: 2; }
     body.openmenu.openmenu.openmenu {
       position: static !important; }
       body.openmenu.openmenu.openmenu:before {
