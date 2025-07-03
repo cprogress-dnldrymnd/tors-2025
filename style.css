@@ -84,7 +84,7 @@ body {
     padding-left: 20px; }
     #side-panel-menu > ul li a:hover {
       background-color: transparent !important; }
-    #side-panel-menu > ul li.menu-item-has-children .menu {
+    #side-panel-menu > ul li.menu-item-has-children ul {
       background-color: transparent !important;
       position: static !important; } }
 /*-------- Comment -----------*/
