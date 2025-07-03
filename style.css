@@ -1206,7 +1206,7 @@ input:checked + .slider.slider:before {
   height: 100%;
   object-fit: cover; }
 
-.e-con-boxed:not(.remove-default-width) .e-con.e-con {
+.e-con.e-con:not(.remove-default-width) {
   --content-width: var(--content-width-var) !important; }
 
 .elementor-section.elementor-section-boxed > .elementor-container {
