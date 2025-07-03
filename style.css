@@ -97,7 +97,7 @@ body {
         position: static !important; } }
   @media (max-width: 767px) and (max-width: 300px) {
     #side-panel-menu {
-      max-width: calc(100% - 60px); } }
+      max-width: calc(100% - 70px); } }
 
 @media (max-width: 767px) {
   body {
