@@ -77,6 +77,7 @@ body {
   padding: 195px 0 0 !important; }
 
 @media (max-width: 767px) {
+  padding-left: 20px;
   body.logged-in #side-panel-menu {
     padding-top: 70px; } }
 /*-------- Comment -----------*/
@@ -1440,7 +1441,8 @@ nav .menu.menu.menu li.menu-item-has-children ul {
   border-radius: 10px;
   overflow: hidden;
   padding: 0;
-  background-color: var(--white-color); }
+  background-color: var(--white-color);
+  visibility: hidden; }
   nav .menu.menu.menu li.menu-item-has-children ul li {
     opacity: 1;
     visibility: visible;
@@ -1456,6 +1458,8 @@ nav .menu.menu.menu li.menu-item-has-children ul {
       text-align: center; }
       nav .menu.menu.menu li.menu-item-has-children ul li a:hover, nav .menu.menu.menu li.menu-item-has-children ul li a:focus, nav .menu.menu.menu li.menu-item-has-children ul li a:active {
         background-color: var(--e-global-color-accent); }
+nav .menu.menu.menu li.menu-item-has-children:hover {
+  visibility: visible; }
 
 .fancybox-wrap.fancybox-wrap.fancybox-wrap.fancybox-wrap {
   z-index: 999999; }

@@ -100,6 +100,7 @@ body {
 }
 
 @media (max-width: 767px) {
+  padding-left: 20px;
   body.logged-in #side-panel-menu {
     padding-top: 70px;
   }
@@ -1901,6 +1902,7 @@ nav .menu.menu.menu li.menu-item-has-children {
     overflow: hidden;
     padding: 0;
     background-color: var(--white-color);
+    visibility: hidden;
     li {
       opacity: 1;
       visibility: visible;
@@ -1921,6 +1923,9 @@ nav .menu.menu.menu li.menu-item-has-children {
         }
       }
     }
+  }
+  &:hover {
+    visibility: visible;
   }
 }
 
