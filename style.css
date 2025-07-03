@@ -97,8 +97,10 @@ body {
   body {
     margin-left: 0 !important;
     margin-right: 0 !important; }
-    body.openmenu.openmenu.openmenu #side-panel-menu {
-      transform: translateX(0); } }
+    body.openmenu.openmenu.openmenu {
+      position: static !important; }
+      body.openmenu.openmenu.openmenu #side-panel-menu {
+        transform: translateX(0); } }
 /*-------- Comment -----------*/
 .comment-form-cookies-consent,
 .required-field-message {
