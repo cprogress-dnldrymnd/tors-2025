@@ -104,7 +104,8 @@ body {
     padding-top: 70px;
   }
   #side-panel-menu {
-    width: 240px !important;
+    width: 100% !important;
+    max-width: calc(100% - 60px);
     left: 0;
     transform: translateX(-100%);
     display: block !important;
