@@ -100,9 +100,20 @@ body {
 }
 
 @media (max-width: 767px) {
-  body.logged-in #side-panel-menu {
-    padding-left: 20px;
+  body.logged-in.logged-in.logged-in #side-panel-menu {
     padding-top: 70px;
+  }
+  #side-panel-menu {
+    > ul {
+      padding-left: 20px;
+      li {
+        &.menu-item-has-children {
+          .menu {
+            position: static !important;
+          }
+        }
+      }
+    }
   }
 }
 
