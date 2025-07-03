@@ -110,6 +110,8 @@ body {
     transform: translateX(-100%);
     display: block !important;
     transition: 500ms;
+      transition-delay: 100ms;
+
     > ul {
       padding-left: 20px;
       li {
@@ -130,8 +132,24 @@ body {
   body {
     margin-left: 0 !important;
     margin-right: 0 !important;
+    &:before {
+      content: "";
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.5);
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      opacity: 0;
+      transition: 500ms;
+      visibility: hidden;
+    }
     &.openmenu.openmenu.openmenu {
       position: static !important;
+      &:before {
+        opacity: 1;
+        visibility: visible;
+      }
       #side-panel-menu {
         transform: translateX(0);
       }
