@@ -594,7 +594,7 @@ section.home-about-area .content ul + a {
   width: 1px;
   left: 50%;
   top: 35px;
-  bottom: 400px;
+  bottom: 0;
   transform: translateX(-50%); }
   @media (max-width: 991px) {
     .custom-lists:before {
