@@ -368,7 +368,7 @@ function recordings_by_genres_artists($atts)
                     'terms' => $artist['slug'],
                 ),
                 array(
-                    'taxonomy' => '=genres',
+                    'taxonomy' => 'genres',
                     'field' => 'slug',
                     'terms' => $genre,
                 ),
