@@ -361,10 +361,16 @@ function recordings_by_genres_artists($atts)
         $args = array(
             'post_type' => 'recordings',
             'tax_query' => array(
+                'relation' => 'AND',
                 array(
                     'taxonomy' => 'artists',
                     'field' => 'slug',
                     'terms' => $artist['slug'],
+                ),
+                array(
+                    'taxonomy' => '=genres',
+                    'field' => 'slug',
+                    'terms' => $genre,
                 ),
             ),
         );
