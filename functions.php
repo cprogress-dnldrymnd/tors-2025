@@ -108,3 +108,13 @@ function translate_text($translated)
 	$translated = str_ireplace(array_keys($words), $words, $translated);
 	return $translated;
 }
+
+
+add_filter('wp_prepare_themes_for_js', function ($themes) {
+
+	$sc = get_stylesheet_directory_uri() . '/screenshot-theme.png';
+	$themes['tors']['screenshot'][0] = $sc;
+	$themes['wikb-child']['screenshot'][0] = $sc;
+
+	return $themes;
+});
