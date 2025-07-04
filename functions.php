@@ -112,7 +112,7 @@ function translate_text($translated)
 
 add_filter('wp_prepare_themes_for_js', function ($themes) {
 
-	$sc = get_stylesheet_directory_uri() . '/screenshot-theme.png';
+	$sc = get_stylesheet_directory_uri() . '/screenshot.png';
 	$themes['tors']['screenshot'][0] = $sc;
 
 	return $themes;
