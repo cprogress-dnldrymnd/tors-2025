@@ -86,7 +86,10 @@ function action_admin_head()
 {
 ?>
 	<style>
-
+		#toplevel_page_redux_demo,
+		#wp-admin-bar-redux_demo {
+			display: none !important
+		}
 	</style>
 <?php
 
