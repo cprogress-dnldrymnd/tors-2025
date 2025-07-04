@@ -79,3 +79,26 @@ function convertToEmbedLink($youtubeUrl)
 		return false;
 	}
 }
+
+
+
+function action_admin_head()
+{
+?>
+	<style>
+
+	</style>
+<?php
+
+}
+add_action('admin_head', 'action_admin_head');
+
+add_filter('gettext', 'weplugins_modify_gettext_defaults', 20, 3);
+
+function weplugins_modify_gettext_defaults($translation, $text, $domain)
+{
+	if ('Moroko' === $text) {
+		return 'TORS';
+	}
+	return $translation;
+}
