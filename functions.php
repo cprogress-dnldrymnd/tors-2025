@@ -93,12 +93,15 @@ function action_admin_head()
 }
 add_action('admin_head', 'action_admin_head');
 
-add_filter('gettext', 'weplugins_modify_gettext_defaults', 20, 3);
 
-function weplugins_modify_gettext_defaults($translation, $text, $domain)
+add_filter('gettext', 'translate_text', 30);
+add_filter('ngettext', 'translate_text', 30);
+function translate_text($translated)
 {
-	if ('Moroko' === $text) {
-		return 'TORS';
-	}
-	return $translation;
+	$words = array(
+		// 'word to translate' => 'translation'
+		'Moroko' => 'TORS',
+	);
+	$translated = str_ireplace(array_keys($words), $words, $translated);
+	return $translated;
 }
