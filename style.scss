@@ -1566,7 +1566,7 @@ input:checked + .slider.slider:before {
 .artist-songs--body.artist-songs--body.artist-songs--body.playing .play {
   display: none;
 }
-..artist-songs--body.artist-songs--body.artist-songs--body:not(.playing) .pause {
+.artist-songs--body.artist-songs--body.artist-songs--body:not(.playing) .pause {
   display: none;
 }
 .timeline.timeline {
