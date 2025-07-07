@@ -372,7 +372,7 @@ function recordings_box($atts)
     echo '<h4>';
     echo get_the_title();
     if ($display_artist) {
-        echo 'by ' . $artist[0]->name;
+        echo ' by ' . $artist[0]->name;
     }
 
     echo '</h4>';
