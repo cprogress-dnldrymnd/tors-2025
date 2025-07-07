@@ -1523,4 +1523,7 @@ nav .menu.menu.menu li.menu-item-has-children:hover ul {
 .video--yt.video--yt .elementor-background-video-container {
   transform: scale(1.1); }
 
+#wp-admin-bar-redux_demo {
+  display: none !important; }
+
 /*# sourceMappingURL=style.css.map */
