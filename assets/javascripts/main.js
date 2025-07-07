@@ -11,6 +11,7 @@ jQuery(document).ready(function () {
     checkVisibility();
 
     jQuery(document).on('change', '.switch-input', function (e) {
+        pause_all_wavesurfer();
         if (jQuery(this).is(":checked")) {
             jQuery(this).parents('.audio-player--parent').removeClass('before-active').addClass('after-active');
             jQuery(this).parents('.audio-player--parent').find('.audio-box').addClass('active').removeClass('active');
@@ -180,4 +181,13 @@ function play_wavesurfer($id) {
     }
     WaveSurfer_TORS[$id].play();
     jQuery('#' + $id).parents('.artist-songs--body').addClass('playing');
+}
+
+
+function pause_all_wavesurfer() {
+    for (let key in WaveSurfer_TORS) {
+        WaveSurfer_TORS[key].pause();
+        // Optionally, remove the 'playing' class from other players
+        jQuery('#' + key).parents('.artist-songs--body').removeClass('playing');
+    }
 }
