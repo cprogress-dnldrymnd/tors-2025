@@ -28,7 +28,7 @@ jQuery(document).ready(function () {
         var $target = jQuery(this).attr('target');
         $target_val = 'audio-' + $target;
         play_wavesurfer($target_val);
-        jQuery(this).parents('.audio-player--player').addClass('playing');
+        jQuery(this).parents('.artist-songs--body').addClass('playing');
         e.preventDefault();
     });
 
@@ -36,7 +36,7 @@ jQuery(document).ready(function () {
         var $target = jQuery(this).attr('target');
         $target_val = 'audio-' + $target;
         WaveSurfer_TORS[$target_val].pause();
-        jQuery(this).parents('.audio-player--player').removeClass('playing');
+        jQuery(this).parents('.artist-songs--body').removeClass('playing');
         e.preventDefault();
     });
 
@@ -146,7 +146,7 @@ function wavesurfer($id, $url,) {
 
     WaveSurfer_TORS[$id].on('finish', () => {
         WaveSurfer_TORS[$id].setTime(0);
-        jQuery('#' + $id).parents('.audio-player--player').removeClass('playing');
+        jQuery('#' + $id).parents('.artist-songs--body').removeClass('playing');
 
     });
     WaveSurfer_TORS[$id].on('ready', function () {
@@ -175,9 +175,9 @@ function play_wavesurfer($id) {
         if (key !== $id && WaveSurfer_TORS[key].isPlaying()) {
             WaveSurfer_TORS[key].pause();
             // Optionally, remove the 'playing' class from other players
-            jQuery('#' + key).parents('.audio-player--player').removeClass('playing');
+            jQuery('#' + key).parents('.artist-songs--body').removeClass('playing');
         }
     }
     WaveSurfer_TORS[$id].play();
-    jQuery('#' + $id).parents('.audio-player--player').addClass('playing');
+    jQuery('#' + $id).parents('.artist-songs--body').addClass('playing');
 }
