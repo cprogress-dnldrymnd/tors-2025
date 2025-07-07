@@ -1563,10 +1563,10 @@ input:checked + .slider.slider:before {
   width: 100%;
 }
 
-.audio-player--player.audio-player--player.playing .play {
+.artist-songs--body.artist-songs--body.artist-songs--body.playing .play {
   display: none;
 }
-.audio-player--player.audio-player--player:not(.playing) .pause {
+..artist-songs--body.artist-songs--body.artist-songs--body:not(.playing) .pause {
   display: none;
 }
 .timeline.timeline {
