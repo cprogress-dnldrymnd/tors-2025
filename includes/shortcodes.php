@@ -350,6 +350,8 @@ function recordings_box($atts)
 
     $before_audio = carbon_get_the_post_meta('before_audio');
     $after_audio = carbon_get_the_post_meta('after_audio');
+    $artist = get_the_terms(get_the_ID(), 'artists');
+
 
     if ($display_artist) {
         $class = 'has--artists';
@@ -360,7 +362,6 @@ function recordings_box($atts)
     echo '<div class="artist-songs--box audio-player--parent before-active audio-player--player ' . $class . '">';
     if ($display_artist) {
 
-        $artist = get_the_terms(get_the_ID(), 'artists');
 
         echo '<div class="artist-songs--wrapper">';
 
@@ -368,7 +369,13 @@ function recordings_box($atts)
     }
     echo '<div class="artist-songs--inner">';
     echo '<div class="artist-songs--title">';
-    echo '<h4>' . get_the_title() . '</h4>';
+    echo '<h4>';
+    echo get_the_title();
+    if ($display_artist) {
+        echo 'by ' . $artist[0]->name;
+    }
+
+    echo '</h4>';
     echo '<div class="desktop-only audio-toggle-v3">';
     echo do_shortcode('[audio_toggle class="mobile"]');
     echo '</div>';
