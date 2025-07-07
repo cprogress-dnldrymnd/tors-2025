@@ -1525,4 +1525,13 @@ nav .menu.menu.menu li.menu-item-has-children:hover ul {
 #wp-admin-bar-redux_demo {
   display: none !important; }
 
+.testimonial-fancybox {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--e-global-color-cea108a);
+  font-weight: bold;
+  font-size: 16px;
+  width: auto; }
+
 /*# sourceMappingURL=style.css.map */
