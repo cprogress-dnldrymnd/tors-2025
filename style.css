@@ -1534,4 +1534,10 @@ nav .menu.menu.menu li.menu-item-has-children:hover ul {
   font-size: 16px;
   width: auto; }
 
+input[type="radio"],
+input[type="checkbox"] {
+  -webkit-appearance: auto !important;
+  -moz-appearance: auto !important;
+  appearance: auto !important; }
+
 /*# sourceMappingURL=style.css.map */
