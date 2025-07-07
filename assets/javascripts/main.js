@@ -10,18 +10,16 @@ jQuery(document).ready(function () {
 
     checkVisibility();
 
-    jQuery('.switch-input').each(function (index, element) {
-        jQuery(document).on('change', jQuery(this), function (e) {
-            if (jQuery(this).is(":checked")) {
-                jQuery(this).parents('.audio-player--parent').removeClass('before-active').addClass('after-active');
-                jQuery(this).parents('.audio-player--parent').find('.audio-box').addClass('active').removeClass('active');
-            } else {
-                jQuery(this).parents('.audio-player--parent').addClass('before-active').removeClass('after-active');
-                jQuery(this).parents('.audio-player--parent').find('.audio-box').removeClass('active').addClass('active');
+    jQuery(document).on('change', '.switch-input', function (e) {
+        if (jQuery(this).is(":checked")) {
+            jQuery(this).parents('.audio-player--parent').removeClass('before-active').addClass('after-active');
+            jQuery(this).parents('.audio-player--parent').find('.audio-box').addClass('active').removeClass('active');
+        } else {
+            jQuery(this).parents('.audio-player--parent').addClass('before-active').removeClass('after-active');
+            jQuery(this).parents('.audio-player--parent').find('.audio-box').removeClass('active').addClass('active');
 
-            }
-            e.preventDefault();
-        });
+        }
+        e.preventDefault();
     });
 
 
