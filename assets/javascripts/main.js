@@ -57,7 +57,7 @@ jQuery(document).ready(function () {
     jQuery(document).on('click', '.recordings-filter .e-filter-item', function (e) {
         setTimeout(function () {
             checkVisibility();
-        }, 2000);
+        }, 3000);
     });
 });
 
