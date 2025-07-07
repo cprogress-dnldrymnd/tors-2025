@@ -1,8 +1,5 @@
 var WaveSurfer_TORS = [];
 jQuery(document).ready(function () {
-
-
-
     Fancybox.bind("[data-fancybox]", {
         Carousel: {
             Video: {
@@ -14,7 +11,7 @@ jQuery(document).ready(function () {
     checkVisibility();
 
     jQuery('.switch-input').each(function (index, element) {
-        jQuery(this).change(function (e) {
+        jQuery(document).on('change', jQuery(this), function (e) {
             if (jQuery(this).is(":checked")) {
                 jQuery(this).parents('.audio-player--parent').removeClass('before-active').addClass('after-active');
                 jQuery(this).parents('.audio-player--parent').find('.audio-box').addClass('active').removeClass('active');
@@ -30,7 +27,7 @@ jQuery(document).ready(function () {
 
     jQuery('.play-pause-btn.play').each(function (index, element) {
         var $target = jQuery(this).attr('target');
-        jQuery(this).click(function (e) {
+        jQuery(document).on('click', jQuery(this), function (e) {
             $target_val = 'audio-' + $target;
             play_wavesurfer($target_val);
             jQuery(this).parents('.audio-player--player').addClass('playing');
@@ -41,7 +38,7 @@ jQuery(document).ready(function () {
 
     jQuery('.play-pause-btn.pause').each(function (index, element) {
         var $target = jQuery(this).attr('target');
-        jQuery(this).click(function (e) {
+        jQuery(document).on('click', jQuery(this), function (e) {
             $target_val = 'audio-' + $target;
             WaveSurfer_TORS[$target_val].pause();
             jQuery(this).parents('.audio-player--player').removeClass('playing');
