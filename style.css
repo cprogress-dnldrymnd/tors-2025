@@ -1491,8 +1491,7 @@ nav .menu.menu.menu li.menu-item-has-children ul {
   overflow: hidden;
   padding: 0;
   background-color: var(--white-color);
-  visibility: hidden;
-  display: none; }
+  visibility: hidden; }
   nav .menu.menu.menu li.menu-item-has-children ul li {
     opacity: 1;
     visibility: visible;
