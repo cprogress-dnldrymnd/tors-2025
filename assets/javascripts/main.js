@@ -34,7 +34,7 @@ jQuery(document).ready(function () {
         e.preventDefault();
     });
 
-    jQuery(document).on('click', jQuery(this), function (e) {
+    jQuery(document).on('click', '.play-pause-btn.pause', function (e) {
         $target_val = 'audio-' + $target;
         WaveSurfer_TORS[$target_val].pause();
         jQuery(this).parents('.audio-player--player').removeClass('playing');
