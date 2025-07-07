@@ -25,25 +25,20 @@ jQuery(document).ready(function () {
     });
 
 
-    jQuery('.play-pause-btn.play').each(function (index, element) {
+
+    jQuery(document).on('click', '.play-pause-btn.play', function (e) {
         var $target = jQuery(this).attr('target');
-        jQuery(document).on('click', jQuery(this), function (e) {
-            $target_val = 'audio-' + $target;
-            play_wavesurfer($target_val);
-            jQuery(this).parents('.audio-player--player').addClass('playing');
-            e.preventDefault();
-        });
+        $target_val = 'audio-' + $target;
+        play_wavesurfer($target_val);
+        jQuery(this).parents('.audio-player--player').addClass('playing');
+        e.preventDefault();
     });
 
-
-    jQuery('.play-pause-btn.pause').each(function (index, element) {
-        var $target = jQuery(this).attr('target');
-        jQuery(document).on('click', jQuery(this), function (e) {
-            $target_val = 'audio-' + $target;
-            WaveSurfer_TORS[$target_val].pause();
-            jQuery(this).parents('.audio-player--player').removeClass('playing');
-            e.preventDefault();
-        });
+    jQuery(document).on('click', jQuery(this), function (e) {
+        $target_val = 'audio-' + $target;
+        WaveSurfer_TORS[$target_val].pause();
+        jQuery(this).parents('.audio-player--player').removeClass('playing');
+        e.preventDefault();
     });
 
 
