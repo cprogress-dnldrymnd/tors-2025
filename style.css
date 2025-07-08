@@ -537,7 +537,14 @@ section.home-about-area .content ul + a {
 .copyright.copyright {
   background-color: var(--e-global-color-cea108a); }
   .copyright.copyright p {
-    font-size: 20px; }
+    font-size: 20px;
+    line-height: 1.4; }
+    @media (max-width: 767px) {
+      .copyright.copyright p {
+        font-size: 13px; } }
+  @media (max-width: 767px) {
+    .copyright.copyright a {
+      font-size: 13px !important; } }
 
 .footer-contents.footer-contents h2 {
   font-size: 25px;
