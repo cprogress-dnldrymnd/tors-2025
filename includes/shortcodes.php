@@ -61,10 +61,10 @@ function instrument_box()
             </div>
         </div>
         <div class="name-icon-box d-flex align-items-center justify-content-between">
-        
+
             <div class="name-box">
                 <?= $product->get_name() ?>
-               
+
             </div>
             <div class="plus-minus-box">
 
@@ -401,7 +401,7 @@ function recordings_box($atts)
     echo '<div class="artist-songs--title">';
     echo '<h4>';
     echo get_the_title();
-    if ($display_artist) {
+    if ($display_artist && $artist) {
         echo ' by ' . $artist[0]->name;
     }
 
