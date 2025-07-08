@@ -11,13 +11,20 @@ jQuery(document).ready(function () {
     checkVisibility();
 
     jQuery(document).on('change', '.switch-input', function (e) {
-        pause_all_wavesurfer();
         if (jQuery(this).is(":checked")) {
             jQuery(this).parents('.audio-player--parent').removeClass('before-active').addClass('after-active');
             jQuery(this).parents('.audio-player--parent').find('.audio-box').addClass('active').removeClass('active');
+
+            $target = jQuery(this).parents('.artist-songs--box').find('.audio-before .play').attr('target');
+            $parent = jQuery(this).parents('.artist-songs--box').find('.artist-songs--body');
+            play_song($target, $parent);
         } else {
             jQuery(this).parents('.audio-player--parent').addClass('before-active').removeClass('after-active');
             jQuery(this).parents('.audio-player--parent').find('.audio-box').removeClass('active').addClass('active');
+
+            $target = jQuery(this).parents('.artist-songs--box').find('.audio-after .play').attr('target');
+            $parent = jQuery(this).parents('.artist-songs--box').find('.artist-songs--body');
+            play_song($target, $parent);
 
         }
         e.preventDefault();
