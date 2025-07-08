@@ -1,7 +1,6 @@
 <?php $moroko_redux_demo = get_option('redux_demo'); ?>
 <!-- Footer Area Start 
     ====================================================== -->
-<?= do_shortcode('[elementor-template id="3621"]') ?>
 <footer class="footer-area">
     <!-- Start:Footer Main Contents-->
     <div class="footer-contents">
