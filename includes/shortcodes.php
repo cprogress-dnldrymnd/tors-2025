@@ -510,6 +510,6 @@ function term_desc($atts)
     );
 
     $term = get_the_terms(get_the_ID(), $taxonomy);
-    return $term->description;
+    return $term[0]->description;
 }
 add_shortcode('term_desc', 'term_desc');
