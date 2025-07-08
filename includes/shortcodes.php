@@ -18,7 +18,7 @@ function get_a_quote_form()
 }
 add_shortcode('get_a_quote_form', 'get_a_quote_form');
 */
-
+/*
 function instrument_box()
 {
     ob_start();
@@ -37,6 +37,31 @@ function instrument_box()
                 <?= $product->get_name() ?>
                 <div class="price-box">From <?= $product->get_price_html() ?></div>
             </div>-->
+            <div class="plus-minus-box">
+
+            </div>
+        </div>
+    </label>
+    <?php
+    return ob_get_clean();
+}
+
+add_shortcode('instrument_box', 'instrument_box');
+*/
+function instrument_box()
+{
+    ob_start();
+    $product = wc_get_product(get_the_ID());
+?>
+    <input type="checkbox" price="<?= $product->get_price() ?>" instrument_id="<?= $product->get_id() ?>" name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
+    <label for="instrument-<?= $product->get_id() ?>" class="d-flex align-items-center justify-content-between label-box">
+        <div class="image-holder">
+            <div class="image-box">
+                <img src="<?= wp_get_attachment_image_url($product->get_image_id(), 'medium') ?>" alt="<?= $product->get_name() ?>">
+            </div>
+        </div>
+        <div class="name-icon-box d-flex align-items-center justify-content-between">
+         
             <div class="plus-minus-box">
 
             </div>
