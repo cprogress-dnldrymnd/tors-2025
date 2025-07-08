@@ -209,3 +209,16 @@ new newTaxonomy(
 		)
 	)
 );
+
+new newTaxonomy(
+	array(
+		'taxonomy'  => 'recordings-cat',
+		'post_type' => 'recordings',
+		'args'      => array(
+			'hierarchical' => true,
+			'label'        => 'Category',
+			'query_var'    => true,
+			'has_archive'  => true,
+		)
+	)
+);
