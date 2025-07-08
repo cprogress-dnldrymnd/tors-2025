@@ -26,10 +26,9 @@ jQuery(document).ready(function () {
 
 
     jQuery(document).on('click', '.play-pause-btn.play', function (e) {
-        var $target = jQuery(this).attr('target');
-        $target_val = 'audio-' + $target;
-        play_wavesurfer($target_val);
-        jQuery(this).parents('.artist-songs--body').addClass('playing');
+        $target = jQuery(this).attr('target');
+        $parent = jQuery(this).parents('.artist-songs--body');
+        play_song($target, $parent)
         e.preventDefault();
     });
 
@@ -60,6 +59,13 @@ jQuery(document).ready(function () {
         }, 3000);
     });
 });
+
+function play_song($target, $parent) {
+    var $target = jQuery(this).attr('target');
+    $target_val = 'audio-' + $target;
+    play_wavesurfer($target_val);
+    $parent.addClass('playing');
+}
 
 // Function to check if an element is visible in the viewport
 // This function takes a jQuery element as input.
