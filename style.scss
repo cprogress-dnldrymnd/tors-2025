@@ -1005,7 +1005,7 @@ section.home-about-area .content ul + a {
       text-align: right;
     }
     @media (max-width: 767px) {
-      padding-right: 70px;
+      padding-right: 70px !important;
     }
   }
   @media (min-width: 992px) {
