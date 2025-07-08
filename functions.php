@@ -139,12 +139,11 @@ function custom_woocommerce_display_discounted_price( $price, $product ) {
 
         // Format the original price and discounted price.
         // wc_price() is a WooCommerce function to format prices with currency.
-        $original_price_html = '<del>' . wc_price( $regular_price ) . '</del>';
         $discounted_price_html = '<ins>' . wc_price( $discounted_price ) . '</ins>';
 
         // Combine them to show "Original Price Discounted Price".
         // You can customize the text surrounding the prices.
-        $price = sprintf( '%s %s', $original_price_html, $discounted_price_html );
+        $price = $discounted_price_html;
     }
 
     return $price;
