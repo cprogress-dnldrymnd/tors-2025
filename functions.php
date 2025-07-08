@@ -117,3 +117,37 @@ add_filter('wp_prepare_themes_for_js', function ($themes) {
 
 	return $themes;
 });
+
+/**
+ * Apply a 15% discount to the displayed price of all products.
+ *
+ * @param string $price The formatted price string.
+ * @param WC_Product $product The product object.
+ * @return string The modified price string with discount.
+ */
+function custom_woocommerce_display_discounted_price( $price, $product ) {
+    // Get the product's regular price.
+    $regular_price = (float) $product->get_regular_price();
+
+    // If the product has a regular price set.
+    if ( $regular_price > 0 ) {
+        // Calculate the discount percentage.
+        $discount_percentage = 0.15; // 15% off
+
+        // Calculate the discounted price.
+        $discounted_price = $regular_price * ( 1 - $discount_percentage );
+
+        // Format the original price and discounted price.
+        // wc_price() is a WooCommerce function to format prices with currency.
+        $original_price_html = '<del>' . wc_price( $regular_price ) . '</del>';
+        $discounted_price_html = '<ins>' . wc_price( $discounted_price ) . '</ins>';
+
+        // Combine them to show "Original Price Discounted Price".
+        // You can customize the text surrounding the prices.
+        $price = sprintf( '%s %s', $original_price_html, $discounted_price_html );
+    }
+
+    return $price;
+}
+add_filter( 'woocommerce_get_price_html', 'custom_woocommerce_display_discounted_price', 10, 2 );
+add_filter( 'woocommerce_cart_item_price', 'custom_woocommerce_display_discounted_price', 10, 2 );
