@@ -143,7 +143,7 @@ function custom_woocommerce_display_discounted_price( $price, $product ) {
 
         // Combine them to show "Original Price Discounted Price".
         // You can customize the text surrounding the prices.
-        $price = $discounted_price_html;
+        $price = $discounted_price;
     }
 
     return $price;
