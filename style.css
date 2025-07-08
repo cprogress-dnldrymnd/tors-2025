@@ -771,10 +771,10 @@ section.home-about-area .content ul + a {
   margin-bottom: 60px;
   max-width: 480px; }
   .get-a-quote-form .label-box .name-box {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
     color: #333333;
-    font-size: 30px;
+    font-size: 21px;
     font-weight: bold;
     line-height: 1.4; }
     .get-a-quote-form .label-box .name-box .price-box {
