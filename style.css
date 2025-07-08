@@ -1560,4 +1560,7 @@ input[type="checkbox"] {
   -moz-appearance: auto !important;
   appearance: auto !important; }
 
+.audio-toggle-v4 input:checked + .slider.slider {
+  background-color: var(--e-global-color-accent) !important; }
+
 /*# sourceMappingURL=style.css.map */
