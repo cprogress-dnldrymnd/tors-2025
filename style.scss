@@ -734,6 +734,9 @@ section.home-about-area .content ul + a {
     a {
       color: var(--white-color);
       font-size: 20px;
+      @media (max-width: 767px) {
+        font-size: 16px;
+      }
     }
   }
 
