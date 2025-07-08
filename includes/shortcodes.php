@@ -61,7 +61,11 @@ function instrument_box()
             </div>
         </div>
         <div class="name-icon-box d-flex align-items-center justify-content-between">
-         
+        
+            <div class="name-box">
+                <?= $product->get_name() ?>
+               
+            </div>
             <div class="plus-minus-box">
 
             </div>
