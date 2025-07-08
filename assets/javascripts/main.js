@@ -61,7 +61,6 @@ jQuery(document).ready(function () {
 });
 
 function play_song($target, $parent) {
-    var $target = jQuery(this).attr('target');
     $target_val = 'audio-' + $target;
     play_wavesurfer($target_val);
     $parent.addClass('playing');
