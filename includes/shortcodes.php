@@ -496,3 +496,20 @@ function artist_box($atts)
 }
 
 add_shortcode('artist_box', 'artist_box');
+
+
+function term_desc($atts)
+{
+    extract(
+        shortcode_atts(
+            array(
+                'taxonomy' => '',
+            ),
+            $atts
+        )
+    );
+
+    $term = get_the_terms(get_the_ID(), $taxonomy);
+    return $term->description;
+}
+add_shortcode('term_desc', 'term_desc');
