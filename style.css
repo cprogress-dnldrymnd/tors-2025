@@ -541,10 +541,12 @@ section.home-about-area .content ul + a {
     line-height: 1.4; }
     @media (max-width: 767px) {
       .copyright.copyright p {
-        font-size: 13px; } }
+        font-size: 13px;
+        line-height: 2; } }
   @media (max-width: 767px) {
     .copyright.copyright a {
-      font-size: 13px !important; } }
+      font-size: 13px !important;
+      line-height: 2; } }
 
 .footer-contents.footer-contents h2 {
   font-size: 25px;

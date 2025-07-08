@@ -710,11 +710,13 @@ section.home-about-area .content ul + a {
     line-height: 1.4;
     @media (max-width: 767px) {
       font-size: 13px;
+      line-height: 2;
     }
   }
   a {
     @media (max-width: 767px) {
       font-size: 13px !important;
+      line-height: 2;
     }
   }
 }
