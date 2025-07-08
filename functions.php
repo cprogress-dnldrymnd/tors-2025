@@ -137,13 +137,10 @@ function custom_woocommerce_display_discounted_price( $price, $product ) {
         // Calculate the discounted price.
         $discounted_price = $regular_price * ( 1 - $discount_percentage );
 
-        // Format the original price and discounted price.
-        // wc_price() is a WooCommerce function to format prices with currency.
-        $discounted_price_html = '<ins>' . wc_price( $discounted_price ) . '</ins>';
 
         // Combine them to show "Original Price Discounted Price".
         // You can customize the text surrounding the prices.
-        $price = $discounted_price;
+        $price = wc_price( $discounted_price ) ;
     }
 
     return $price;
