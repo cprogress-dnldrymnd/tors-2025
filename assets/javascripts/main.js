@@ -28,15 +28,14 @@ jQuery(document).ready(function () {
     jQuery(document).on('click', '.play-pause-btn.play', function (e) {
         $target = jQuery(this).attr('target');
         $parent = jQuery(this).parents('.artist-songs--body');
-        play_song($target, $parent)
+        play_song($target, $parent);
         e.preventDefault();
     });
 
     jQuery(document).on('click', '.play-pause-btn.pause', function (e) {
-        var $target = jQuery(this).attr('target');
-        $target_val = 'audio-' + $target;
-        WaveSurfer_TORS[$target_val].pause();
-        jQuery(this).parents('.artist-songs--body').removeClass('playing');
+        $target = jQuery(this).attr('target');
+        $parent = jQuery(this).parents('.artist-songs--body');
+        pause_song($target, $parent);
         e.preventDefault();
     });
 
@@ -64,6 +63,12 @@ function play_song($target, $parent) {
     $target_val = 'audio-' + $target;
     play_wavesurfer($target_val);
     $parent.addClass('playing');
+}
+
+function pause_song($target, $parent) {
+    $target_val = 'audio-' + $target;
+    WaveSurfer_TORS[$target_val].pause();
+    $parent.removeClass('playing');
 }
 
 // Function to check if an element is visible in the viewport
