@@ -1042,7 +1042,7 @@ section.home-about-area .content ul + a {
     &:checked {
       & + label {
         .plus-minus-box {
-          background-color: var(--e-global-color-accent);
+          background-color: var(--e-global-color-accent) !important;
 
           &:after {
             opacity: 0;
@@ -1260,6 +1260,12 @@ section.home-about-area .content ul + a {
     width: 40px;
     height: 40px;
     flex: 0 0 40px;
+  }
+  @media (max-width: 480px) {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
   }
 }
 

@@ -763,7 +763,7 @@ section.home-about-area .content ul + a {
 .get-a-quote-form input[type="checkbox"] {
   display: none; }
   .get-a-quote-form input[type="checkbox"]:checked + label .plus-minus-box {
-    background-color: var(--e-global-color-accent); }
+    background-color: var(--e-global-color-accent) !important; }
     .get-a-quote-form input[type="checkbox"]:checked + label .plus-minus-box:after {
       opacity: 0; }
 .get-a-quote-form .label-box {
@@ -925,6 +925,12 @@ section.home-about-area .content ul + a {
       width: 40px;
       height: 40px;
       flex: 0 0 40px; } }
+  @media (max-width: 480px) {
+    .plus-minus-box.plus-minus-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #fff; } }
 
 .justify-content-between {
   justify-content: space-between !important; }
