@@ -373,6 +373,7 @@ function recordings_box($atts)
         shortcode_atts(
             array(
                 'display_artist' => false,
+                'display_artist_name' => true,
             ),
             $atts
         )
@@ -401,7 +402,7 @@ function recordings_box($atts)
     echo '<div class="artist-songs--title">';
     echo '<h4>';
     echo get_the_title();
-    if ($display_artist && $artist) {
+    if ($display_artist && $display_artist_name) {
         echo ' by ' . $artist[0]->name;
     }
 
