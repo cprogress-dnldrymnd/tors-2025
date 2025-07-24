@@ -1,0 +1,159 @@
+<script>
+  jQuery(document).ready(function () {
+    jQuery(document).on('submit_success', function (event, response) {
+      jQuery('.instrument-selection').addClass('hidden');
+      jQuery('.sucess--message').removeClass('hidden');
+      jQuery('.step--section').addClass('hidden');
+
+      var scrollDestination = jQuery('.sucess--message').offset().top;
+      var headerOffset = 91; // Set this to your fixed header's height if applicable, e.g., 60
+
+      // Animate the scroll
+      jQuery('html, body').animate({
+        scrollTop: scrollDestination - headerOffset
+      }, 800); // 800 milliseconds for the animation duration (adjust as needed)
+    });
+    var currency = jQuery('.elementor-grid >div:last-child .woocommerce-Price-currencySymbol').text();
+
+    jQuery(document).on('click', '.label-box, .package-button .elementor-button', function (event) {
+      setTimeout(function () {
+        console.log(currency);
+        var val_name = jQuery(".instruments input:checkbox:checked").map(function () {
+          return {
+            val: jQuery(this).val(),
+            instrument_id: parseFloat(jQuery(this).attr('instrument_id'))
+          };
+        }).get();
+
+        var prices = jQuery(".instruments input:checkbox:checked").map(function () {
+          return parseFloat(jQuery(this).attr('price'));
+        }).get();
+
+        var sum = prices.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        var from_price = sum - (sum * 0.15);
+        var to_price = sum + (sum * 0.25);
+        $quote_price = 'From ' + currency + from_price.toFixed(2) + ' - ' + currency + to_price.toFixed(2);
+        $append = '';
+        $textarea_val = '';
+
+        jQuery.each(val_name, function (index, value) {
+          $append = $append + '<li><label class="label-box" for="instrument-' + value.instrument_id + '">' + value.val + '</label></li>';
+          $textarea_val = $textarea_val + value.val + '\n';
+        });
+
+        jQuery('.selection').html('');
+        jQuery('.quote-value p').text($quote_price);
+        jQuery(jQuery($append)).appendTo('.selection');
+        jQuery('#form-field-instruments').val($textarea_val);
+        jQuery('#form-field-quote_price').val($quote_price);
+
+      }, 100);
+    });
+
+    jQuery('.clear-selection').click(function (e) {
+      jQuery('.selection').html('');
+      jQuery(".instruments input[type='checkbox']").removeAttr('checked');
+      jQuery('#form-field-instruments').val('');
+    });
+    jQuery(document).on('click', '.package-button .elementor-button', function (event) {
+      jQuery(this).parents('.package-parent').addClass('clicked');
+      jQuery(this).parents('.package-parent').toggleClass('active');
+      jQuery('.package-parent:not(.clicked)').removeClass('active');
+      jQuery('.package-parent:not(.clicked)').parent().find('input').prop('checked', false);
+      jQuery('.package-parent').removeClass('clicked');
+
+      if (jQuery(this).parents('.package-parent').hasClass('active')) {
+        jQuery(this).parents('.package-holder').find('input').prop('checked', true);
+      } else {
+        jQuery(this).parents('.package-holder').find('input').prop('checked', false);
+      }
+
+      event.preventDefault();
+    });
+
+    jQuery(document).on('click', '.step-1-choices', function (event) {
+      jQuery('.step-1-choices').addClass('clicked');
+      jQuery(this).toggleClass('active');
+      jQuery('.step-1-choices:not(.clicked)').removeClass('active');
+      //jQuery('.step-1-choices').removeClass('clicked');
+
+      if (jQuery(this).hasClass('active')) {
+        if (jQuery(this).attr('id') == 'choose-a-package-button') {
+          jQuery('#step--1').attr('selected-option', 'choose-a-package');
+        } else {
+          jQuery('#step--1').attr('selected-option', 'build-your-track');
+        }
+      } else {
+        jQuery('#step--1').attr('selected-option', 'undefined');
+      }
+      event.preventDefault();
+    });
+
+    jQuery(document).on('click', '#continue-button', function (event) {
+      console.log(jQuery('#step--1').attr('selected-option'));
+      if (jQuery('.step-active').attr('id') == 'step--1') {
+        if (jQuery('#step--1').attr('selected-option') !== 'undefined') { 
+          jQuery('.step-active').addClass('current');
+          if (jQuery('.step-active').attr('selected-option') == 'choose-a-package') {
+            jQuery('#step--2').addClass('step-active');
+          } else {
+            jQuery('#step--3').addClass('step-active');
+          }
+          jQuery('.step-active.current').removeClass('step-active current');
+          scroll_to();
+        } else {
+          alert('Please select an option!')
+        }
+      } else if (jQuery('.step-active').attr('id') == 'step--2') {
+        if (jQuery('.package-parent.active').length > 0) {
+          jQuery('.step-active').addClass('current');
+          if (jQuery('.package-parent.active').hasClass('package-parent-build')) {
+            jQuery('#step--3').addClass('step-active');
+          } else {
+            jQuery('#step--4').addClass('step-active');
+          }
+          jQuery('.step-active.current').removeClass('step-active current');
+          scroll_to();
+        } else {
+          alert('Please select an option!')
+        }
+      } else {
+        jQuery('.step-active').addClass('current');
+        jQuery('.step-active.current').next().addClass('step-active');
+        jQuery('.step-active.current').removeClass('step-active current');
+        scroll_to();
+      }
+
+      event.preventDefault();
+    });
+
+
+    jQuery(document).on('click', '#back-button', function (event) {
+      jQuery('.step-active').addClass('current');
+      jQuery('.step-active.current').prev().addClass('step-active');
+      jQuery('.step-active.current').removeClass('step-active current');
+      scroll_to();
+      event.preventDefault();
+    });
+
+
+    jQuery(document).on('click', '.add-additional', function (event) {
+      jQuery('.step-active').addClass('current');
+      jQuery('#step--3').addClass('step-active');
+      jQuery('.step-active.current').removeClass('step-active current');
+      scroll_to();
+      event.preventDefault();
+    });
+
+
+    function scroll_to() {
+      var scrollDestination = jQuery('#build-your-track').offset().top;
+      var headerOffset = 91; // Set this to your fixed header's height if applicable, e.g., 60
+
+      // Animate the scroll
+      jQuery('html, body').animate({
+        scrollTop: scrollDestination - headerOffset
+      }, 500); // 800 milliseconds for the animation duration (adjust as needed)
+    }
+  });
+</script>
