@@ -1911,6 +1911,9 @@ input:checked + .slider.slider:before {
     opacity: 0;
     visibility: hidden;
     min-height: 50px;
+    @media (max-width: 767px) {
+      min-height: 30px;
+    }
   }
   &.audio-loading,
   &:not(.display-audio) {
@@ -2058,4 +2061,3 @@ input[type="checkbox"] {
 .audio-toggle-v4 input:checked + .slider.slider {
   background-color: var(--e-global-color-accent) !important;
 }
-

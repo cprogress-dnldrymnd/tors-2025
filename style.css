@@ -1458,6 +1458,9 @@ input:checked + .slider.slider:before {
     opacity: 0;
     visibility: hidden;
     min-height: 50px; }
+    @media (max-width: 767px) {
+      .audio-box-holder .audio-box {
+        min-height: 30px; } }
   .audio-box-holder.audio-loading .loading-animation, .audio-box-holder:not(.display-audio) .loading-animation {
     opacity: 1;
     visibility: visible; }
