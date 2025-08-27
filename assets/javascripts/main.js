@@ -11,7 +11,6 @@ jQuery(document).ready(function () {
     checkVisibility();
 
     jQuery(document).on('change', '.switch-input', function (e) {
-        console.log('xxx');
         if (jQuery(this).is(":checked")) {
             jQuery(this).parents('.audio-player--parent').removeClass('before-active').addClass('after-active');
             jQuery(this).parents('.audio-player--parent').find('.audio-box').addClass('active').removeClass('active');
@@ -68,6 +67,7 @@ jQuery(document).ready(function () {
 
 function play_song($target, $parent) {
     $target_val = 'audio-' + $target;
+    console.log($target_val);
     play_wavesurfer($target_val);
     $parent.addClass('playing');
 }
