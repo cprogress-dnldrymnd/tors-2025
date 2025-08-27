@@ -49,7 +49,7 @@ function tissue_paper_register_custom_fields()
 /* Require Files
 /*-----------------------------------------------------------------------------------*/
 require_once('includes/post-types.php');
-//require_once('includes/shortcodes.php');
+require_once('includes/shortcodes.php');
 require_once('includes/elementor.php');
 
 
@@ -74,7 +74,8 @@ function convertToEmbedLink($youtubeUrl)
 
 	if ($videoId) {
 		return "https://www.youtube.com/embed/" . $videoId;
-	} else {
+	}
+	else {
 		// Return false if no video ID could be extracted
 		return false;
 	}
@@ -84,14 +85,14 @@ function convertToEmbedLink($youtubeUrl)
 
 function action_admin_head()
 {
-?>
+	?>
 	<style>
 		#toplevel_page_redux_demo,
 		#wp-admin-bar-redux_demo {
 			display: none !important
 		}
 	</style>
-<?php
+	<?php
 
 }
 add_action('admin_head', 'action_admin_head');
@@ -125,25 +126,109 @@ add_filter('wp_prepare_themes_for_js', function ($themes) {
  * @param WC_Product $product The product object.
  * @return string The modified price string with discount.
  */
-function custom_woocommerce_display_discounted_price( $price, $product ) {
-    // Get the product's regular price.
-    $regular_price = (float) $product->get_regular_price();
+function custom_woocommerce_display_discounted_price_html($price, $product)
+{
+	// Get the product's regular price.
+	$allowed_categories = array('instruments', 'packages'); // <-- **IMPORTANT: Change these to your desired category slugs**
 
-    // If the product has a regular price set.
-    if ( $regular_price > 0 ) {
-        // Calculate the discount percentage.
-        $discount_percentage = 0.15; // 15% off
+    // Check if the product belongs to any of the allowed categories.
+    $product_id = $product->get_id();
+    $in_allowed_category = false;
 
-        // Calculate the discounted price.
-        $discounted_price = $regular_price * ( 1 - $discount_percentage );
-
-
-        // Combine them to show "Original Price Discounted Price".
-        // You can customize the text surrounding the prices.
-        $price = wc_price( $discounted_price ) ;
+    if ( ! empty( $allowed_categories ) ) {
+        foreach ( $allowed_categories as $category_slug ) {
+            if ( has_term( $category_slug, 'product_cat', $product_id ) ) {
+                $in_allowed_category = true;
+                break; // Found an allowed category, no need to check further
+            }
+        }
     }
 
-    return $price;
+	if (!is_admin() && $in_allowed_category) {
+		if ($product->is_type('grouped')) {
+			return group_products_price();
+		}
+		/*
+		else {
+			$regular_price = (float) $product->get_regular_price();
+
+			// If the product has a regular price set.
+			if ($regular_price > 0) {
+				// Calculate the discount percentage.
+				$discount_percentage = 0.15; // 15% off
+
+				// Calculate the discounted price.
+				$discounted_price = $regular_price * (1 - $discount_percentage);
+
+
+				// Combine them to show "Original Price Discounted Price".
+				// You can customize the text surrounding the prices.
+				$price = wc_price($discounted_price) ;
+			}
+		}*/
+
+	}
+	return $price;
 }
-add_filter( 'woocommerce_get_price_html', 'custom_woocommerce_display_discounted_price', 10, 2 );
-add_filter( 'woocommerce_cart_item_price', 'custom_woocommerce_display_discounted_price', 10, 2 );
+add_filter('woocommerce_get_price_html', 'custom_woocommerce_display_discounted_price_html', 10, 2);
+add_filter('woocommerce_cart_item_price', 'custom_woocommerce_display_discounted_price_html', 10, 2);
+
+
+function custom_woocommerce_display_discounted_price($price, $product)
+{
+	// Get the product's regular price.
+	$allowed_categories = array('instruments', 'packages'); // <-- **IMPORTANT: Change these to your desired category slugs**
+
+    // Check if the product belongs to any of the allowed categories.
+    $product_id = $product->get_id();
+    $in_allowed_category = false;
+
+    if ( ! empty( $allowed_categories ) ) {
+        foreach ( $allowed_categories as $category_slug ) {
+            if ( has_term( $category_slug, 'product_cat', $product_id ) ) {
+                $in_allowed_category = true;
+                break; // Found an allowed category, no need to check further
+            }
+        }
+    }
+	if (!is_admin() && $in_allowed_category) {
+		if ($price > 0) {
+			$discount_percentage = 0.15; // 15% discount
+			$discounted_price = $price * (1 - $discount_percentage);
+			return $discounted_price;
+		}
+	}
+	return $price;
+}
+add_filter('woocommerce_product_get_price', 'custom_woocommerce_display_discounted_price', 10, 2);
+
+
+add_action('elementor/query/one_post_per_category', function ($query) {
+	if (is_category()) {
+		$query->set('posts_per_page', 1);
+		$query->set('post_type', 'post'); // or your custom post type
+		$query->set('orderby', 'date');
+	}
+});
+
+
+
+function group_products_price()
+{
+	global $product;
+
+	// Get the IDs of the child products associated with this grouped product
+	// The get_children() method is specific to WC_Product_Grouped objects
+	$children_ids = $product->get_children();
+
+	$children_products = 0;
+
+	// If there are child IDs, loop through them to get the full WC_Product objects
+	if (!empty($children_ids)) {
+		foreach ($children_ids as $child_id) {
+			$product = wc_get_product($child_id);
+			$children_products = $children_products + $product->get_price();
+		}
+	}
+	return wc_price($children_products);
+}
