@@ -1569,5 +1569,7 @@ input[type="checkbox"] {
 .elementor-nav-menu--main .elementor-nav-menu ul {
   margin: 0 !important;
   position: static !important; }
+  .elementor-nav-menu--main .elementor-nav-menu ul .elementor-item.has-submenu {
+    justify-content: space-between; }
 
 /*# sourceMappingURL=style.css.map */
