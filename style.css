@@ -1566,4 +1566,7 @@ input[type="checkbox"] {
 .audio-toggle-v4 input:checked + .slider.slider {
   background-color: var(--e-global-color-accent) !important; }
 
+.elementor-nav-menu--main .elementor-nav-menu ul {
+  margin: 0 !important; }
+
 /*# sourceMappingURL=style.css.map */
