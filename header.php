@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php if (!function_exists('has_site_icon') || !has_site_icon()) {
-        ?>
+    ?>
         <link rel="shortcut icon"
             href="<?php if (isset($moroko_redux_demo['favicon']['url'])) { ?><?php echo esc_url($moroko_redux_demo['favicon']['url']); ?><?php } ?>">
     <?php } ?>
@@ -41,6 +41,9 @@
                     <div class="col-md-7">
                         <!-- Start:Main Navigation -->
                         <div id="menu-toggle"><i class="fa fa-bars"></i></div>
+                        <div class="mobile--menu--trigger">
+                            <i class="fa fa-bars"></i>
+                        </div>
                         <nav>
                             <?php
                             wp_nav_menu(
