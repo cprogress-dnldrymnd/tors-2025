@@ -67,7 +67,7 @@ jQuery(document).ready(function () {
     });
 
     jQuery('.our-work--genres a').click(function (e) { 
-        
+        console.log('xx');
         e.preventDefault();
     });
 });
