@@ -708,6 +708,9 @@ section.home-about-area .content ul + a {
       top: 50%;
       transform: translateY(-50%);
       border-radius: 10px; }
+      @media (max-width: 575px) {
+        .custom-lists .elementor-image-box .line-box .circle {
+          display: none; } }
     .custom-lists .elementor-image-box .line-box .circle-2 {
       width: 26px;
       height: 26px;
@@ -724,12 +727,22 @@ section.home-about-area .content ul + a {
         background-color: var(--white-color);
         border-radius: 20px;
         border: 3px solid var(--e-global-color-accent); }
+      @media (max-width: 575px) {
+        .custom-lists .elementor-image-box .line-box .circle-2 {
+          right: 0;
+          transform: none;
+          top: 0; } }
     @media (max-width: 991px) {
       .custom-lists .elementor-image-box .line-box {
         width: 85px; } }
     @media (max-width: 767px) {
       .custom-lists .elementor-image-box .line-box {
         width: 40px; } }
+    @media (max-width: 575px) {
+      .custom-lists .elementor-image-box .line-box {
+        width: 26px;
+        height: 26px;
+        background-color: transparent; } }
 .custom-lists .left-box,
 .custom-lists .right-box {
   padding-right: 115px !important; }
@@ -755,6 +768,10 @@ section.home-about-area .content ul + a {
       .custom-lists .left-box .elementor-image-box .line-box,
       .custom-lists .right-box .elementor-image-box .line-box {
         left: -99px; } }
+    @media (max-width: 575px) {
+      .custom-lists .left-box .elementor-image-box .line-box,
+      .custom-lists .right-box .elementor-image-box .line-box {
+        left: -64px; } }
   @media (max-width: 991px) {
     .custom-lists .left-box,
     .custom-lists .right-box {
@@ -765,6 +782,10 @@ section.home-about-area .content ul + a {
     .custom-lists .left-box,
     .custom-lists .right-box {
       padding-left: 70px !important; } }
+  @media (max-width: 575px) {
+    .custom-lists .left-box,
+    .custom-lists .right-box {
+      padding-left: 40px !important; } }
 @media (min-width: 992px) {
   .custom-lists .right-box {
     padding-left: 115px !important;
