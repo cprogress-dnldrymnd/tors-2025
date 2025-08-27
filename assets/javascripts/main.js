@@ -66,6 +66,11 @@ jQuery(document).ready(function () {
         }, 3000);
     });
 
+    jQuery('a.has-submenu').click(function (e) { 
+        jQuery(this).toggleClass('submenu--active');
+        e.preventDefault();
+    });
+
 });
 
 function play_song($target, $parent) {
