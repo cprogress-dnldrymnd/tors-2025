@@ -15,21 +15,16 @@ jQuery(document).ready(function () {
             jQuery(this).parents('.audio-player--parent').removeClass('before-active').addClass('after-active');
             jQuery(this).parents('.audio-player--parent').find('.audio-box').addClass('active').removeClass('active');
 
-            $target = jQuery(this).parents('.artist-songs--box').find('.audio-after .play').attr('target');
-            $parent = jQuery(this).parents('.artist-songs--box').find('.artist-songs--body');
-            
-            if($target == 'undefined') {
-                
-            }
-
-       artist-songs--box-v2     
+            $target = jQuery(this).parents('.artist-songs--box--js').find('.audio-after .play').attr('target');
+            $parent = jQuery(this).parents('.artist-songs--box--js').find('.artist-songs--body');
+  
             play_song($target, $parent);
         } else {
             jQuery(this).parents('.audio-player--parent').addClass('before-active').removeClass('after-active');
             jQuery(this).parents('.audio-player--parent').find('.audio-box').removeClass('active').addClass('active');
 
-            $target = jQuery(this).parents('.artist-songs--box').find('.audio-before .play').attr('target');
-            $parent = jQuery(this).parents('.artist-songs--box').find('.artist-songs--body');
+            $target = jQuery(this).parents('.artist-songs--box--js').find('.audio-before .play').attr('target');
+            $parent = jQuery(this).parents('.artist-songs--box--js').find('.artist-songs--body');
             play_song($target, $parent);
         }
         e.preventDefault();
