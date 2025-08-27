@@ -1573,4 +1573,7 @@ input[type="checkbox"] {
 .elementor-item.has-submenu {
   justify-content: space-between !important; }
 
+.dialog-type-lightbox.dialog-type-lightbox {
+  z-index: 99999; }
+
 /*# sourceMappingURL=style.css.map */
