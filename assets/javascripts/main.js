@@ -46,6 +46,7 @@ jQuery(document).ready(function () {
         e.preventDefault();
     });
 
+    
 
 
     jQuery('.show-all-song').click(function (e) {
@@ -63,6 +64,11 @@ jQuery(document).ready(function () {
         setTimeout(function () {
             checkVisibility();
         }, 3000);
+    });
+
+    jQuery('.our-work--genres a').click(function (e) { 
+        
+        e.preventDefault();
     });
 });
 
