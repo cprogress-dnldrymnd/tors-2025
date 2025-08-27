@@ -1576,4 +1576,12 @@ input[type="checkbox"] {
 .dialog-type-lightbox.dialog-type-lightbox {
   z-index: 99999; }
 
+@media (min-width: 768px) {
+  .mobile--menu--trigger {
+    display: none; } }
+
+@media (max-width: 767px) {
+  #menu-toggle {
+    display: none; } }
+
 /*# sourceMappingURL=style.css.map */
