@@ -429,7 +429,7 @@ function recordings_box($atts)
         $class = '';
     }
 
-    echo '<div class="artist-songs--box audio-player--parent before-active audio-player--player ' . $class . '">';
+    echo '<div class="artist-songs--box artist-songs--box--js audio-player--parent before-active audio-player--player ' . $class . '">';
     if ($display_artist) {
 
 

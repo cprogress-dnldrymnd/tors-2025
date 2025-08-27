@@ -17,6 +17,12 @@ jQuery(document).ready(function () {
 
             $target = jQuery(this).parents('.artist-songs--box').find('.audio-after .play').attr('target');
             $parent = jQuery(this).parents('.artist-songs--box').find('.artist-songs--body');
+            
+            if($target == 'undefined') {
+                
+            }
+
+       artist-songs--box-v2     
             play_song($target, $parent);
         } else {
             jQuery(this).parents('.audio-player--parent').addClass('before-active').removeClass('after-active');
