@@ -978,6 +978,8 @@ section.home-about-area .content ul + a {
       }
     }
   }
+  .left-box {
+  }
 
   .left-box,
   .right-box {
@@ -1002,10 +1004,11 @@ section.home-about-area .content ul + a {
       }
     }
     @media (max-width: 991px) {
-      text-align: right;
+      text-align: left;
+      padding-right: 0 !important;
     }
     @media (max-width: 767px) {
-      padding-right: 70px !important;
+      padding-left: 70px !important;
     }
   }
   @media (min-width: 992px) {

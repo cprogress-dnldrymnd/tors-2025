@@ -743,11 +743,12 @@ section.home-about-area .content ul + a {
   @media (max-width: 991px) {
     .custom-lists .left-box,
     .custom-lists .right-box {
-      text-align: right; } }
+      text-align: left;
+      padding-right: 0 !important; } }
   @media (max-width: 767px) {
     .custom-lists .left-box,
     .custom-lists .right-box {
-      padding-right: 70px !important; } }
+      padding-left: 70px !important; } }
 @media (min-width: 992px) {
   .custom-lists .right-box {
     padding-left: 115px !important;
