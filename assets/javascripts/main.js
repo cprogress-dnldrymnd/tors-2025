@@ -11,6 +11,7 @@ jQuery(document).ready(function () {
     checkVisibility();
 
     jQuery(document).on('change', '.switch-input', function (e) {
+        console.log('xxx');
         if (jQuery(this).is(":checked")) {
             jQuery(this).parents('.audio-player--parent').removeClass('before-active').addClass('after-active');
             jQuery(this).parents('.audio-player--parent').find('.audio-box').addClass('active').removeClass('active');
@@ -25,7 +26,6 @@ jQuery(document).ready(function () {
             $target = jQuery(this).parents('.artist-songs--box').find('.audio-before .play').attr('target');
             $parent = jQuery(this).parents('.artist-songs--box').find('.artist-songs--body');
             play_song($target, $parent);
-
         }
         e.preventDefault();
     });
