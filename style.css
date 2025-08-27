@@ -1576,12 +1576,25 @@ input[type="checkbox"] {
 .dialog-type-lightbox.dialog-type-lightbox {
   z-index: 99999; }
 
-@media (min-width: 768px) {
-  .mobile--menu--trigger {
-    display: none; } }
+.mobile--menu--trigger {
+  background-color: var(--e-global-color-accent);
+  font-size: 25px;
+  padding: 5px;
+  color: #000;
+  line-height: 0;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media (min-width: 768px) {
+    .mobile--menu--trigger {
+      display: none; } }
 
 @media (max-width: 767px) {
   #mob-menu {
     display: none; } }
+
+.elementor-nav-menu__container {
+  display: block !important; }
 
 /*# sourceMappingURL=style.css.map */

@@ -2074,6 +2074,15 @@ input[type="checkbox"] {
   z-index: 99999;
 }
 .mobile--menu--trigger {
+  background-color: var(--e-global-color-accent);
+  font-size: 25px;
+  padding: 5px;
+  color: #000;
+  line-height: 0;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media (min-width: 768px) {
     display: none;
   }
@@ -2083,4 +2092,8 @@ input[type="checkbox"] {
   @media (max-width: 767px) {
     display: none;
   }
+}
+
+.elementor-nav-menu__container {
+  display: block !important;
 }
