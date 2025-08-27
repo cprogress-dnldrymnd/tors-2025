@@ -921,6 +921,12 @@ section.home-about-area .content ul + a {
 
     &:not(.last-box) {
       margin-bottom: 160px;
+      @media (max-width: 991px) {
+        margin-bottom: 100px;
+      }
+      @media (max-width: 767px) {
+        margin-bottom: 50px;
+      }
     }
   }
 
@@ -1000,8 +1006,11 @@ section.home-about-area .content ul + a {
           right: -13px;
         }
         @media (max-width: 991px) {
-          left: -15px;
+          left: -189px;
           right: auto;
+        }
+        @media (max-width: 767px) {
+          left: 99px;
         }
       }
     }

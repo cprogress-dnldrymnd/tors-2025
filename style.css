@@ -682,6 +682,12 @@ section.home-about-area .content ul + a {
   line-height: 1.4; }
 .custom-lists .custom-list-box:not(.last-box) {
   margin-bottom: 160px; }
+  @media (max-width: 991px) {
+    .custom-lists .custom-list-box:not(.last-box) {
+      margin-bottom: 100px; } }
+  @media (max-width: 767px) {
+    .custom-lists .custom-list-box:not(.last-box) {
+      margin-bottom: 50px; } }
 @media (min-width: 992px) {
   .custom-lists .elementor-image-box-title {
     font-size: 36px; } }
@@ -743,8 +749,12 @@ section.home-about-area .content ul + a {
     @media (max-width: 991px) {
       .custom-lists .left-box .elementor-image-box .line-box,
       .custom-lists .right-box .elementor-image-box .line-box {
-        left: -15px;
+        left: -189px;
         right: auto; } }
+    @media (max-width: 767px) {
+      .custom-lists .left-box .elementor-image-box .line-box,
+      .custom-lists .right-box .elementor-image-box .line-box {
+        left: 99px; } }
   @media (max-width: 991px) {
     .custom-lists .left-box,
     .custom-lists .right-box {
