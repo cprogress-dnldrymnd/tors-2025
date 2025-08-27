@@ -681,13 +681,13 @@ section.home-about-area .content ul + a {
   font-size: 20px;
   line-height: 1.4; }
 .custom-lists .custom-list-box:not(.last-box) {
-  margin-bottom: 160px; }
+  margin-bottom: 50px; }
   @media (max-width: 991px) {
     .custom-lists .custom-list-box:not(.last-box) {
-      margin-bottom: 100px; } }
+      margin-bottom: 45px; } }
   @media (max-width: 767px) {
     .custom-lists .custom-list-box:not(.last-box) {
-      margin-bottom: 50px; } }
+      margin-bottom: 40px; } }
 @media (min-width: 992px) {
   .custom-lists .elementor-image-box-title {
     font-size: 36px; } }
