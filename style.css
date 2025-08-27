@@ -1567,6 +1567,7 @@ input[type="checkbox"] {
   background-color: var(--e-global-color-accent) !important; }
 
 .elementor-nav-menu--main .elementor-nav-menu ul {
-  margin: 0 !important; }
+  margin: 0 !important;
+  position: static !important; }
 
 /*# sourceMappingURL=style.css.map */
