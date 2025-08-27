@@ -133,9 +133,14 @@ function formatTime(time) {
 }
 
 function wavesurfer($id, $url,) {
+    if(window.innerWidth>767) {
+        $height = 50;
+    } else {
+        $height = 30;
+    }
     WaveSurfer_TORS[$id] = WaveSurfer.create({
         "container": document.getElementById($id),
-        "height": 50,
+        "height": $height,
         "splitChannels": false,
         "normalize": true,
         "waveColor": "#fff",
