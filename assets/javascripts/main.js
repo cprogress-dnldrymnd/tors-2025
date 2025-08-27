@@ -66,11 +66,6 @@ jQuery(document).ready(function () {
         }, 3000);
     });
 
-    jQuery('.our-work--genres a').click(function (e) { 
-        console.log('xx');
-        return false;
-        e.preventDefault();
-    });
 });
 
 function play_song($target, $parent) {
