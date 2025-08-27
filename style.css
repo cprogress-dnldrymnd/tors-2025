@@ -740,6 +740,11 @@ section.home-about-area .content ul + a {
     .custom-lists .left-box .elementor-image-box .line-box .circle-2,
     .custom-lists .right-box .elementor-image-box .line-box .circle-2 {
       right: -13px; }
+    @media (max-width: 991px) {
+      .custom-lists .left-box .elementor-image-box .line-box,
+      .custom-lists .right-box .elementor-image-box .line-box {
+        left: -15px;
+        right: auto; } }
   @media (max-width: 991px) {
     .custom-lists .left-box,
     .custom-lists .right-box {

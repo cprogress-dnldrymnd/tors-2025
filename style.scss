@@ -979,7 +979,6 @@ section.home-about-area .content ul + a {
     }
   }
 
-
   .left-box,
   .right-box {
     padding-right: 115px !important;
@@ -999,6 +998,10 @@ section.home-about-area .content ul + a {
 
         .circle-2 {
           right: -13px;
+        }
+        @media (max-width: 991px) {
+          left: -15px;
+          right: auto;
         }
       }
     }
