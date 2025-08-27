@@ -754,7 +754,7 @@ section.home-about-area .content ul + a {
     @media (max-width: 767px) {
       .custom-lists .left-box .elementor-image-box .line-box,
       .custom-lists .right-box .elementor-image-box .line-box {
-        left: 99px; } }
+        left: -99px; } }
   @media (max-width: 991px) {
     .custom-lists .left-box,
     .custom-lists .right-box {
