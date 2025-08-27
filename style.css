@@ -660,9 +660,9 @@ section.home-about-area .content ul + a {
   transform: translateX(-50%); }
   @media (max-width: 991px) {
     .custom-lists:before {
-      left: auto;
+      left: 15px;
       transform: none;
-      right: 15px;
+      right: auto;
       bottom: 0; } }
 .custom-lists .row {
   margin: 0; }
@@ -744,7 +744,8 @@ section.home-about-area .content ul + a {
     .custom-lists .left-box,
     .custom-lists .right-box {
       text-align: left;
-      padding-right: 0 !important; } }
+      padding-right: 0 !important;
+      padding-left: 115px !important; } }
   @media (max-width: 767px) {
     .custom-lists .left-box,
     .custom-lists .right-box {

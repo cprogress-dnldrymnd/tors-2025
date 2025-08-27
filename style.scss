@@ -888,9 +888,9 @@ section.home-about-area .content ul + a {
     transform: translateX(-50%);
 
     @media (max-width: 991px) {
-      left: auto;
+      left: 15px;
       transform: none;
-      right: 15px;
+      right: auto;
       bottom: 0;
     }
   }
@@ -978,8 +978,7 @@ section.home-about-area .content ul + a {
       }
     }
   }
-  .left-box {
-  }
+
 
   .left-box,
   .right-box {
@@ -1006,6 +1005,7 @@ section.home-about-area .content ul + a {
     @media (max-width: 991px) {
       text-align: left;
       padding-right: 0 !important;
+      padding-left: 115px !important;
     }
     @media (max-width: 767px) {
       padding-left: 70px !important;
