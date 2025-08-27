@@ -1594,7 +1594,7 @@ input[type="checkbox"] {
   #mob-menu {
     display: none; } }
 
-.elementor-nav-menu__container {
+#mobile---menu > div > nav:first-child {
   display: block !important; }
 
 /*# sourceMappingURL=style.css.map */
