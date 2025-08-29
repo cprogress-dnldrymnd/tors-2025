@@ -1670,6 +1670,8 @@ input[type="checkbox"] {
   .recordings--by-genre {
     display: block !important; }
     .recordings--by-genre > div {
-      display: block !important; } }
+      display: block !important; }
+      .recordings--by-genre > div > div {
+        display: block !important; } }
 
 /*# sourceMappingURL=style.css.map */
