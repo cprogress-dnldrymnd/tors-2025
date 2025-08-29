@@ -52,7 +52,7 @@ function instrument_box()
 {
     ob_start();
     global $product;
-    ?>
+?>
     <input type="checkbox" price="<?= $product->get_price() ?>" instrument_id="<?= $product->get_id() ?>"
         name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
     <label for="instrument-<?= $product->get_id() ?>" class="d-flex align-items-center justify-content-between label-box">
@@ -114,16 +114,15 @@ function audio_box($atts)
         $audio_url = wp_get_attachment_url($audio);
         if ($audio_type == 'before') {
             $class = 'active';
-        }
-        else {
+        } else {
             $class = '';
         }
-        ?>
+    ?>
         <div class="audio-box-holder d-flex align-items-center audio-<?= $audio_type ?>" audio_url="<?= $audio_url ?>">
             <?= do_shortcode('[loading_animation]') ?>
             <div class="audio-box <?= $class ?> <?= $audio_type ?>-audio" id="audio-<?= $audio ?>"></div>
         </div>
-        <?php
+    <?php
     }
     return ob_get_clean();
 }
@@ -148,14 +147,14 @@ function audio_toggle($atts)
                 class="slider round"></span> </label>
         <span class="toggle-label toggle-label--after">After</span>
     </div>
-    <?php
+<?php
     return ob_get_clean();
 }
 add_shortcode('audio_toggle', 'audio_toggle');
 function loading_animation()
 {
     ob_start();
-    ?>
+?>
     <div class="loading-animation">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="57"
             viewBox="0 0 56 57">
@@ -244,7 +243,7 @@ function loading_animation()
             </g>
         </svg>
     </div>
-    <?php
+<?php
     return ob_get_clean();
 }
 add_shortcode('loading_animation', 'loading_animation');
@@ -294,8 +293,7 @@ function get_estimated_read_time($post_id = null)
     if ($minutes < 1) {
         if ($seconds < 30) {
             return 'Less than a minute read';
-        }
-        else {
+        } else {
             return '1 min read'; // Round up to 1 minute if seconds are 30 or more.
         }
     }
@@ -304,8 +302,7 @@ function get_estimated_read_time($post_id = null)
     $output = '';
     if ($minutes === 1) {
         $output = '1 min read';
-    }
-    else {
+    } else {
         $output = $minutes . ' min read';
     }
 
@@ -341,8 +338,7 @@ function recordings_by_genres_artists($atts)
 
     if ($genre == 'current_object') {
         $genre = get_queried_object()->slug;
-    }
-    else {
+    } else {
         $genre = $genre;
     }
 
@@ -424,8 +420,7 @@ function recordings_box($atts)
 
     if ($display_artist) {
         $class = 'has--artists';
-    }
-    else {
+    } else {
         $class = '';
     }
 
@@ -556,7 +551,7 @@ function artist_box($atts)
     <path id="Path_9769" data-name="Path 9769" d="M49,10.28a6.065,6.065,0,0,0-4.233-4.364C41.014,5,26,5,26,5S10.991,5,7.238,6A6.066,6.066,0,0,0,3,10.368,63.275,63.275,0,0,0,2,21.91,63.275,63.275,0,0,0,3,33.54a6.066,6.066,0,0,0,4.233,4.189c3.753,1,18.765,1,18.765,1s15.012,0,18.765-1A6.066,6.066,0,0,0,49,33.365,63.278,63.278,0,0,0,50,21.91,63.272,63.272,0,0,0,49,10.28Z" transform="translate(0)" fill="none" stroke="#fecd55" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
     <path id="Path_9770" data-name="Path 9770" d="M9.75,10.934c0-1.146,0-1.718.239-2.038a1.2,1.2,0,0,1,.875-.478c.4-.028.88.281,1.844.9L22.172,15.4c.836.537,1.254.806,1.4,1.148a1.2,1.2,0,0,1,0,.934c-.144.342-.563.611-1.4,1.148l-9.464,6.084c-.964.62-1.445.929-1.844.9a1.2,1.2,0,0,1-.875-.478c-.239-.32-.239-.892-.239-2.038Z" transform="translate(10.852 4.784)" fill="none" stroke="#fecd55" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
   </g>
-</svg> ' . $artist->name . '\'s Testimonial </a></div>';
+</svg> Here from ' . $artist->name . '  </a></div>';
     }
 
     echo '</div>';
@@ -607,7 +602,6 @@ function group_products()
             $children_products .= get_the_title($child_id);
             $children_products .= '</div>';
             $children_products .= '</div>';
-
         }
     }
     $children_products .= '</div>';
@@ -619,10 +613,10 @@ function group_product_input()
 {
     ob_start();
     global $product;
-    ?>
-     <input type="checkbox" class="is-group-product" price="<?= $product->get_price() ?>" instrument_id="<?= $product->get_id() ?>"
-     name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
-     <?php
-     return ob_get_clean();
+?>
+    <input type="checkbox" class="is-group-product" price="<?= $product->get_price() ?>" instrument_id="<?= $product->get_id() ?>"
+        name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
+<?php
+    return ob_get_clean();
 }
 add_shortcode('group_product_input', 'group_product_input');
