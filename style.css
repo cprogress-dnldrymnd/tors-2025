@@ -1672,6 +1672,10 @@ input[type="checkbox"] {
     .recordings--by-genre.recordings--by-genre.recordings--by-genre.recordings--by-genre > div {
       display: block !important; }
       .recordings--by-genre.recordings--by-genre.recordings--by-genre.recordings--by-genre > div > div {
-        display: block !important; } }
+        display: block !important; }
+        .recordings--by-genre.recordings--by-genre.recordings--by-genre.recordings--by-genre > div > div > div {
+          display: block !important; }
+          .recordings--by-genre.recordings--by-genre.recordings--by-genre.recordings--by-genre > div > div > div > div:not(:last-child) {
+            margin-top: 40px; } }
 
 /*# sourceMappingURL=style.css.map */
