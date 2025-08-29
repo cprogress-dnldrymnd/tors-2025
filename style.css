@@ -1635,4 +1635,9 @@ input[type="checkbox"] {
 #mobile---menu > div > nav:first-child {
   display: block !important; }
 
+@media (max-width: 767px) {
+  .header-area.header-area.header-area {
+    padding-top: 15px;
+    padding-top: 15px; } }
+
 /*# sourceMappingURL=style.css.map */
