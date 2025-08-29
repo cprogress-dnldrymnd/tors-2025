@@ -1642,4 +1642,11 @@ input[type="checkbox"] {
     .header-area.header-area.header-area .logo-box .text {
       display: none !important; } }
 
+@media (max-width: 767px) {
+  #wpadminbar {
+    display: none !important; }
+
+  html.no-js {
+    margin-top: 0 !important; } }
+
 /*# sourceMappingURL=style.css.map */

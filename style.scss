@@ -2133,13 +2133,21 @@ input[type="checkbox"] {
 }
 
 .header-area.header-area.header-area {
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     padding-top: 15px;
     padding-bottom: 15px;
-    .logo-box  {
+    .logo-box {
       .text {
         display: none !important;
       }
     }
+  }
+}
+@media (max-width: 767px) {
+  #wpadminbar {
+    display: none !important;
+  }
+  html.no-js {
+    margin-top: 0 !important;
   }
 }
