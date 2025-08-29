@@ -2179,11 +2179,6 @@ input[type="checkbox"] {
         display: block !important;
         > div {
           display: block !important;
-          > div {
-            &:not(:last-child) {
-              margin-top: 40px;
-            }
-          }
         }
       }
     }

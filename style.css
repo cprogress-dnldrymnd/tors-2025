@@ -1674,8 +1674,6 @@ input[type="checkbox"] {
       .recordings--by-genre.recordings--by-genre.recordings--by-genre.recordings--by-genre > div > div {
         display: block !important; }
         .recordings--by-genre.recordings--by-genre.recordings--by-genre.recordings--by-genre > div > div > div {
-          display: block !important; }
-          .recordings--by-genre.recordings--by-genre.recordings--by-genre.recordings--by-genre > div > div > div > div:not(:last-child) {
-            margin-top: 40px; } }
+          display: block !important; } }
 
 /*# sourceMappingURL=style.css.map */
