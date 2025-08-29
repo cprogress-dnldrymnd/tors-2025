@@ -2169,3 +2169,12 @@ input[type="checkbox"] {
     margin-top: 0 !important;
   }
 }
+
+@media (max-width: 767px) {
+  .recordings--by-genre {
+    display: block !important;
+    > div {
+      display: block !important;
+    }
+  }
+}
