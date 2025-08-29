@@ -1667,11 +1667,11 @@ input[type="checkbox"] {
   html.no-js {
     margin-top: 0 !important; } }
 @media (max-width: 767px) {
-  .recordings--by-genre {
+  .recordings--by-genre.recordings--by-genre.recordings--by-genre.recordings--by-genre {
     display: block !important; }
-    .recordings--by-genre > div {
+    .recordings--by-genre.recordings--by-genre.recordings--by-genre.recordings--by-genre > div {
       display: block !important; }
-      .recordings--by-genre > div > div {
+      .recordings--by-genre.recordings--by-genre.recordings--by-genre.recordings--by-genre > div > div {
         display: block !important; } }
 
 /*# sourceMappingURL=style.css.map */
