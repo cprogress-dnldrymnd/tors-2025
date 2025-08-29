@@ -1638,6 +1638,6 @@ input[type="checkbox"] {
 @media (max-width: 767px) {
   .header-area.header-area.header-area {
     padding-top: 15px;
-    padding-top: 15px; } }
+    padding-bottom: 15px; } }
 
 /*# sourceMappingURL=style.css.map */
