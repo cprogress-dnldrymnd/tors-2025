@@ -830,6 +830,9 @@ section.home-about-area .content ul + a {
       font-weight: 400;
       font-size: 20px;
       color: var(--text-color); }
+      @media (max-width: 480px) {
+        .get-a-quote-form .label-box .name-box .price-box {
+          font-size: 16px; } }
     @media (max-width: 1199px) {
       .get-a-quote-form .label-box .name-box {
         font-size: 28px;
@@ -846,6 +849,12 @@ section.home-about-area .content ul + a {
     @media (max-width: 575px) {
       .get-a-quote-form .label-box .name-box {
         font-size: 20px; } }
+    @media (max-width: 480px) {
+      .get-a-quote-form .label-box .name-box {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 16px;
+        line-height: 1; } }
   .get-a-quote-form .label-box .name-icon-box {
     width: 100%; }
   @media (max-width: 480px) {
@@ -864,6 +873,12 @@ section.home-about-area .content ul + a {
       height: 105%;
       width: 105%;
       object-fit: cover; }
+      @media (max-width: 480px) {
+        .get-a-quote-form .label-box .image-box img {
+          height: 100%;
+          width: 100%;
+          transform: scale(1.15);
+          object-position: center -13px; } }
     @media (max-width: 1199px) {
       .get-a-quote-form .label-box .image-box {
         width: 120px; } }
@@ -875,11 +890,13 @@ section.home-about-area .content ul + a {
         width: 80px; } }
     @media (max-width: 480px) {
       .get-a-quote-form .label-box .image-box {
-        width: 100%; } }
+        width: 100%;
+        padding: 35%;
+        border-radius: 10px; } }
   @media (max-width: 480px) {
     .get-a-quote-form .label-box {
       flex-direction: column;
-      gap: 20px; } }
+      gap: 10px; } }
 .get-a-quote-form .form-box .form-box-header {
   margin-top: 75px;
   border-top: 2px solid #e2e2e2; }
