@@ -2187,9 +2187,9 @@ input[type="checkbox"] {
 
 .margin-js {
   &.margin--left {
-    margin-left: var(--container-margin, 112px);
+    margin-left: var(--container-margin, 112px) !important;
   }
   &.margin--right {
-    margin-right: var(--container-margin, 112px);
+    margin-right: var(--container-margin, 112px) !important;
   }
 }

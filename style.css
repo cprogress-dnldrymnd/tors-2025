@@ -1676,8 +1676,8 @@ input[type="checkbox"] {
         .recordings--by-genre.recordings--by-genre.recordings--by-genre.recordings--by-genre > div > div > div {
           display: block !important; } }
 .margin-js.margin--left {
-  margin-left: var(--container-margin, 112px); }
+  margin-left: var(--container-margin, 112px) !important; }
 .margin-js.margin--right {
-  margin-right: var(--container-margin, 112px); }
+  margin-right: var(--container-margin, 112px) !important; }
 
 /*# sourceMappingURL=style.css.map */
