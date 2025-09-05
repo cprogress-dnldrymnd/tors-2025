@@ -73,6 +73,7 @@ jQuery(document).ready(function () {
 
     console.log('x1');
     $container_margin = jQuery('.header-area .container').css('margin-left');
+    console.log($container_margin);
     jQuery('body').css('--container-margin', $container_margin);
 
 });
