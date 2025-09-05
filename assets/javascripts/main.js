@@ -17,7 +17,7 @@ jQuery(document).ready(function () {
 
             $target = jQuery(this).parents('.artist-songs--box--js').find('.audio-after .play').attr('target');
             $parent = jQuery(this).parents('.artist-songs--box--js').find('.artist-songs--body');
-  
+
             play_song($target, $parent);
         } else {
             jQuery(this).parents('.audio-player--parent').addClass('before-active').removeClass('after-active');
@@ -46,7 +46,7 @@ jQuery(document).ready(function () {
         e.preventDefault();
     });
 
-    
+
 
 
     jQuery('.show-all-song').click(function (e) {
@@ -66,10 +66,14 @@ jQuery(document).ready(function () {
         }, 3000);
     });
 
-    jQuery('a.has-submenu').click(function (e) { 
+    jQuery('a.has-submenu').click(function (e) {
         jQuery(this).toggleClass('submenu--active');
         e.preventDefault();
     });
+
+
+    $container_margin = jQuery('.header-area .container').css('margin-left');
+    jQuery('body').css('--container-margin', $container_margin);
 
 });
 
@@ -140,7 +144,7 @@ function formatTime(time) {
 }
 
 function wavesurfer($id, $url,) {
-    if(window.innerWidth>767) {
+    if (window.innerWidth > 767) {
         $height = 50;
     } else {
         $height = 30;
