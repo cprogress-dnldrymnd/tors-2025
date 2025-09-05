@@ -1677,7 +1677,7 @@ input[type="checkbox"] {
           display: block !important; } }
 .margin-js.margin--left {
   margin-left: var(--container-margin, 112px); }
-.margin-js.margin-0right {
+.margin-js.margin--right {
   margin-right: var(--container-margin, 112px); }
 
 /*# sourceMappingURL=style.css.map */
