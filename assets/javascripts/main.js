@@ -71,10 +71,11 @@ jQuery(document).ready(function () {
         e.preventDefault();
     });
 
-    console.log('x3');
+    console.log('x2');
     $container_margin = jQuery('.header-area .container').css('margin-left');
     console.log($container_margin);
-    jQuery('div[data-elementor-type="wp-page"]').css('--container-margin', $container_margin);
+    jQuery('body').css('--container-margin', $container_margin);
+    jQuery('body').css('--container-margin', '11px');
 
 });
 
