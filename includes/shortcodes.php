@@ -587,25 +587,27 @@ add_shortcode('plus_minus', 'plus_minus');
 
 function group_products()
 {
-    global $product;
+    if (!is_admin()) {
+        global $product;
 
-    // Get the IDs of the child products associated with this grouped product
-    // The get_children() method is specific to WC_Product_Grouped objects
-    $children_ids = $product->get_children();
-    $children_products = '<div class="group-products">';
+        // Get the IDs of the child products associated with this grouped product
+        // The get_children() method is specific to WC_Product_Grouped objects
+        $children_ids = $product->get_children();
+        $children_products = '<div class="group-products">';
 
-    // If there are child IDs, loop through them to get the full WC_Product objects
-    if (!empty($children_ids)) {
-        foreach ($children_ids as $child_id) {
-            $children_products .= '<div class="group-product">';
-            $children_products .= '<div class="group-product-inner">';
-            $children_products .= get_the_title($child_id);
-            $children_products .= '</div>';
-            $children_products .= '</div>';
+        // If there are child IDs, loop through them to get the full WC_Product objects
+        if (!empty($children_ids)) {
+            foreach ($children_ids as $child_id) {
+                $children_products .= '<div class="group-product">';
+                $children_products .= '<div class="group-product-inner">';
+                $children_products .= get_the_title($child_id);
+                $children_products .= '</div>';
+                $children_products .= '</div>';
+            }
         }
+        $children_products .= '</div>';
+        return $children_products;
     }
-    $children_products .= '</div>';
-    return $children_products;
 }
 add_shortcode('group_products', 'group_products');
 
@@ -617,7 +619,9 @@ function group_product_input()
     $id = '';
     $name = '';
     if (!is_admin()) {
-  
+        $price = $product->get_price();
+        $id = $product->get_id();
+        $name = $product->name();
     }
 ?>
     <input type="checkbox" class="is-group-product" price="<?= $price ?>" instrument_id="<?= $id ?>"
