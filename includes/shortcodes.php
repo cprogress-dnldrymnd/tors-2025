@@ -613,10 +613,16 @@ function group_product_input()
 {
     ob_start();
     global $product;
-    
+    $price = '';
+    $price = '';
+    if (!is_admin()) {
+        $price = $product->get_price();
+        $id = $product->get_id();
+        $name = $product->name();
+    }
 ?>
-    <input type="checkbox" class="is-group-product" price="" instrument_id="<?= $product->get_id() ?>"
-        name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
+    <input type="checkbox" class="is-group-product" price="<?= $price ?>" instrument_id="<?= $id ?>"
+        name="instruments[]" value="<?= $name ?>" id="instrument-<?= $id ?>">
 <?php
     return ob_get_clean();
 }
