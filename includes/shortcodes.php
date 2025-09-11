@@ -614,7 +614,8 @@ function group_product_input()
     ob_start();
     global $product;
     $price = '';
-    $price = '';
+    $id = '';
+    $name = '';
     if (!is_admin()) {
         $price = $product->get_price();
         $id = $product->get_id();
