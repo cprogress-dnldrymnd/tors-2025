@@ -52,6 +52,7 @@ function instrument_box()
 {
     ob_start();
     global $product;
+    
 ?>
     <input type="checkbox" price="<?= $product->get_price() ?>" instrument_id="<?= $product->get_id() ?>"
         name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
