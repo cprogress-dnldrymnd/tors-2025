@@ -617,9 +617,7 @@ function group_product_input()
     $id = '';
     $name = '';
     if (!is_admin()) {
-        $price = $product->get_price();
-        $id = $product->get_id();
-        $name = $product->name();
+  
     }
 ?>
     <input type="checkbox" class="is-group-product" price="<?= $price ?>" instrument_id="<?= $id ?>"
