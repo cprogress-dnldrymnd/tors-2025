@@ -437,7 +437,7 @@ function recordings_box($atts)
     echo '<h4>';
     echo get_the_title();
     if ($display_artist_name) {
-        //echo ' by ' . $artist[0]->name;
+        echo ' by ' . $artist[0]->name;
     }
 
     echo '</h4>';
@@ -587,27 +587,25 @@ add_shortcode('plus_minus', 'plus_minus');
 
 function group_products()
 {
-    if (!is_admin()) {
-        global $product;
+    global $product;
 
-        // Get the IDs of the child products associated with this grouped product
-        // The get_children() method is specific to WC_Product_Grouped objects
-        $children_ids = $product->get_children();
-        $children_products = '<div class="group-products">';
+    // Get the IDs of the child products associated with this grouped product
+    // The get_children() method is specific to WC_Product_Grouped objects
+    $children_ids = $product->get_children();
+    $children_products = '<div class="group-products">';
 
-        // If there are child IDs, loop through them to get the full WC_Product objects
-        if (!empty($children_ids)) {
-            foreach ($children_ids as $child_id) {
-                $children_products .= '<div class="group-product">';
-                $children_products .= '<div class="group-product-inner">';
-                $children_products .= get_the_title($child_id);
-                $children_products .= '</div>';
-                $children_products .= '</div>';
-            }
+    // If there are child IDs, loop through them to get the full WC_Product objects
+    if (!empty($children_ids)) {
+        foreach ($children_ids as $child_id) {
+            $children_products .= '<div class="group-product">';
+            $children_products .= '<div class="group-product-inner">';
+            $children_products .= get_the_title($child_id);
+            $children_products .= '</div>';
+            $children_products .= '</div>';
         }
-        $children_products .= '</div>';
-        return $children_products;
     }
+    $children_products .= '</div>';
+    return $children_products;
 }
 add_shortcode('group_products', 'group_products');
 
@@ -615,17 +613,9 @@ function group_product_input()
 {
     ob_start();
     global $product;
-    $price = '';
-    $id = '';
-    $name = '';
-    if (!is_admin()) {
-        $price = $product->get_price();
-        $id = $product->get_id();
-        $name = $product->name();
-    }
 ?>
-    <input type="checkbox" class="is-group-product" price="<?= $price ?>" instrument_id="<?= $id ?>"
-        name="instruments[]" value="<?= $name ?>" id="instrument-<?= $id ?>">
+    <input type="checkbox" class="is-group-product" price="<?= $product->get_price() ?>" instrument_id="<?= $product->get_id() ?>"
+        name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
 <?php
     return ob_get_clean();
 }
