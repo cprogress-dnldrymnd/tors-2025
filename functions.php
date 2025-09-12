@@ -84,6 +84,7 @@ function convertToEmbedLink($youtubeUrl)
 
 function action_admin_head()
 {
+	echo get_current_user_id();
 	if (get_current_user_id() !== 1) {; // only for admin
 ?>
 		<style>
