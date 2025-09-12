@@ -1772,6 +1772,6 @@ input[type="checkbox"] {
     .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev:hover,
     .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev:focus,
     .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev:active {
-      border-color: var(--e-global-color-cea108a); } }
+      border-color: var(--e-global-color-accent); } }
 
 /*# sourceMappingURL=style.css.map */
