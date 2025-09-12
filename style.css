@@ -1669,9 +1669,7 @@ input[type="checkbox"] {
 @media (max-width: 767px) {
   .header-area.header-area.header-area {
     padding-top: 15px;
-    padding-bottom: 15px; }
-    .header-area.header-area.header-area .logo-box .text {
-      display: none !important; } }
+    padding-bottom: 15px; } }
 
 @media (max-width: 767px) {
   body:not(.home) .header-area.header-area.header-area .logo-box .text {

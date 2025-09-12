@@ -2168,11 +2168,7 @@ input[type="checkbox"] {
   @media (max-width: 767px) {
     padding-top: 15px;
     padding-bottom: 15px;
-    .logo-box {
-      .text {
-        display: none !important;
-      }
-    }
+ 
   }
 }
 body:not(.home) {
