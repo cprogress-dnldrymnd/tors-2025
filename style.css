@@ -1744,8 +1744,6 @@ input[type="checkbox"] {
       display: none; } }
 
 @media (max-width: 767px) {
-  .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile h2 {
-    padding-right: 90px; }
   .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-buttons-main {
     position: absolute;
     top: 0;
