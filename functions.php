@@ -74,8 +74,7 @@ function convertToEmbedLink($youtubeUrl)
 
 	if ($videoId) {
 		return "https://www.youtube.com/embed/" . $videoId;
-	}
-	else {
+	} else {
 		// Return false if no video ID could be extracted
 		return false;
 	}
@@ -85,15 +84,16 @@ function convertToEmbedLink($youtubeUrl)
 
 function action_admin_head()
 {
-	?>
-	<style>
-		#toplevel_page_redux_demo,
-		#wp-admin-bar-redux_demo {
-			display: none !important
-		}
-	</style>
-	<?php
-
+	if (get_current_user_id() !== 1) {; // only for admin
+?>
+		<style>
+			#toplevel_page_redux_demo,
+			#wp-admin-bar-redux_demo {
+				display: none !important
+			}
+		</style>
+<?php
+	}
 }
 add_action('admin_head', 'action_admin_head');
 
@@ -131,18 +131,18 @@ function custom_woocommerce_display_discounted_price_html($price, $product)
 	// Get the product's regular price.
 	$allowed_categories = array('instruments', 'packages'); // <-- **IMPORTANT: Change these to your desired category slugs**
 
-    // Check if the product belongs to any of the allowed categories.
-    $product_id = $product->get_id();
-    $in_allowed_category = false;
+	// Check if the product belongs to any of the allowed categories.
+	$product_id = $product->get_id();
+	$in_allowed_category = false;
 
-    if ( ! empty( $allowed_categories ) ) {
-        foreach ( $allowed_categories as $category_slug ) {
-            if ( has_term( $category_slug, 'product_cat', $product_id ) ) {
-                $in_allowed_category = true;
-                break; // Found an allowed category, no need to check further
-            }
-        }
-    }
+	if (! empty($allowed_categories)) {
+		foreach ($allowed_categories as $category_slug) {
+			if (has_term($category_slug, 'product_cat', $product_id)) {
+				$in_allowed_category = true;
+				break; // Found an allowed category, no need to check further
+			}
+		}
+	}
 
 	if (!is_admin() && $in_allowed_category) {
 		if ($product->is_type('grouped')) {
@@ -166,7 +166,6 @@ function custom_woocommerce_display_discounted_price_html($price, $product)
 				$price = wc_price($discounted_price) ;
 			}
 		}*/
-
 	}
 	return $price;
 }
@@ -179,18 +178,18 @@ function custom_woocommerce_display_discounted_price($price, $product)
 	// Get the product's regular price.
 	$allowed_categories = array('instruments', 'packages'); // <-- **IMPORTANT: Change these to your desired category slugs**
 
-    // Check if the product belongs to any of the allowed categories.
-    $product_id = $product->get_id();
-    $in_allowed_category = false;
+	// Check if the product belongs to any of the allowed categories.
+	$product_id = $product->get_id();
+	$in_allowed_category = false;
 
-    if ( ! empty( $allowed_categories ) ) {
-        foreach ( $allowed_categories as $category_slug ) {
-            if ( has_term( $category_slug, 'product_cat', $product_id ) ) {
-                $in_allowed_category = true;
-                break; // Found an allowed category, no need to check further
-            }
-        }
-    }
+	if (! empty($allowed_categories)) {
+		foreach ($allowed_categories as $category_slug) {
+			if (has_term($category_slug, 'product_cat', $product_id)) {
+				$in_allowed_category = true;
+				break; // Found an allowed category, no need to check further
+			}
+		}
+	}
 	if (!is_admin() && $in_allowed_category) {
 		if ($price > 0) {
 			$discount_percentage = 0.15; // 15% discount
