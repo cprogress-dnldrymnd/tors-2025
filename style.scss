@@ -2286,8 +2286,12 @@ input[type="checkbox"] {
     transform: none;
     width: 32px;
     height: 32px;
+    margin: 0;
+    border-radius: 50%;
+    border: 1px solid var(--e-global-color-cea108a);
     &:after {
       font-size: 10px;
+      color: var(--e-global-color-cea108a);
     }
   }
 }
