@@ -584,3 +584,39 @@ function plus_minus()
     return '<div class="plus-minus-box"> </div>';
 }
 add_shortcode('plus_minus', 'plus_minus');
+
+function group_products()
+{
+    global $product;
+
+    // Get the IDs of the child products associated with this grouped product
+    // The get_children() method is specific to WC_Product_Grouped objects
+    $children_ids = $product->get_children();
+    $children_products = '<div class="group-products">';
+
+    // If there are child IDs, loop through them to get the full WC_Product objects
+    if (!empty($children_ids)) {
+        foreach ($children_ids as $child_id) {
+            $children_products .= '<div class="group-product">';
+            $children_products .= '<div class="group-product-inner">';
+            $children_products .= get_the_title($child_id);
+            $children_products .= '</div>';
+            $children_products .= '</div>';
+        }
+    }
+    $children_products .= '</div>';
+    return $children_products;
+}
+add_shortcode('group_products', 'group_products');
+
+function group_product_input()
+{
+    ob_start();
+    global $product;
+?>
+    <input type="checkbox" class="is-group-product" price="<?= $product->get_price() ?>" instrument_id="<?= $product->get_id() ?>"
+        name="instruments[]" value="<?= $product->get_name() ?>" id="instrument-<?= $product->get_id() ?>">
+<?php
+    return ob_get_clean();
+}
+add_shortcode('group_product_input', 'group_product_input');
