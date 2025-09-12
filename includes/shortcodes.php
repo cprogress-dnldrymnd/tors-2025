@@ -440,9 +440,10 @@ function recordings_box($atts)
     echo '<div class="artist-songs--title">';
     echo '<h4>';
     echo get_the_title();
+    /*
     if ($display_artist_name) {
         echo ' by ' . $artist[0]->name;
-    }
+    }*/
 
     echo '</h4>';
     echo '<div class="desktop-only audio-toggle-v3">';
