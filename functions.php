@@ -25,6 +25,8 @@ add_action('after_setup_theme', 'moroko_child_theme_setup');
 /*-----------------------------------------------------------------------------------*/
 function enqueue_scripts()
 {
+	//wp_enqueue_script('jquery');
+	wp_enqueue_script('js--js', 'https://code.jquery.com/ui/1.14.1/jquery-ui.min.js');
 	wp_enqueue_style('swiper--css', vendor_dir . 'swiper/swiper-bundle.min.css');
 	wp_enqueue_style('fancybox--css', vendor_dir . 'fancybox/fancybox.css');
 	wp_enqueue_script('swiper--js', vendor_dir . 'swiper/swiper-bundle.min.js');
