@@ -1780,5 +1780,13 @@ input[type="checkbox"] {
     gap: 40px; }
   .swiper-artists-songs-section .swiper-buttons-song {
     display: none; } }
+.swiper-artists-songs-section .swiper-buttons-song {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; }
+.swiper-artists-songs-section .swiper-pagination {
+  position: static;
+  width: auto; }
 
 /*# sourceMappingURL=style.css.map */

@@ -2317,4 +2317,14 @@ input[type="checkbox"] {
       display: none;
     }
   }
+  .swiper-buttons-song {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .swiper-pagination {
+    position: static;
+    width: auto;
+  }
 }
