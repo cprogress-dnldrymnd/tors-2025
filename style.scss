@@ -2240,11 +2240,25 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   gap: 20px;
+  & + nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+  }
 }
 .cart-icon-trigger {
+  background-color: var(--e-global-color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  padding: 5px;
+  border-radius: 5px;
   svg {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
   &.cart-icon-trigger-desktop {
     @media (max-width: 991px) {

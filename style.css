@@ -1718,15 +1718,29 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   gap: 20px; }
+  .right-header + nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center; }
 
-.cart-icon-trigger svg {
-  width: 30px;
-  height: 30px; }
-@media (max-width: 991px) {
-  .cart-icon-trigger.cart-icon-trigger-desktop {
-    display: none; } }
-@media (min-width: 992px) {
-  .cart-icon-trigger.cart-icon-trigger-mobile {
-    display: none; } }
+.cart-icon-trigger {
+  background-color: var(--e-global-color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  padding: 5px;
+  border-radius: 5px; }
+  .cart-icon-trigger svg {
+    width: 25px;
+    height: 25px; }
+  @media (max-width: 991px) {
+    .cart-icon-trigger.cart-icon-trigger-desktop {
+      display: none; } }
+  @media (min-width: 992px) {
+    .cart-icon-trigger.cart-icon-trigger-mobile {
+      display: none; } }
 
 /*# sourceMappingURL=style.css.map */
