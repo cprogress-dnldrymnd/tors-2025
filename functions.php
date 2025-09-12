@@ -31,6 +31,9 @@ function enqueue_scripts()
 	wp_enqueue_script('swiper--js', vendor_dir . 'swiper/swiper-bundle.min.js');
 	wp_enqueue_script('fancybox--js', vendor_dir . 'fancybox/fancybox.umd.js');
 	wp_enqueue_script('main--js', assets_dir . 'javascripts/main.js');
+
+	wp_dequeue_script('moroko-owl-carousel');
+	wp_dequeue_script('moroko-owl-carousel-settings');
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_scripts'); // Register this fxn and allow Wordpress to call it automatcally in the header
