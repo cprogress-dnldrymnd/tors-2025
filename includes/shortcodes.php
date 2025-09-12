@@ -344,6 +344,7 @@ function recordings_by_genres_artists($atts)
 
     $artists = get__artists_by_genre($genre);
     echo '<section class="artists-songs-section">';
+    echo '<div class="swiper-wrapper swiper-wrapper-mobile-only">';
 
     foreach ($artists as $artist) {
 
@@ -392,6 +393,9 @@ function recordings_by_genres_artists($atts)
 
         echo '</div>';
     }
+    echo '</div>';
+    echo '<div class="swiper-buttons-song"><div class="swiper-button-next swiper-button-next--song"></div> <div class="swiper-button-prev swiper-button-prev--song"></div></div>';
+
     echo '</section>';
 
     return ob_get_clean();
