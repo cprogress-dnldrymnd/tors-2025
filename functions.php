@@ -34,6 +34,10 @@ function enqueue_scripts()
 
 	wp_dequeue_script('moroko-owl-carousel');
 	wp_dequeue_script('moroko-owl-carousel-settings');
+	wp_dequeue_script('moroko-flexslider-settings');
+	wp_dequeue_script('moroko-jquery-flexslider');
+
+	
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_scripts', 9999); // Register this fxn and allow Wordpress to call it automatcally in the header
