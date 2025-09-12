@@ -1777,6 +1777,8 @@ input[type="checkbox"] {
   .swiper-artists-songs-section .swiper-wrapper {
     flex-direction: column;
     display: flex;
-    gap: 40px; } }
+    gap: 40px; }
+  .swiper-artists-songs-section .swiper-buttons-song {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
