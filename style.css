@@ -1722,5 +1722,11 @@ input[type="checkbox"] {
 .cart-icon-trigger svg {
   width: 30px;
   height: 30px; }
+@media (max-width: 991px) {
+  .cart-icon-trigger.cart-icon-trigger-desktop {
+    display: none; } }
+@media (min-width: 992px) {
+  .cart-icon-trigger.cart-icon-trigger-mobile {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

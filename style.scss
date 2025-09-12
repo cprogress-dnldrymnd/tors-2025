@@ -2246,4 +2246,14 @@ input[type="checkbox"] {
     width: 30px;
     height: 30px;
   }
+  &.cart-icon-trigger-desktop {
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  &.cart-icon-trigger-mobile {
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
 }
