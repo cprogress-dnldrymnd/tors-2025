@@ -1789,5 +1789,7 @@ input[type="checkbox"] {
 .swiper-artists-songs-section .swiper-pagination {
   position: static;
   width: auto !important; }
+.swiper-artists-songs-section .swiper-pagination-bullet-active.swiper-pagination-bullet-active {
+  background-color: var(--e-global-color-accent); }
 
 /*# sourceMappingURL=style.css.map */

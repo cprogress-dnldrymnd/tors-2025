@@ -2328,4 +2328,7 @@ input[type="checkbox"] {
     position: static;
     width: auto !important;
   }
+  .swiper-pagination-bullet-active.swiper-pagination-bullet-active {
+    background-color: var(--e-global-color-accent);
+  }
 }
