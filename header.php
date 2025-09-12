@@ -26,7 +26,7 @@
     Preloader Area End -->
     <!-- Header Area Start 
     ====================================================== -->
-    <header class="header-area">
+    <header class="header-area" id="top">
         <div class="container large-container">
             <div class="top-bar">
                 <!-- Start: Top Logo -->
@@ -40,6 +40,7 @@
                     <!-- Start:Navigation Area -->
                     <div class="col-md-7">
                         <!-- Start:Main Navigation -->
+                        <div id="menu-toggle"><i class="fa fa-bars"></i></div>
                         <?php if (is_page(4463)) { ?>
                             <div class="cart-icon-trigger">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
@@ -47,7 +48,6 @@
                                 </svg>
                             </div>
                         <?php } ?>
-                        <div id="menu-toggle"><i class="fa fa-bars"></i></div>
                         <div class="mobile--menu--trigger">
                             <i class="fa fa-bars"></i>
                         </div>
