@@ -2185,7 +2185,7 @@ input[type="checkbox"] {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   .padding-js {
     &.padding--left {
       padding-left: var(--container-margin, 112px) !important;
