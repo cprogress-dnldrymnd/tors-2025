@@ -1767,6 +1767,11 @@ input[type="checkbox"] {
     .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-next:after,
     .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev:after {
       font-size: 10px;
-      color: var(--e-global-color-cea108a); } }
+      color: var(--e-global-color-cea108a); }
+    .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-next:hover, .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-next:focus, .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-next:active,
+    .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev:hover,
+    .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev:focus,
+    .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev:active {
+      border-color: var(--e-global-color-cea108a); } }
 
 /*# sourceMappingURL=style.css.map */
