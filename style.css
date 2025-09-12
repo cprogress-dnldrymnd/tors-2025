@@ -1714,6 +1714,11 @@ input[type="checkbox"] {
 .caret-up {
   font-size: 18px; }
 
+.right-header {
+  display: flex;
+  align-items: center;
+  gap: 20px; }
+
 .cart-icon-trigger svg {
   width: 30px;
   height: 30px; }
