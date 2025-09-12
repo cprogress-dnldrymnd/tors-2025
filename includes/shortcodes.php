@@ -394,7 +394,7 @@ function recordings_by_genres_artists($atts)
         echo '</div>';
     }
     echo '</div>';
-    echo '<div class="swiper-buttons-song"><div class="swiper-button-next swiper-button-next--song"></div> <div class="swiper-button-prev swiper-button-prev--song"></div></div>';
+    echo '<div class="swiper-buttons-song"><div class="swiper-button-next swiper-button-next--song"></div> <div class="swiper-pagination swiper-pagination--song"></div>  <div class="swiper-button-prev swiper-button-prev--song"></div></div>';
 
     echo '</section>';
 
