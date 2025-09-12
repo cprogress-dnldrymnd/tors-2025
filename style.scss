@@ -2306,9 +2306,12 @@ input[type="checkbox"] {
   }
 }
 
-
 .swiper-artists-songs-section {
-  @media(min-width: 768px) {
-    
+  @media (min-width: 768px) {
+    .swiper-wrapper {
+      flex-direction: column;
+      display: flex;
+      gap: 40px;
+    }
   }
 }

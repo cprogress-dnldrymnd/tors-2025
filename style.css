@@ -1773,5 +1773,10 @@ input[type="checkbox"] {
     .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev:focus,
     .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev:active {
       border-color: var(--e-global-color-accent); } }
+@media (min-width: 768px) {
+  .swiper-artists-songs-section .swiper-wrapper {
+    flex-direction: column;
+    display: flex;
+    gap: 40px; } }
 
 /*# sourceMappingURL=style.css.map */
