@@ -2185,11 +2185,13 @@ input[type="checkbox"] {
   }
 }
 
-.padding-js {
-  &.padding--left {
-    padding-left: var(--container-margin, 112px) !important;
-  }
-  &.padding--right {
-    padding-right: var(--container-margin, 112px) !important;
+@media (min-width: 768px) {
+  .padding-js {
+    &.padding--left {
+      padding-left: var(--container-margin, 112px) !important;
+    }
+    &.padding--right {
+      padding-right: var(--container-margin, 112px) !important;
+    }
   }
 }
