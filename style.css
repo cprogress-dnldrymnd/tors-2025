@@ -1680,5 +1680,26 @@ input[type="checkbox"] {
     padding-left: var(--container-margin, 112px) !important; }
   .padding-js.padding--right {
     padding-right: var(--container-margin, 112px) !important; } }
+.fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: yellow;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 24px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s; }
+
+.fixed-button:hover {
+  background-color: #f8d300; }
+
+.caret-up {
+  font-size: 18px; }
 
 /*# sourceMappingURL=style.css.map */
