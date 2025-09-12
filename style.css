@@ -1675,9 +1675,5 @@ input[type="checkbox"] {
         display: block !important; }
         .recordings--by-genre.recordings--by-genre.recordings--by-genre.recordings--by-genre > div > div > div {
           display: block !important; } }
-.padding-js.padding--left {
-  padding-left: var(--container-margin, 112px) !important; }
-.padding-js.padding--right {
-  padding-right: var(--container-margin, 112px) !important; }
 
 /*# sourceMappingURL=style.css.map */
