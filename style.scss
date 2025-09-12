@@ -2311,7 +2311,7 @@ input[type="checkbox"] {
       gap: 40px;
     }
     .swiper-buttons-song {
-      display: none;
+      display: none !important
     }
   }
   .swiper-buttons-song {
