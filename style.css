@@ -1752,42 +1752,42 @@ input[type="checkbox"] {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    gap: 10px; }
-  .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-next,
-  .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev {
-    position: static;
-    transform: none;
-    width: 32px;
-    height: 32px;
-    margin: 0;
-    border-radius: 50%;
-    border: 1px solid var(--e-global-color-cea108a); }
-    .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-next:after,
-    .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev:after {
-      font-size: 10px;
-      color: var(--e-global-color-cea108a); }
-    .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-next:hover, .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-next:focus, .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-next:active,
-    .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev:hover,
-    .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev:focus,
-    .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev:active {
-      border-color: var(--e-global-color-accent); } }
+    gap: 10px; } }
 @media (min-width: 768px) {
-  .swiper-artists-songs-section .swiper-wrapper {
+  .swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-wrapper {
     flex-direction: column;
     display: flex;
     gap: 40px; }
-  .swiper-artists-songs-section .swiper-buttons-song {
+  .swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-buttons-song {
     display: none !important; } }
-.swiper-artists-songs-section .swiper-buttons-song {
+.swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-buttons-song {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row-reverse;
   gap: 20px; }
-.swiper-artists-songs-section .swiper-pagination {
+.swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-pagination {
   position: static;
   width: auto !important; }
-.swiper-artists-songs-section .swiper-pagination-bullet-active.swiper-pagination-bullet-active {
+.swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-pagination-bullet-active.swiper-pagination-bullet-active {
   background-color: var(--e-global-color-accent); }
+.swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-button-next,
+.swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-button-prev {
+  position: static;
+  transform: none;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  border-radius: 50%;
+  border: 1px solid var(--e-global-color-cea108a); }
+  .swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-button-next:after,
+  .swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-button-prev:after {
+    font-size: 10px;
+    color: var(--e-global-color-cea108a); }
+  .swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-button-next:hover, .swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-button-next:focus, .swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-button-next:active,
+  .swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-button-prev:hover,
+  .swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-button-prev:focus,
+  .swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-button-prev:active {
+    border-color: var(--e-global-color-accent); }
 
 /*# sourceMappingURL=style.css.map */
