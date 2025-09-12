@@ -1744,8 +1744,21 @@ input[type="checkbox"] {
       display: none; } }
 
 .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-buttons-main {
-  position: absolute; }
-.carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-next, .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev {
-  position: static; }
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse; }
+.carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-next,
+.carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev {
+  position: static;
+  transform: none;
+  width: 32px;
+  height: 32px; }
+  .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-next:after,
+  .carousel--on-mobile.carousel--on-mobile.carousel--on-mobile .swiper-button-prev:after {
+    font-size: 10px; }
 
 /*# sourceMappingURL=style.css.map */
