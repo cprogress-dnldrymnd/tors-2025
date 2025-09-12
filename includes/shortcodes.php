@@ -343,8 +343,8 @@ function recordings_by_genres_artists($atts)
     }
 
     $artists = get__artists_by_genre($genre);
-    echo '<section class="artists-songs-section">';
-    echo '<div class="swiper-wrapper swiper-wrapper-mobile-only">';
+    echo '<section class="artists-songs-section swiper swiper-artists-songs-section">';
+    echo '<div class="swiper-wrapper">';
 
     foreach ($artists as $artist) {
 
