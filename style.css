@@ -1674,6 +1674,10 @@ input[type="checkbox"] {
       display: none !important; } }
 
 @media (max-width: 767px) {
+  body:not(.home) .header-area.header-area.header-area .logo-box .text {
+    display: none !important; } }
+
+@media (max-width: 767px) {
   #wpadminbar {
     display: none !important; }
 
