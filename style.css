@@ -1754,6 +1754,8 @@ input[type="checkbox"] {
     flex-direction: row-reverse;
     gap: 10px; } }
 @media (min-width: 768px) {
+  .swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .play-pause-btn i {
+    font-size: 30px !important; }
   .swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section .swiper-wrapper {
     flex-direction: column;
     display: flex;

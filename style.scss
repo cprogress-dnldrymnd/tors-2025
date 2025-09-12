@@ -2287,6 +2287,11 @@ input[type="checkbox"] {
 
 .swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section {
   @media (min-width: 768px) {
+    .play-pause-btn {
+      i {
+        font-size: 30px !important;
+      }
+    }
     .swiper-wrapper {
       flex-direction: column;
       display: flex;
