@@ -2281,24 +2281,18 @@ input[type="checkbox"] {
       flex-direction: row-reverse;
       gap: 10px;
     }
-   
   }
 }
 
 .swiper-artists-songs-section.swiper-artists-songs-section.swiper-artists-songs-section {
   @media (min-width: 768px) {
-    .play-pause-btn {
-      i {
-        font-size: 30px !important;
-      }
-    }
     .swiper-wrapper {
       flex-direction: column;
       display: flex;
       gap: 40px;
     }
     .swiper-buttons-song {
-      display: none !important
+      display: none !important;
     }
   }
   .swiper-buttons-song {
@@ -2315,23 +2309,30 @@ input[type="checkbox"] {
   .swiper-pagination-bullet-active.swiper-pagination-bullet-active {
     background-color: var(--e-global-color-accent);
   }
-   .swiper-button-next,
-    .swiper-button-prev {
-      position: static;
-      transform: none;
-      width: 32px;
-      height: 32px;
-      margin: 0;
-      border-radius: 50%;
-      border: 1px solid var(--e-global-color-cea108a);
-      &:after {
-        font-size: 10px;
-        color: var(--e-global-color-cea108a);
-      }
-      &:hover,
-      &:focus,
-      &:active {
-        border-color: var(--e-global-color-accent);
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: static;
+    transform: none;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    border-radius: 50%;
+    border: 1px solid var(--e-global-color-cea108a);
+    &:after {
+      font-size: 10px;
+      color: var(--e-global-color-cea108a);
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: var(--e-global-color-accent);
+    }
+  }
+  @media (max-width: 767px) {
+    .play-pause-btn {
+      i {
+        font-size: 30px !important;
       }
     }
+  }
 }
