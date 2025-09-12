@@ -368,7 +368,7 @@ function recordings_by_genres_artists($atts)
         $query_recordings = new WP_Query($args);
         $query_recordings_count = $query_recordings->found_posts;
 
-        echo '<div class="artists-songs-section-inner">';
+        echo '<div class="artists-songs-section-inner swiper-slide">';
 
         echo do_shortcode('[artist_box term_id=' . $artist['term_id'] . ']');
 
