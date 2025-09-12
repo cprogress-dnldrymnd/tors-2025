@@ -1743,4 +1743,9 @@ input[type="checkbox"] {
     .cart-icon-trigger.cart-icon-trigger-mobile {
       display: none; } }
 
+.carousel--on-mobile .swiper-buttons-main {
+  position: absolute; }
+.carousel--on-mobile .swiper-button-next, .carousel--on-mobile .swiper-button-prev {
+  position: static; }
+
 /*# sourceMappingURL=style.css.map */

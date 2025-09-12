@@ -2269,3 +2269,12 @@ input[type="checkbox"] {
     }
   }
 }
+
+.carousel--on-mobile {
+  .swiper-buttons-main {
+    position: absolute;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    position: static;
+  }
+}
